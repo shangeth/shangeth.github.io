@@ -5104,6 +5104,7 @@ Entropy Entropy is the expected …
 (function () {
   var HOST = 'https://app.anyreach.ai';
   var WIDGET_ID = 'ca80a75b-43b7-47a1-bb92-c138b801b4bd';
+
   var iframe = document.createElement('iframe');
   iframe.id = 'anyreach-iframe';
   iframe.src = HOST + '/public/widgets/' + encodeURIComponent(WIDGET_ID);
@@ -5116,9 +5117,35 @@ Entropy Entropy is the expected …
   iframe.style.zIndex = '2147483647';
   iframe.style.bottom = '20px';
   iframe.style.right = '20px';
-  iframe.style.width = '400px';
-  iframe.style.height = '600px';
+  
+  // Check if mobile
+  var isMobile = window.innerWidth <= 768;
+  
+  if (isMobile) {
+    // Mobile: Start with button size, widget can expand via its own postMessage
+    iframe.style.width = '70px';
+    iframe.style.height = '70px';
+    iframe.style.borderRadius = '50%';
+    iframe.style.overflow = 'hidden';
+  } else {
+    // Desktop: Full widget size
+    iframe.style.width = '400px';
+    iframe.style.height = '600px';
+  }
+  
   (document.body || document.documentElement).appendChild(iframe);
+  
+  // Listen for resize messages from widget
+  window.addEventListener('message', function(event) {
+    if (event.origin !== HOST) return;
+    
+    if (event.data && event.data.type === 'anyreach:resize' && isMobile) {
+      // Allow widget to control its size when expanded
+      if (event.data.width) iframe.style.width = event.data.width;
+      if (event.data.height) iframe.style.height = event.data.height;
+      if (event.data.borderRadius !== undefined) iframe.style.borderRadius = event.data.borderRadius;
+    }
+  });
 })();
 </script>
 
