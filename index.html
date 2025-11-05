@@ -5117,35 +5117,26 @@ Entropy Entropy is the expected …
   iframe.style.zIndex = '2147483647';
   iframe.style.bottom = '20px';
   iframe.style.right = '20px';
-  
-  // Check if mobile
-  var isMobile = window.innerWidth <= 768;
-  
-  if (isMobile) {
-    // Mobile: Start with button size, widget can expand via its own postMessage
-    iframe.style.width = '70px';
-    iframe.style.height = '70px';
-    iframe.style.borderRadius = '50%';
-    iframe.style.overflow = 'hidden';
-  } else {
-    // Desktop: Full widget size
-    iframe.style.width = '400px';
-    iframe.style.height = '600px';
-  }
-  
+  iframe.style.width = '40px';
+  iframe.style.height = '40px';
   (document.body || document.documentElement).appendChild(iframe);
-  
-  // Listen for resize messages from widget
-  window.addEventListener('message', function(event) {
-    if (event.origin !== HOST) return;
-    
-    if (event.data && event.data.type === 'anyreach:resize' && isMobile) {
-      // Allow widget to control its size when expanded
-      if (event.data.width) iframe.style.width = event.data.width;
-      if (event.data.height) iframe.style.height = event.data.height;
-      if (event.data.borderRadius !== undefined) iframe.style.borderRadius = event.data.borderRadius;
+
+  function onMessage(e) {
+    var d = e && e.data;
+    if (!d || d.source !== 'anyreach-widget') return;
+    if (d.type === 'resize') {
+      var w = Number(d.width);
+      var h = Number(d.height);
+      if (!isNaN(w)) iframe.style.width = w + 'px';
+      if (!isNaN(h)) iframe.style.height = h + 'px';
+    } else if (d.type === 'position') {
+      var r = Number(d.right);
+      var b = Number(d.bottom);
+      if (!isNaN(r)) iframe.style.right = r + 'px';
+      if (!isNaN(b)) iframe.style.bottom = b + 'px';
     }
-  });
+  }
+  window.addEventListener('message', onMessage);
 })();
 </script>
 
