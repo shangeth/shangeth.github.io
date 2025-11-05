@@ -5115,22 +5115,21 @@ Entropy Entropy is the expected …
   iframe.style.position = 'fixed';
   iframe.style.border = '0';
   iframe.style.zIndex = '2147483647';
-  iframe.style.bottom = '0';
-  iframe.style.right = '0';
   
-  // Responsive sizing
-  if (window.innerWidth <= 768) {
-    // Mobile: Full width and height with some margin
-    iframe.style.width = '100vw';
-    iframe.style.height = '100vh';
-    iframe.style.maxWidth = '100vw';
-    iframe.style.maxHeight = '100vh';
-  } else {
-    // Desktop: Fixed widget size
-    iframe.style.width = '400px';
-    iframe.style.height = '600px';
+  // Desktop: standard size
+  if (window.innerWidth > 768) {
     iframe.style.bottom = '20px';
     iframe.style.right = '20px';
+    iframe.style.width = '400px';
+    iframe.style.height = '600px';
+  } else {
+    // Mobile: full screen with small margins
+    iframe.style.bottom = '0';
+    iframe.style.right = '0';
+    iframe.style.left = '0';
+    iframe.style.top = '0';
+    iframe.style.width = '100%';
+    iframe.style.height = '100%';
   }
   
   (document.body || document.documentElement).appendChild(iframe);
