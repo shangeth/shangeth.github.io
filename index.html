@@ -5100,6 +5100,25 @@ Entropy Entropy is the expected …
     
     <script src="/js/academic.min.ee8463f2a394889d45e169a983fe913d.js"></script>
 
+    <script>
+(function () {
+  var HOST = 'https://app.anyreach.ai';
+  var WIDGET_ID = 'ca80a75b-43b7-47a1-bb92-c138b801b4bd';
+
+  var iframe = document.createElement('iframe');
+  iframe.id = 'anyreach-iframe';
+  iframe.src = HOST + '/public/widgets/' + encodeURIComponent(WIDGET_ID);
+  iframe.title = 'Anyreach Chat';
+  iframe.loading = 'lazy';
+  iframe.allow = 'microphone; autoplay; clipboard-write';
+  iframe.referrerPolicy = 'origin-when-cross-origin';
+  iframe.style.position = 'fixed';
+  iframe.style.border = '0';
+  iframe.style.zIndex = '2147483647';
+  (document.body || document.documentElement).appendChild(iframe);
+})();
+</script>
+
   </body>
 </html>
 
