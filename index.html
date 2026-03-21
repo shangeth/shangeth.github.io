@@ -5100,47 +5100,6 @@ Entropy Entropy is the expected …
     
     <script src="/js/academic.min.ee8463f2a394889d45e169a983fe913d.js"></script>
 
-    <script>
-(function () {
-  var HOST = 'https://app.anyreach.ai';
-  var WIDGET_ID = 'ca80a75b-43b7-47a1-bb92-c138b801b4bd';
-
-  var iframe = document.createElement('iframe');
-  iframe.id = 'anyreach-iframe';
-  iframe.src = HOST + '/public/widgets/' + encodeURIComponent(WIDGET_ID);
-  iframe.title = 'Anyreach Chat';
-  iframe.loading = 'lazy';
-  iframe.allow = 'microphone; autoplay; clipboard-write';
-  iframe.referrerPolicy = 'origin-when-cross-origin';
-  iframe.style.position = 'fixed';
-  iframe.style.border = '0';
-  iframe.style.zIndex = '2147483647';
-  iframe.style.bottom = '20px';
-  iframe.style.right = '20px';
-  iframe.style.width = '10px';
-  iframe.style.height = '10px';
-  iframe.style.background = 'transparent';
-  iframe.style.colorScheme = 'light dark';
-  (document.body || document.documentElement).appendChild(iframe);
-
-  function onMessage(e) {
-    var d = e && e.data;
-    if (!d || d.source !== 'anyreach-widget') return;
-    if (d.type === 'resize') {
-      var w = Number(d.width);
-      var h = Number(d.height);
-      if (!isNaN(w)) iframe.style.width = w + 'px';
-      if (!isNaN(h)) iframe.style.height = h + 'px';
-    } else if (d.type === 'position') {
-      var r = Number(d.right);
-      var b = Number(d.bottom);
-      if (!isNaN(r)) iframe.style.right = r + 'px';
-      if (!isNaN(b)) iframe.style.bottom = b + 'px';
-    }
-  }
-  window.addEventListener('message', onMessage);
-})();
-</script>
 
   </body>
 </html>
