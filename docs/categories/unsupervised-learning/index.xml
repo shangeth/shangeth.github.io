@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Unsupervised Learning on Shangeth</title>
-    <link>//localhost:1313/categories/unsupervised-learning/</link>
+    <link>/categories/unsupervised-learning/</link>
     <description>Recent content in Unsupervised Learning on Shangeth</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     <copyright>&amp;copy; {year} Shangeth Rajaa</copyright>
     <lastBuildDate>Mon, 20 May 2019 00:00:00 +0000</lastBuildDate>
     
-	    <atom:link href="//localhost:1313/categories/unsupervised-learning/index.xml" rel="self" type="application/rss+xml" />
+	    <atom:link href="/categories/unsupervised-learning/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Unsupervised Learning 101</title>
-      <link>//localhost:1313/post/unsupervised-learning/</link>
+      <link>/post/unsupervised-learning/</link>
       <pubDate>Mon, 20 May 2019 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/post/unsupervised-learning/</guid>
+      <guid>/post/unsupervised-learning/</guid>
       <description>&lt;h1 id=&#34;machine-learning-is-broadly-divided-into-3-types&#34;&gt;Machine Learning is broadly divided into 3 types:&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;

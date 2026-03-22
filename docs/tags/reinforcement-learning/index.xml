@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Reinforcement Learning on Shangeth</title>
-    <link>//localhost:1313/tags/reinforcement-learning/</link>
+    <link>/tags/reinforcement-learning/</link>
     <description>Recent content in Reinforcement Learning on Shangeth</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     <copyright>&amp;copy; {year} Shangeth Rajaa</copyright>
     <lastBuildDate>Tue, 01 Jun 2021 00:00:00 +0000</lastBuildDate>
     
-	    <atom:link href="//localhost:1313/tags/reinforcement-learning/index.xml" rel="self" type="application/rss+xml" />
+	    <atom:link href="/tags/reinforcement-learning/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>RL based framework to generate optimal data quality remediation sequence for machine learning</title>
-      <link>//localhost:1313/publication/sigmod/</link>
+      <link>/publication/sigmod/</link>
       <pubDate>Tue, 01 Jun 2021 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/publication/sigmod/</guid>
+      <guid>/publication/sigmod/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Cite as:&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Shangeth Rajaa, Nitin Gupta, Hima Patel, Shanmukh Chaitanya, Ruhi Sharma Mittal, Lokesh N, Naveen Panwar, Shazia Afzal, Sameep Mehta. RL based framework to generate optimal data quality remediation sequence for machine learning. SIGMOD 2021.&lt;/p&gt;
 </description>
@@ -24,9 +24,9 @@
     
     <item>
       <title>Off Policy Monte Carlo Prediction with Importance sampling</title>
-      <link>//localhost:1313/post/off-policy-monte-carlo/</link>
+      <link>/post/off-policy-monte-carlo/</link>
       <pubDate>Sat, 01 Aug 2020 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/post/off-policy-monte-carlo/</guid>
+      <guid>/post/off-policy-monte-carlo/</guid>
       <description>&lt;h1 id=&#34;off-policy-monte-carlo-with-importance-sampling&#34;&gt;Off-Policy Monte Carlo with Importance Sampling&lt;/h1&gt;
 &lt;h2 id=&#34;off-policy-learning&#34;&gt;Off Policy Learning&lt;/h2&gt;
 &lt;h3 id=&#34;link-to-the-notebook&#34;&gt;&lt;a href=&#34;https://github.com/shangeth/Monte-Carlo-Prediction/blob/master/Off_Policy_Learning_with_Importance_Sampling.ipynb&#34;&gt;Link to the Notebook&lt;/a&gt;&lt;/h3&gt;
@@ -205,33 +205,33 @@ Random Action 1
     
     <item>
       <title>DRL Navigator</title>
-      <link>//localhost:1313/project/drl-navigator/</link>
+      <link>/project/drl-navigator/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/project/drl-navigator/</guid>
+      <guid>/project/drl-navigator/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Monte Carlo Prediction</title>
-      <link>//localhost:1313/project/monte-carlo/</link>
+      <link>/project/monte-carlo/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/project/monte-carlo/</guid>
+      <guid>/project/monte-carlo/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Policy Based Reinforcement Learning</title>
-      <link>//localhost:1313/project/policy-based-rl/</link>
+      <link>/project/policy-based-rl/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/project/policy-based-rl/</guid>
+      <guid>/project/policy-based-rl/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Temporal Difference</title>
-      <link>//localhost:1313/project/temporal-difference/</link>
+      <link>/project/temporal-difference/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/project/temporal-difference/</guid>
+      <guid>/project/temporal-difference/</guid>
       <description></description>
     </item>
     

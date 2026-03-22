@@ -2,237 +2,237 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Shangeth</title>
-    <link>//localhost:1313/tags/</link>
+    <link>/tags/</link>
     <description>Recent content in Tags on Shangeth</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     <copyright>&amp;copy; {year} Shangeth Rajaa</copyright>
     <lastBuildDate>Mon, 09 Mar 2026 00:00:00 +0000</lastBuildDate>
     
-	    <atom:link href="//localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+	    <atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Conversational AI</title>
-      <link>//localhost:1313/tags/conversational-ai/</link>
+      <link>/tags/conversational-ai/</link>
       <pubDate>Mon, 09 Mar 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/tags/conversational-ai/</guid>
+      <guid>/tags/conversational-ai/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Deep Learning</title>
-      <link>//localhost:1313/tags/deep-learning/</link>
+      <link>/tags/deep-learning/</link>
       <pubDate>Mon, 09 Mar 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/tags/deep-learning/</guid>
+      <guid>/tags/deep-learning/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Large Language Models</title>
-      <link>//localhost:1313/tags/large-language-models/</link>
+      <link>/tags/large-language-models/</link>
       <pubDate>Mon, 09 Mar 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/tags/large-language-models/</guid>
+      <guid>/tags/large-language-models/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Speech</title>
-      <link>//localhost:1313/tags/speech/</link>
+      <link>/tags/speech/</link>
       <pubDate>Mon, 09 Mar 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/tags/speech/</guid>
+      <guid>/tags/speech/</guid>
       <description></description>
     </item>
     
     <item>
       <title>NLP</title>
-      <link>//localhost:1313/tags/nlp/</link>
+      <link>/tags/nlp/</link>
       <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/tags/nlp/</guid>
+      <guid>/tags/nlp/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Speaker Profiling</title>
-      <link>//localhost:1313/tags/speaker-profiling/</link>
+      <link>/tags/speaker-profiling/</link>
       <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/tags/speaker-profiling/</guid>
+      <guid>/tags/speaker-profiling/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Language Identification</title>
-      <link>//localhost:1313/tags/language-identification/</link>
+      <link>/tags/language-identification/</link>
       <pubDate>Thu, 01 Jun 2023 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/tags/language-identification/</guid>
+      <guid>/tags/language-identification/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Spoken Language Understanding</title>
-      <link>//localhost:1313/tags/spoken-language-understanding/</link>
+      <link>/tags/spoken-language-understanding/</link>
       <pubDate>Mon, 01 May 2023 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/tags/spoken-language-understanding/</guid>
+      <guid>/tags/spoken-language-understanding/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Dataset</title>
-      <link>//localhost:1313/tags/dataset/</link>
+      <link>/tags/dataset/</link>
       <pubDate>Thu, 01 Dec 2022 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/tags/dataset/</guid>
+      <guid>/tags/dataset/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Data Quality</title>
-      <link>//localhost:1313/tags/data-quality/</link>
+      <link>/tags/data-quality/</link>
       <pubDate>Tue, 01 Jun 2021 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/tags/data-quality/</guid>
+      <guid>/tags/data-quality/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Reinforcement Learning</title>
-      <link>//localhost:1313/tags/reinforcement-learning/</link>
+      <link>/tags/reinforcement-learning/</link>
       <pubDate>Tue, 01 Jun 2021 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/tags/reinforcement-learning/</guid>
+      <guid>/tags/reinforcement-learning/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Information Theory</title>
-      <link>//localhost:1313/tags/information-theory/</link>
+      <link>/tags/information-theory/</link>
       <pubDate>Tue, 01 Sep 2020 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/tags/information-theory/</guid>
+      <guid>/tags/information-theory/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Python</title>
-      <link>//localhost:1313/tags/python/</link>
+      <link>/tags/python/</link>
       <pubDate>Tue, 01 Sep 2020 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/tags/python/</guid>
+      <guid>/tags/python/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Auto Deep Learning</title>
-      <link>//localhost:1313/tags/auto-deep-learning/</link>
+      <link>/tags/auto-deep-learning/</link>
       <pubDate>Mon, 01 Jun 2020 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/tags/auto-deep-learning/</guid>
+      <guid>/tags/auto-deep-learning/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Machine Learning</title>
-      <link>//localhost:1313/tags/machine-learning/</link>
+      <link>/tags/machine-learning/</link>
       <pubDate>Mon, 01 Jun 2020 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/tags/machine-learning/</guid>
+      <guid>/tags/machine-learning/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Computer Vision</title>
-      <link>//localhost:1313/tags/computer-vision/</link>
+      <link>/tags/computer-vision/</link>
       <pubDate>Mon, 08 Jul 2019 01:07:01 +0530</pubDate>
-      <guid>//localhost:1313/tags/computer-vision/</guid>
+      <guid>/tags/computer-vision/</guid>
       <description></description>
     </item>
     
     <item>
       <title>JavaScript</title>
-      <link>//localhost:1313/tags/javascript/</link>
+      <link>/tags/javascript/</link>
       <pubDate>Mon, 08 Jul 2019 01:07:01 +0530</pubDate>
-      <guid>//localhost:1313/tags/javascript/</guid>
+      <guid>/tags/javascript/</guid>
       <description></description>
     </item>
     
     <item>
       <title>PyTorch</title>
-      <link>//localhost:1313/tags/pytorch/</link>
+      <link>/tags/pytorch/</link>
       <pubDate>Mon, 08 Jul 2019 01:07:01 +0530</pubDate>
-      <guid>//localhost:1313/tags/pytorch/</guid>
+      <guid>/tags/pytorch/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Tensorflow</title>
-      <link>//localhost:1313/tags/tensorflow/</link>
+      <link>/tags/tensorflow/</link>
       <pubDate>Mon, 08 Jul 2019 01:07:01 +0530</pubDate>
-      <guid>//localhost:1313/tags/tensorflow/</guid>
+      <guid>/tags/tensorflow/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Flask</title>
-      <link>//localhost:1313/tags/flask/</link>
+      <link>/tags/flask/</link>
       <pubDate>Fri, 14 Jun 2019 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/tags/flask/</guid>
+      <guid>/tags/flask/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Source Themes</title>
-      <link>//localhost:1313/tags/source-themes/</link>
+      <link>/tags/source-themes/</link>
       <pubDate>Fri, 14 Jun 2019 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/tags/source-themes/</guid>
+      <guid>/tags/source-themes/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Deep Learning Post</title>
-      <link>//localhost:1313/tags/deep-learning-post/</link>
+      <link>/tags/deep-learning-post/</link>
       <pubDate>Sat, 25 May 2019 04:43:00 +0000</pubDate>
-      <guid>//localhost:1313/tags/deep-learning-post/</guid>
+      <guid>/tags/deep-learning-post/</guid>
       <description></description>
     </item>
     
     <item>
       <title>GAN Post</title>
-      <link>//localhost:1313/tags/gan-post/</link>
+      <link>/tags/gan-post/</link>
       <pubDate>Sat, 25 May 2019 04:43:00 +0000</pubDate>
-      <guid>//localhost:1313/tags/gan-post/</guid>
+      <guid>/tags/gan-post/</guid>
       <description></description>
     </item>
     
     <item>
       <title>GAN Post## Supervised Learning</title>
-      <link>//localhost:1313/tags/gan-post%23%23-supervised-learning/</link>
+      <link>/tags/gan-post%23%23-supervised-learning/</link>
       <pubDate>Tue, 21 May 2019 03:43:00 +0000</pubDate>
-      <guid>//localhost:1313/tags/gan-post%23%23-supervised-learning/</guid>
+      <guid>/tags/gan-post%23%23-supervised-learning/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Unsupervised Learning Post</title>
-      <link>//localhost:1313/tags/unsupervised-learning-post/</link>
+      <link>/tags/unsupervised-learning-post/</link>
       <pubDate>Mon, 20 May 2019 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/tags/unsupervised-learning-post/</guid>
+      <guid>/tags/unsupervised-learning-post/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Keras</title>
-      <link>//localhost:1313/tags/keras/</link>
+      <link>/tags/keras/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/tags/keras/</guid>
+      <guid>/tags/keras/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Self Driving Cars</title>
-      <link>//localhost:1313/tags/self-driving-cars/</link>
+      <link>/tags/self-driving-cars/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/tags/self-driving-cars/</guid>
+      <guid>/tags/self-driving-cars/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Topic Modelling</title>
-      <link>//localhost:1313/tags/topic-modelling/</link>
+      <link>/tags/topic-modelling/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/tags/topic-modelling/</guid>
+      <guid>/tags/topic-modelling/</guid>
       <description></description>
     </item>
     

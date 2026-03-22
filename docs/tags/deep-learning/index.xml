@@ -2,69 +2,69 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Deep Learning on Shangeth</title>
-    <link>//localhost:1313/tags/deep-learning/</link>
+    <link>/tags/deep-learning/</link>
     <description>Recent content in Deep Learning on Shangeth</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     <copyright>&amp;copy; {year} Shangeth Rajaa</copyright>
     <lastBuildDate>Mon, 09 Mar 2026 00:00:00 +0000</lastBuildDate>
     
-	    <atom:link href="//localhost:1313/tags/deep-learning/index.xml" rel="self" type="application/rss+xml" />
+	    <atom:link href="/tags/deep-learning/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>DualTurn: Learning Turn-Taking from Dual-Channel Generative Speech Pretraining</title>
-      <link>//localhost:1313/publication/dualturn/</link>
+      <link>/publication/dualturn/</link>
       <pubDate>Mon, 09 Mar 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/publication/dualturn/</guid>
+      <guid>/publication/dualturn/</guid>
       <description></description>
     </item>
     
     <item>
       <title>SpeechLLM: Multi-Modal LLM for Speech Understanding</title>
-      <link>//localhost:1313/publication/speechllm/</link>
+      <link>/publication/speechllm/</link>
       <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/publication/speechllm/</guid>
+      <guid>/publication/speechllm/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Improving spoken language identification with MAP-Mix</title>
-      <link>//localhost:1313/publication/icassp2023/</link>
+      <link>/publication/icassp2023/</link>
       <pubDate>Thu, 01 Jun 2023 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/publication/icassp2023/</guid>
+      <guid>/publication/icassp2023/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Improving end-to-end spoken language understanding with prosodic attention and distillation</title>
-      <link>//localhost:1313/publication/slu-prosodic/</link>
+      <link>/publication/slu-prosodic/</link>
       <pubDate>Mon, 01 May 2023 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/publication/slu-prosodic/</guid>
+      <guid>/publication/slu-prosodic/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Skit-S2I: An Indian Accented Speech to Intent Dataset</title>
-      <link>//localhost:1313/publication/skit-s2i/</link>
+      <link>/publication/skit-s2i/</link>
       <pubDate>Thu, 01 Dec 2022 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/publication/skit-s2i/</guid>
+      <guid>/publication/skit-s2i/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Learning speaker representation with semi-supervised learning approach for speaker profiling</title>
-      <link>//localhost:1313/publication/speaker-representation/</link>
+      <link>/publication/speaker-representation/</link>
       <pubDate>Fri, 01 Oct 2021 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/publication/speaker-representation/</guid>
+      <guid>/publication/speaker-representation/</guid>
       <description></description>
     </item>
     
     <item>
       <title>RL based framework to generate optimal data quality remediation sequence for machine learning</title>
-      <link>//localhost:1313/publication/sigmod/</link>
+      <link>/publication/sigmod/</link>
       <pubDate>Tue, 01 Jun 2021 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/publication/sigmod/</guid>
+      <guid>/publication/sigmod/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Cite as:&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Shangeth Rajaa, Nitin Gupta, Hima Patel, Shanmukh Chaitanya, Ruhi Sharma Mittal, Lokesh N, Naveen Panwar, Shazia Afzal, Sameep Mehta. RL based framework to generate optimal data quality remediation sequence for machine learning. SIGMOD 2021.&lt;/p&gt;
 </description>
@@ -72,25 +72,25 @@
     
     <item>
       <title>Facial Emotion Recognition PyTorch ONNX</title>
-      <link>//localhost:1313/project/facial-emotion-recognition-pytorch/</link>
+      <link>/project/facial-emotion-recognition-pytorch/</link>
       <pubDate>Mon, 08 Jul 2019 01:07:01 +0530</pubDate>
-      <guid>//localhost:1313/project/facial-emotion-recognition-pytorch/</guid>
+      <guid>/project/facial-emotion-recognition-pytorch/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Pneumonia Diagnosis with Deep Learning</title>
-      <link>//localhost:1313/project/pneumonia-diagnosis-with-deep-learning/</link>
+      <link>/project/pneumonia-diagnosis-with-deep-learning/</link>
       <pubDate>Fri, 14 Jun 2019 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/project/pneumonia-diagnosis-with-deep-learning/</guid>
+      <guid>/project/pneumonia-diagnosis-with-deep-learning/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Convolutional Feature Extraction and Neural Arithmetic Logic Units for Stock Prediction</title>
-      <link>//localhost:1313/publication/icacds/</link>
+      <link>/publication/icacds/</link>
       <pubDate>Sat, 18 May 2019 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/publication/icacds/</guid>
+      <guid>/publication/icacds/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Cite as :&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Rajaa S., Sahoo J.K. (2019) Convolutional Feature Extraction and Neural Arithmetic Logic Units for Stock Prediction. In: Singh M., Gupta P., Tyagi V., Flusser J., Ören T., Kashyap R. (eds) Advances in Computing and Data Sciences. ICACDS 2019. Communications in Computer and Information Science, vol 1045. Springer, Singapore&lt;/p&gt;
 </description>
@@ -98,129 +98,129 @@
     
     <item>
       <title>Character Generating RNN</title>
-      <link>//localhost:1313/project/character-generating-rnn/</link>
+      <link>/project/character-generating-rnn/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/project/character-generating-rnn/</guid>
+      <guid>/project/character-generating-rnn/</guid>
       <description></description>
     </item>
     
     <item>
       <title>DRL Navigator</title>
-      <link>//localhost:1313/project/drl-navigator/</link>
+      <link>/project/drl-navigator/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/project/drl-navigator/</guid>
+      <guid>/project/drl-navigator/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Emojification</title>
-      <link>//localhost:1313/project/emojification/</link>
+      <link>/project/emojification/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/project/emojification/</guid>
+      <guid>/project/emojification/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Hand Gesture Recognition</title>
-      <link>//localhost:1313/project/hand-gesture-recognition/</link>
+      <link>/project/hand-gesture-recognition/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/project/hand-gesture-recognition/</guid>
+      <guid>/project/hand-gesture-recognition/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Lane Detection with Deep Learning</title>
-      <link>//localhost:1313/project/lane-detection/</link>
+      <link>/project/lane-detection/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/project/lane-detection/</guid>
+      <guid>/project/lane-detection/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Monte Carlo Prediction</title>
-      <link>//localhost:1313/project/monte-carlo/</link>
+      <link>/project/monte-carlo/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/project/monte-carlo/</guid>
+      <guid>/project/monte-carlo/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Multi Tasking Learning</title>
-      <link>//localhost:1313/talk/multi-tasking-learning/</link>
+      <link>/talk/multi-tasking-learning/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/talk/multi-tasking-learning/</guid>
+      <guid>/talk/multi-tasking-learning/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Multi Tasking Learning for face characterization</title>
-      <link>//localhost:1313/project/multitasking-learning/</link>
+      <link>/project/multitasking-learning/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/project/multitasking-learning/</guid>
+      <guid>/project/multitasking-learning/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Neural Style Transfer</title>
-      <link>//localhost:1313/project/neural-style-transfer/</link>
+      <link>/project/neural-style-transfer/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/project/neural-style-transfer/</guid>
+      <guid>/project/neural-style-transfer/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Policy Based Reinforcement Learning</title>
-      <link>//localhost:1313/project/policy-based-rl/</link>
+      <link>/project/policy-based-rl/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/project/policy-based-rl/</guid>
+      <guid>/project/policy-based-rl/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Self Driving Cars Steering Angle Prediction</title>
-      <link>//localhost:1313/project/self-driving-cars-steering-angle-prediction/</link>
+      <link>/project/self-driving-cars-steering-angle-prediction/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/project/self-driving-cars-steering-angle-prediction/</guid>
+      <guid>/project/self-driving-cars-steering-angle-prediction/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Self Driving Cars Vehicle Detection</title>
-      <link>//localhost:1313/project/self-driving-cars-vehicle-detection/</link>
+      <link>/project/self-driving-cars-vehicle-detection/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/project/self-driving-cars-vehicle-detection/</guid>
+      <guid>/project/self-driving-cars-vehicle-detection/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Seq2Seq Machine Translation</title>
-      <link>//localhost:1313/project/seq2seq-machine-translation/</link>
+      <link>/project/seq2seq-machine-translation/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/project/seq2seq-machine-translation/</guid>
+      <guid>/project/seq2seq-machine-translation/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Signature Verification with Deep Learning</title>
-      <link>//localhost:1313/project/signature-verification/</link>
+      <link>/project/signature-verification/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/project/signature-verification/</guid>
+      <guid>/project/signature-verification/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Temporal Difference</title>
-      <link>//localhost:1313/project/temporal-difference/</link>
+      <link>/project/temporal-difference/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/project/temporal-difference/</guid>
+      <guid>/project/temporal-difference/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Vehicle Speed Estimation</title>
-      <link>//localhost:1313/project/vehicle-speed-estimation/</link>
+      <link>/project/vehicle-speed-estimation/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/project/vehicle-speed-estimation/</guid>
+      <guid>/project/vehicle-speed-estimation/</guid>
       <description></description>
     </item>
     

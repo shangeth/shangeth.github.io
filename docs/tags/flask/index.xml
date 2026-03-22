@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Flask on Shangeth</title>
-    <link>//localhost:1313/tags/flask/</link>
+    <link>/tags/flask/</link>
     <description>Recent content in Flask on Shangeth</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     <copyright>&amp;copy; {year} Shangeth Rajaa</copyright>
     <lastBuildDate>Fri, 14 Jun 2019 00:00:00 +0000</lastBuildDate>
     
-	    <atom:link href="//localhost:1313/tags/flask/index.xml" rel="self" type="application/rss+xml" />
+	    <atom:link href="/tags/flask/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Pneumonia Diagnosis with Deep Learning</title>
-      <link>//localhost:1313/project/pneumonia-diagnosis-with-deep-learning/</link>
+      <link>/project/pneumonia-diagnosis-with-deep-learning/</link>
       <pubDate>Fri, 14 Jun 2019 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/project/pneumonia-diagnosis-with-deep-learning/</guid>
+      <guid>/project/pneumonia-diagnosis-with-deep-learning/</guid>
       <description></description>
     </item>
     

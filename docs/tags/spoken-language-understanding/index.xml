@@ -2,29 +2,29 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Spoken Language Understanding on Shangeth</title>
-    <link>//localhost:1313/tags/spoken-language-understanding/</link>
+    <link>/tags/spoken-language-understanding/</link>
     <description>Recent content in Spoken Language Understanding on Shangeth</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     <copyright>&amp;copy; {year} Shangeth Rajaa</copyright>
     <lastBuildDate>Mon, 01 May 2023 00:00:00 +0000</lastBuildDate>
     
-	    <atom:link href="//localhost:1313/tags/spoken-language-understanding/index.xml" rel="self" type="application/rss+xml" />
+	    <atom:link href="/tags/spoken-language-understanding/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Improving end-to-end spoken language understanding with prosodic attention and distillation</title>
-      <link>//localhost:1313/publication/slu-prosodic/</link>
+      <link>/publication/slu-prosodic/</link>
       <pubDate>Mon, 01 May 2023 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/publication/slu-prosodic/</guid>
+      <guid>/publication/slu-prosodic/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Skit-S2I: An Indian Accented Speech to Intent Dataset</title>
-      <link>//localhost:1313/publication/skit-s2i/</link>
+      <link>/publication/skit-s2i/</link>
       <pubDate>Thu, 01 Dec 2022 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/publication/skit-s2i/</guid>
+      <guid>/publication/skit-s2i/</guid>
       <description></description>
     </item>
     

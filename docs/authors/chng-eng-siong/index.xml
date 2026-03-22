@@ -2,29 +2,29 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Chng Eng Siong on Shangeth</title>
-    <link>//localhost:1313/authors/chng-eng-siong/</link>
+    <link>/authors/chng-eng-siong/</link>
     <description>Recent content in Chng Eng Siong on Shangeth</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     <copyright>&amp;copy; {year} Shangeth Rajaa</copyright>
     <lastBuildDate>Thu, 01 Jun 2023 00:00:00 +0000</lastBuildDate>
     
-	    <atom:link href="//localhost:1313/authors/chng-eng-siong/index.xml" rel="self" type="application/rss+xml" />
+	    <atom:link href="/authors/chng-eng-siong/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Improving spoken language identification with MAP-Mix</title>
-      <link>//localhost:1313/publication/icassp2023/</link>
+      <link>/publication/icassp2023/</link>
       <pubDate>Thu, 01 Jun 2023 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/publication/icassp2023/</guid>
+      <guid>/publication/icassp2023/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Learning speaker representation with semi-supervised learning approach for speaker profiling</title>
-      <link>//localhost:1313/publication/speaker-representation/</link>
+      <link>/publication/speaker-representation/</link>
       <pubDate>Fri, 01 Oct 2021 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/publication/speaker-representation/</guid>
+      <guid>/publication/speaker-representation/</guid>
       <description></description>
     </item>
     

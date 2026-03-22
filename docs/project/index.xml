@@ -2,213 +2,213 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Projects on Shangeth</title>
-    <link>//localhost:1313/project/</link>
+    <link>/project/</link>
     <description>Recent content in Projects on Shangeth</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     <copyright>&amp;copy; {year} Shangeth Rajaa</copyright>
     <lastBuildDate>Mon, 08 Jul 2019 01:07:01 +0530</lastBuildDate>
     
-	    <atom:link href="//localhost:1313/project/index.xml" rel="self" type="application/rss+xml" />
+	    <atom:link href="/project/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Facial Emotion Recognition PyTorch ONNX</title>
-      <link>//localhost:1313/project/facial-emotion-recognition-pytorch/</link>
+      <link>/project/facial-emotion-recognition-pytorch/</link>
       <pubDate>Mon, 08 Jul 2019 01:07:01 +0530</pubDate>
-      <guid>//localhost:1313/project/facial-emotion-recognition-pytorch/</guid>
+      <guid>/project/facial-emotion-recognition-pytorch/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Pneumonia Diagnosis with Deep Learning</title>
-      <link>//localhost:1313/project/pneumonia-diagnosis-with-deep-learning/</link>
+      <link>/project/pneumonia-diagnosis-with-deep-learning/</link>
       <pubDate>Fri, 14 Jun 2019 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/project/pneumonia-diagnosis-with-deep-learning/</guid>
+      <guid>/project/pneumonia-diagnosis-with-deep-learning/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Character Generating RNN</title>
-      <link>//localhost:1313/project/character-generating-rnn/</link>
+      <link>/project/character-generating-rnn/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/project/character-generating-rnn/</guid>
+      <guid>/project/character-generating-rnn/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Computer Vision Security System</title>
-      <link>//localhost:1313/project/computer-vision-security-system/</link>
+      <link>/project/computer-vision-security-system/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/project/computer-vision-security-system/</guid>
+      <guid>/project/computer-vision-security-system/</guid>
       <description></description>
     </item>
     
     <item>
       <title>DRL Navigator</title>
-      <link>//localhost:1313/project/drl-navigator/</link>
+      <link>/project/drl-navigator/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/project/drl-navigator/</guid>
+      <guid>/project/drl-navigator/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Emojification</title>
-      <link>//localhost:1313/project/emojification/</link>
+      <link>/project/emojification/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/project/emojification/</guid>
+      <guid>/project/emojification/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Hand Gesture Recognition</title>
-      <link>//localhost:1313/project/hand-gesture-recognition/</link>
+      <link>/project/hand-gesture-recognition/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/project/hand-gesture-recognition/</guid>
+      <guid>/project/hand-gesture-recognition/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Lane Detection with Deep Learning</title>
-      <link>//localhost:1313/project/lane-detection/</link>
+      <link>/project/lane-detection/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/project/lane-detection/</guid>
+      <guid>/project/lane-detection/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Monte Carlo Prediction</title>
-      <link>//localhost:1313/project/monte-carlo/</link>
+      <link>/project/monte-carlo/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/project/monte-carlo/</guid>
+      <guid>/project/monte-carlo/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Multi Tasking Learning for face characterization</title>
-      <link>//localhost:1313/project/multitasking-learning/</link>
+      <link>/project/multitasking-learning/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/project/multitasking-learning/</guid>
+      <guid>/project/multitasking-learning/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Neural Style Transfer</title>
-      <link>//localhost:1313/project/neural-style-transfer/</link>
+      <link>/project/neural-style-transfer/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/project/neural-style-transfer/</guid>
+      <guid>/project/neural-style-transfer/</guid>
       <description></description>
     </item>
     
     <item>
       <title>NYTimes Topic Modelling</title>
-      <link>//localhost:1313/project/nytimes-topic-modelling/</link>
+      <link>/project/nytimes-topic-modelling/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/project/nytimes-topic-modelling/</guid>
+      <guid>/project/nytimes-topic-modelling/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Policy Based Reinforcement Learning</title>
-      <link>//localhost:1313/project/policy-based-rl/</link>
+      <link>/project/policy-based-rl/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/project/policy-based-rl/</guid>
+      <guid>/project/policy-based-rl/</guid>
       <description></description>
     </item>
     
     <item>
       <title>PyRevShell</title>
-      <link>//localhost:1313/project/pyrevshell/</link>
+      <link>/project/pyrevshell/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/project/pyrevshell/</guid>
+      <guid>/project/pyrevshell/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Self Driving Cars Steering Angle Prediction</title>
-      <link>//localhost:1313/project/self-driving-cars-steering-angle-prediction/</link>
+      <link>/project/self-driving-cars-steering-angle-prediction/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/project/self-driving-cars-steering-angle-prediction/</guid>
+      <guid>/project/self-driving-cars-steering-angle-prediction/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Self Driving Cars Vehicle Detection</title>
-      <link>//localhost:1313/project/self-driving-cars-vehicle-detection/</link>
+      <link>/project/self-driving-cars-vehicle-detection/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/project/self-driving-cars-vehicle-detection/</guid>
+      <guid>/project/self-driving-cars-vehicle-detection/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Seq2Seq Machine Translation</title>
-      <link>//localhost:1313/project/seq2seq-machine-translation/</link>
+      <link>/project/seq2seq-machine-translation/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/project/seq2seq-machine-translation/</guid>
+      <guid>/project/seq2seq-machine-translation/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Signature Verification with Deep Learning</title>
-      <link>//localhost:1313/project/signature-verification/</link>
+      <link>/project/signature-verification/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/project/signature-verification/</guid>
+      <guid>/project/signature-verification/</guid>
       <description></description>
     </item>
     
     <item>
       <title>SockChat</title>
-      <link>//localhost:1313/project/sockchat/</link>
+      <link>/project/sockchat/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/project/sockchat/</guid>
+      <guid>/project/sockchat/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Temporal Difference</title>
-      <link>//localhost:1313/project/temporal-difference/</link>
+      <link>/project/temporal-difference/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/project/temporal-difference/</guid>
+      <guid>/project/temporal-difference/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Tic Tac Toe</title>
-      <link>//localhost:1313/project/tictactoe/</link>
+      <link>/project/tictactoe/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/project/tictactoe/</guid>
+      <guid>/project/tictactoe/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Twitter Sentiment analysis</title>
-      <link>//localhost:1313/project/nltk-sentiment-analysis/</link>
+      <link>/project/nltk-sentiment-analysis/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/project/nltk-sentiment-analysis/</guid>
+      <guid>/project/nltk-sentiment-analysis/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Vehicle Speed Estimation</title>
-      <link>//localhost:1313/project/vehicle-speed-estimation/</link>
+      <link>/project/vehicle-speed-estimation/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/project/vehicle-speed-estimation/</guid>
+      <guid>/project/vehicle-speed-estimation/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Web Builder</title>
-      <link>//localhost:1313/project/web-builder/</link>
+      <link>/project/web-builder/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/project/web-builder/</guid>
+      <guid>/project/web-builder/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Weekly Scheduler</title>
-      <link>//localhost:1313/project/weekly-scheduler/</link>
+      <link>/project/weekly-scheduler/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/project/weekly-scheduler/</guid>
+      <guid>/project/weekly-scheduler/</guid>
       <description></description>
     </item>
     

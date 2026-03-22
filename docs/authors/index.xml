@@ -2,149 +2,149 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Authors on Shangeth</title>
-    <link>//localhost:1313/authors/</link>
+    <link>/authors/</link>
     <description>Recent content in Authors on Shangeth</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     <copyright>&amp;copy; {year} Shangeth Rajaa</copyright>
     <lastBuildDate>Mon, 09 Mar 2026 00:00:00 +0000</lastBuildDate>
     
-	    <atom:link href="//localhost:1313/authors/index.xml" rel="self" type="application/rss+xml" />
+	    <atom:link href="/authors/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Shangeth Rajaa</title>
-      <link>//localhost:1313/authors/shangeth-rajaa/</link>
+      <link>/authors/shangeth-rajaa/</link>
       <pubDate>Mon, 09 Mar 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/authors/shangeth-rajaa/</guid>
+      <guid>/authors/shangeth-rajaa/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Abhinav Tushar</title>
-      <link>//localhost:1313/authors/abhinav-tushar/</link>
+      <link>/authors/abhinav-tushar/</link>
       <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/authors/abhinav-tushar/</guid>
+      <guid>/authors/abhinav-tushar/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Chng Eng Siong</title>
-      <link>//localhost:1313/authors/chng-eng-siong/</link>
+      <link>/authors/chng-eng-siong/</link>
       <pubDate>Thu, 01 Jun 2023 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/authors/chng-eng-siong/</guid>
+      <guid>/authors/chng-eng-siong/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Kriti Anandan</title>
-      <link>//localhost:1313/authors/kriti-anandan/</link>
+      <link>/authors/kriti-anandan/</link>
       <pubDate>Thu, 01 Jun 2023 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/authors/kriti-anandan/</guid>
+      <guid>/authors/kriti-anandan/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Swaraj Dalmia</title>
-      <link>//localhost:1313/authors/swaraj-dalmia/</link>
+      <link>/authors/swaraj-dalmia/</link>
       <pubDate>Thu, 01 Jun 2023 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/authors/swaraj-dalmia/</guid>
+      <guid>/authors/swaraj-dalmia/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Tarun Gupta</title>
-      <link>//localhost:1313/authors/tarun-gupta/</link>
+      <link>/authors/tarun-gupta/</link>
       <pubDate>Thu, 01 Jun 2023 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/authors/tarun-gupta/</guid>
+      <guid>/authors/tarun-gupta/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Kumarmanas Nethil</title>
-      <link>//localhost:1313/authors/kumarmanas-nethil/</link>
+      <link>/authors/kumarmanas-nethil/</link>
       <pubDate>Thu, 01 Dec 2022 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/authors/kumarmanas-nethil/</guid>
+      <guid>/authors/kumarmanas-nethil/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Pham Van Tung</title>
-      <link>//localhost:1313/authors/pham-van-tung/</link>
+      <link>/authors/pham-van-tung/</link>
       <pubDate>Fri, 01 Oct 2021 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/authors/pham-van-tung/</guid>
+      <guid>/authors/pham-van-tung/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Hima Patel</title>
-      <link>//localhost:1313/authors/hima-patel/</link>
+      <link>/authors/hima-patel/</link>
       <pubDate>Tue, 01 Jun 2021 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/authors/hima-patel/</guid>
+      <guid>/authors/hima-patel/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Lokesh N</title>
-      <link>//localhost:1313/authors/lokesh-n/</link>
+      <link>/authors/lokesh-n/</link>
       <pubDate>Tue, 01 Jun 2021 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/authors/lokesh-n/</guid>
+      <guid>/authors/lokesh-n/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Naveen Panwar</title>
-      <link>//localhost:1313/authors/naveen-panwar/</link>
+      <link>/authors/naveen-panwar/</link>
       <pubDate>Tue, 01 Jun 2021 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/authors/naveen-panwar/</guid>
+      <guid>/authors/naveen-panwar/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Nitin Gupta</title>
-      <link>//localhost:1313/authors/nitin-gupta/</link>
+      <link>/authors/nitin-gupta/</link>
       <pubDate>Tue, 01 Jun 2021 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/authors/nitin-gupta/</guid>
+      <guid>/authors/nitin-gupta/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Ruhi Sharma Mittal</title>
-      <link>//localhost:1313/authors/ruhi-sharma-mittal/</link>
+      <link>/authors/ruhi-sharma-mittal/</link>
       <pubDate>Tue, 01 Jun 2021 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/authors/ruhi-sharma-mittal/</guid>
+      <guid>/authors/ruhi-sharma-mittal/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Sameep Mehta</title>
-      <link>//localhost:1313/authors/sameep-mehta/</link>
+      <link>/authors/sameep-mehta/</link>
       <pubDate>Tue, 01 Jun 2021 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/authors/sameep-mehta/</guid>
+      <guid>/authors/sameep-mehta/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Shanmukh Chaitanya</title>
-      <link>//localhost:1313/authors/shanmukh-chaitanya/</link>
+      <link>/authors/shanmukh-chaitanya/</link>
       <pubDate>Tue, 01 Jun 2021 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/authors/shanmukh-chaitanya/</guid>
+      <guid>/authors/shanmukh-chaitanya/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Shazia Afzal</title>
-      <link>//localhost:1313/authors/shazia-afzal/</link>
+      <link>/authors/shazia-afzal/</link>
       <pubDate>Tue, 01 Jun 2021 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/authors/shazia-afzal/</guid>
+      <guid>/authors/shazia-afzal/</guid>
       <description></description>
     </item>
     
     <item>
       <title></title>
-      <link>//localhost:1313/authors/admin/</link>
+      <link>/authors/admin/</link>
       <pubDate>Tue, 01 Sep 2020 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/authors/admin/</guid>
+      <guid>/authors/admin/</guid>
       <description>&lt;p&gt;Senior ML Scientist at &lt;strong&gt;Anyreach AI&lt;/strong&gt;, working on Turn-Taking in Full-Duplex Spoken Dialogue Systems, Multi-Modal Speech LLMs for understanding and synthesis, and Automatic Speech Translation.&lt;/p&gt;
 &lt;p&gt;6+ years in Voice AI research across industry and academia: &lt;strong&gt;Anyreach AI&lt;/strong&gt;, &lt;strong&gt;Skit.ai&lt;/strong&gt;, &lt;strong&gt;NTU Singapore&lt;/strong&gt;, &lt;strong&gt;IBM Research&lt;/strong&gt;, &lt;strong&gt;INRIA Paris&lt;/strong&gt;. Have built and led ML and research teams in early-stage startups, taking products from zero to production. 7 peer-reviewed publications at Interspeech, ICASSP, NeurIPS, and PMLR.&lt;/p&gt;
 &lt;p&gt;Dual Degree in B.E. EEE &amp;amp; M.Sc. Mathematics from BITS Pilani.&lt;/p&gt;
@@ -154,129 +154,129 @@
     
     <item>
       <title>Adrien Pavao</title>
-      <link>//localhost:1313/authors/adrien-pavao/</link>
+      <link>/authors/adrien-pavao/</link>
       <pubDate>Mon, 01 Jun 2020 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/authors/adrien-pavao/</guid>
+      <guid>/authors/adrien-pavao/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Isabelle Guyon</title>
-      <link>//localhost:1313/authors/isabelle-guyon/</link>
+      <link>/authors/isabelle-guyon/</link>
       <pubDate>Mon, 01 Jun 2020 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/authors/isabelle-guyon/</guid>
+      <guid>/authors/isabelle-guyon/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Julio C. S. Jacques Junior</title>
-      <link>//localhost:1313/authors/julio-c.-s.-jacques-junior/</link>
+      <link>/authors/julio-c.-s.-jacques-junior/</link>
       <pubDate>Mon, 01 Jun 2020 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/authors/julio-c.-s.-jacques-junior/</guid>
+      <guid>/authors/julio-c.-s.-jacques-junior/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Meysam Madadi</title>
-      <link>//localhost:1313/authors/meysam-madadi/</link>
+      <link>/authors/meysam-madadi/</link>
       <pubDate>Mon, 01 Jun 2020 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/authors/meysam-madadi/</guid>
+      <guid>/authors/meysam-madadi/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Sebastien Treguer</title>
-      <link>//localhost:1313/authors/sebastien-treguer/</link>
+      <link>/authors/sebastien-treguer/</link>
       <pubDate>Mon, 01 Jun 2020 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/authors/sebastien-treguer/</guid>
+      <guid>/authors/sebastien-treguer/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Sergio Escalera</title>
-      <link>//localhost:1313/authors/sergio-escalera/</link>
+      <link>/authors/sergio-escalera/</link>
       <pubDate>Mon, 01 Jun 2020 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/authors/sergio-escalera/</guid>
+      <guid>/authors/sergio-escalera/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Wei-Wei Tu</title>
-      <link>//localhost:1313/authors/wei-wei-tu/</link>
+      <link>/authors/wei-wei-tu/</link>
       <pubDate>Mon, 01 Jun 2020 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/authors/wei-wei-tu/</guid>
+      <guid>/authors/wei-wei-tu/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Zhen Xu</title>
-      <link>//localhost:1313/authors/zhen-xu/</link>
+      <link>/authors/zhen-xu/</link>
       <pubDate>Mon, 01 Jun 2020 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/authors/zhen-xu/</guid>
+      <guid>/authors/zhen-xu/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Zhengying Liu</title>
-      <link>//localhost:1313/authors/zhengying-liu/</link>
+      <link>/authors/zhengying-liu/</link>
       <pubDate>Mon, 01 Jun 2020 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/authors/zhengying-liu/</guid>
+      <guid>/authors/zhengying-liu/</guid>
       <description></description>
     </item>
     
     <item>
       <title>JulioJacques Junior</title>
-      <link>//localhost:1313/authors/juliojacques-junior/</link>
+      <link>/authors/juliojacques-junior/</link>
       <pubDate>Fri, 14 Jun 2019 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/authors/juliojacques-junior/</guid>
+      <guid>/authors/juliojacques-junior/</guid>
       <description></description>
     </item>
     
     <item>
       <title>MeysamMadadi</title>
-      <link>//localhost:1313/authors/meysammadadi/</link>
+      <link>/authors/meysammadadi/</link>
       <pubDate>Fri, 14 Jun 2019 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/authors/meysammadadi/</guid>
+      <guid>/authors/meysammadadi/</guid>
       <description></description>
     </item>
     
     <item>
       <title>SergioEscalera</title>
-      <link>//localhost:1313/authors/sergioescalera/</link>
+      <link>/authors/sergioescalera/</link>
       <pubDate>Fri, 14 Jun 2019 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/authors/sergioescalera/</guid>
+      <guid>/authors/sergioescalera/</guid>
       <description></description>
     </item>
     
     <item>
       <title>ShangethRajaa</title>
-      <link>//localhost:1313/authors/shangethrajaa/</link>
+      <link>/authors/shangethrajaa/</link>
       <pubDate>Fri, 14 Jun 2019 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/authors/shangethrajaa/</guid>
+      <guid>/authors/shangethrajaa/</guid>
       <description></description>
     </item>
     
     <item>
       <title>ZhengyingLiu</title>
-      <link>//localhost:1313/authors/zhengyingliu/</link>
+      <link>/authors/zhengyingliu/</link>
       <pubDate>Fri, 14 Jun 2019 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/authors/zhengyingliu/</guid>
+      <guid>/authors/zhengyingliu/</guid>
       <description></description>
     </item>
     
     <item>
       <title>ZhenXu</title>
-      <link>//localhost:1313/authors/zhenxu/</link>
+      <link>/authors/zhenxu/</link>
       <pubDate>Fri, 14 Jun 2019 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/authors/zhenxu/</guid>
+      <guid>/authors/zhenxu/</guid>
       <description></description>
     </item>
     
     <item>
       <title>JK Sahoo</title>
-      <link>//localhost:1313/authors/jk-sahoo/</link>
+      <link>/authors/jk-sahoo/</link>
       <pubDate>Sat, 18 May 2019 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/authors/jk-sahoo/</guid>
+      <guid>/authors/jk-sahoo/</guid>
       <description></description>
     </item>
     

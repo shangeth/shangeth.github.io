@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Courses on Shangeth</title>
-    <link>//localhost:1313/courses/</link>
+    <link>/courses/</link>
     <description>Recent content in Courses on Shangeth</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     <copyright>&amp;copy; {year} Shangeth Rajaa</copyright>
     <lastBuildDate>Wed, 18 Sep 2019 00:00:00 +0100</lastBuildDate>
     
-	    <atom:link href="//localhost:1313/courses/index.xml" rel="self" type="application/rss+xml" />
+	    <atom:link href="/courses/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Course Overview</title>
-      <link>//localhost:1313/courses/deeplearning/</link>
+      <link>/courses/deeplearning/</link>
       <pubDate>Thu, 29 Aug 2019 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/courses/deeplearning/</guid>
+      <guid>/courses/deeplearning/</guid>
       <description>&lt;p&gt;Explore Machine Learning (ML) is a Google-sponsored program for university students to get started with Machine Learning. The curriculum offers 3 tracks of machine learning content (Beginner, Intermediate, Advanced) and relies on university student facilitators to train other students on campus.&lt;/p&gt;
 &lt;h1 id=&#34;content&#34;&gt;Content&lt;/h1&gt;
 &lt;p&gt;This course will be part of Explore Machine Learning by Google. The Basic and Intermediate track will be taught in the Fall 2019 at BITS Pilani Goa Campus by Shangeth. The Basic track introduces to deep learning problems(regression and classification) and training Deep Neural Networks for a variety of real world problems like Text Sentiment analysis with ANNs.&lt;/p&gt;
@@ -25,7 +25,7 @@
 Venue and Timing of lectures will be decided based on availability of instructor and students every week.&lt;/p&gt;
 &lt;!-- # Instructor
 &lt;div&gt;
-&lt;img alt=&#39;Instructor&#39; src=&#34;//localhost:1313/img/instructor.jpeg&#34;&gt;
+&lt;img alt=&#39;Instructor&#39; src=&#34;/img/instructor.jpeg&#34;&gt;
 
 &lt;div &gt;
 Shangeth Rajaa&lt;br&gt;
@@ -84,27 +84,27 @@ You only need a basic understanding of simple concepts like differentiation, gra
     
     <item>
       <title>Course Overview</title>
-      <link>//localhost:1313/courses/deeplearning-2/</link>
+      <link>/courses/deeplearning-2/</link>
       <pubDate>Thu, 29 Aug 2019 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/courses/deeplearning-2/</guid>
+      <guid>/courses/deeplearning-2/</guid>
       <description>&lt;h1 id=&#34;will-be-live-soon&#34;&gt;Will be live soon&lt;/h1&gt;
 &lt;h2 id=&#34;check-out-the-basic-track&#34;&gt;Check out the Basic Track&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;//localhost:1313/courses/deeplearning/&#34;&gt;Deep Learning - Basic Track&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/courses/deeplearning/&#34;&gt;Deep Learning - Basic Track&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
     </item>
     
     <item>
       <title>Course Overview</title>
-      <link>//localhost:1313/courses/deeplearning-3/</link>
+      <link>/courses/deeplearning-3/</link>
       <pubDate>Thu, 29 Aug 2019 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/courses/deeplearning-3/</guid>
+      <guid>/courses/deeplearning-3/</guid>
       <description>&lt;h1 id=&#34;will-be-added-after-fall-2019-smile&#34;&gt;Will be added after Fall 2019 &amp;#x1f604;&lt;/h1&gt;
 &lt;h2 id=&#34;check-out-the-basic-and-intermediate-tracks&#34;&gt;Check out the Basic and Intermediate Tracks&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;//localhost:1313/courses/deeplearning/&#34;&gt;Deep Learning - Basic Track&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;//localhost:1313/courses/deeplearning-2/&#34;&gt;Deep Learning - Intermediate Track&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/courses/deeplearning/&#34;&gt;Deep Learning - Basic Track&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/courses/deeplearning-2/&#34;&gt;Deep Learning - Intermediate Track&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
     </item>
