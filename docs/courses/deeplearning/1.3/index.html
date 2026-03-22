@@ -1,0 +1,1244 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academic 4.3.0">
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Shangeth Rajaa">
+
+  
+  
+  
+    
+  
+  <meta name="description" content="
+ Open in GitHub
+Deep Learning - Beginners Track
+Instructor: Shangeth Rajaa
+
+Logistic Regression is one of the most commonly used classification models. Unlike Linear Regression which predicts a real unbounded value $\hat{y} = f(X) = WX&#43;b$, Logistic Regression predicts the probability of a data belonging to a particular class.">
+
+  
+  <link rel="alternate" hreflang="en-us" href="//localhost:1313/courses/deeplearning/1.3/">
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+  
+  <meta name="theme-color" content="hsl(339, 90%, 68%)">
+  
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" integrity="sha256-ygkqlh3CYSUri3LhQxzdcm0n1EQvH2Y+U5S2idbLtxs=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/github.min.css" crossorigin="anonymous" title="hl-light" disabled>
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark">
+        
+      
+    
+
+    
+
+    
+
+  
+
+  
+  
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Montserrat:400,700|Roboto:400,400italic,700|Roboto+Mono">
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="/css/academic.min.fbf82cd35ad1b35acad5131534fed02c.css">
+
+  
+
+  
+
+  
+
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="icon" type="image/png" href="/img/icon.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
+
+  <link rel="canonical" href="//localhost:1313/courses/deeplearning/1.3/">
+
+  
+  
+  
+  
+    
+  
+  <meta property="twitter:card" content="summary_large_image">
+  
+  <meta property="twitter:site" content="@shangethr">
+  <meta property="twitter:creator" content="@shangethr">
+  
+  <meta property="og:site_name" content="Shangeth">
+  <meta property="og:url" content="//localhost:1313/courses/deeplearning/1.3/">
+  <meta property="og:title" content="Logistic Regression | Shangeth">
+  <meta property="og:description" content="
+ Open in GitHub
+Deep Learning - Beginners Track
+Instructor: Shangeth Rajaa
+
+Logistic Regression is one of the most commonly used classification models. Unlike Linear Regression which predicts a real unbounded value $\hat{y} = f(X) = WX&#43;b$, Logistic Regression predicts the probability of a data belonging to a particular class."><meta property="og:image" content="//localhost:1313/img/instructor.jpeg">
+  <meta property="og:locale" content="en-us">
+  
+  <meta property="article:published_time" content="2019-08-30T00:00:00&#43;01:00">
+  
+  <meta property="article:modified_time" content="2019-08-30T00:00:00&#43;01:00">
+  
+
+  
+
+  
+
+  <title>Logistic Regression | Shangeth</title>
+
+</head>
+<body id="top" data-spy="scroll" data-target="#TableOfContents" data-offset="71" class="dark">
+  <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" role="textbox" spellcheck="false" type="search">
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+
+<nav class="navbar navbar-light fixed-top navbar-expand-lg py-0" id="navbar-main">
+  <div class="container">
+
+    
+      <a class="navbar-brand" href="/">Shangeth</a>
+      
+      <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span><i class="fas fa-bars"></i></span>
+      </button>
+      
+
+    
+    <div class="collapse navbar-collapse" id="navbar">
+
+      
+      
+      <ul class="navbar-nav mr-auto">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#about">
+            
+            <span>Home</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#featured">
+            
+            <span>Research</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#experience">
+            
+            <span>Experience</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#posts">
+            
+            <span>Blog</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+            
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="https://github.com/shangeth" target="_blank" rel="noopener">
+            
+            <span>GitHub</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#contact">
+            
+            <span>Contact</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+      
+      </ul>
+      <ul class="navbar-nav ml-auto">
+      
+
+        
+
+        
+        <li class="nav-item">
+          <a class="nav-link js-search" href="#"><i class="fas fa-search" aria-hidden="true"></i></a>
+        </li>
+        
+
+        
+
+        
+        <li class="nav-item">
+          <a class="nav-link js-dark-toggle" href="#"><i class="fas fa-moon" aria-hidden="true"></i></a>
+        </li>
+        
+
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+
+<div class="container-fluid docs">
+  <div class="row flex-xl-nowrap">
+    <div class="col-12 col-md-3 col-xl-2 docs-sidebar">
+      
+
+
+
+
+<form class="docs-search d-flex align-items-center">
+  <button class="btn docs-toggle d-md-none p-0 mr-3" type="button" data-toggle="collapse" data-target="#docs-nav" aria-controls="docs-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    <span><i class="fas fa-bars"></i></span>
+  </button>
+
+  
+  <input name="q" type="search" class="form-control" id="search-query" placeholder="Search..." autocomplete="off">
+  
+</form>
+
+<nav class="collapse docs-links" id="docs-nav">
+  
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/courses/deeplearning/">Course Overview</a>
+
+  </div>
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/courses/deeplearning/0.1/">0.Data and Learning problem</a>
+    <ul class="nav docs-sidenav">
+      
+      <li >
+        <a href="/courses/deeplearning/0.1/">0.1.Data and Learning Problem</a>
+      </li>
+      
+    </ul>
+    
+
+  </div>
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/courses/deeplearning/1.1/">1.Intro to Deep Learning</a>
+    <ul class="nav docs-sidenav">
+      
+      <li >
+        <a href="/courses/deeplearning/1.1/">1.1.Linear Regression</a>
+      </li>
+      
+      <li >
+        <a href="/courses/deeplearning/1.2/">1.2.Assignment - Polynomial Regression</a>
+      </li>
+      
+      <li class="active">
+        <a href="/courses/deeplearning/1.3/">1.3.Logistic Regression</a>
+      </li>
+      
+      <li >
+        <a href="/courses/deeplearning/1.4/">1.4.Assignment - Multiclass Classification</a>
+      </li>
+      
+      <li >
+        <a href="/courses/deeplearning/1.5/">1.5.Multi Layer Perceptron - Motivation</a>
+      </li>
+      
+    </ul>
+    
+
+  </div>
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/courses/deeplearning/2.1/">2.Deep Neural Networks</a>
+    <ul class="nav docs-sidenav">
+      
+      <li >
+        <a href="/courses/deeplearning/2.1/">2.1.Neural Network Architectures</a>
+      </li>
+      
+      <li >
+        <a href="/courses/deeplearning/2.2/">2.2.Batch Training</a>
+      </li>
+      
+      <li >
+        <a href="/courses/deeplearning/2.3/">2.3.Optimizers</a>
+      </li>
+      
+      <li >
+        <a href="/courses/deeplearning/2.4/">2.4.Learning Rate</a>
+      </li>
+      
+      <li >
+        <a href="/courses/deeplearning/2.5/">2.5.Bias &amp; Variance</a>
+      </li>
+      
+      <li >
+        <a href="/courses/deeplearning/2.6/">2.6.Overfitting &amp; Regularization</a>
+      </li>
+      
+      <li >
+        <a href="/courses/deeplearning/2.7/">2.7.ANN - Medical Diagnosis</a>
+      </li>
+      
+      <li >
+        <a href="/courses/deeplearning/2.8/">2.8.ANN - Computer Vision</a>
+      </li>
+      
+      <li >
+        <a href="/courses/deeplearning/2.9/">2.9.ANN - Natural Language Processing</a>
+      </li>
+      
+    </ul>
+    
+
+  </div>
+  
+  
+</nav>
+
+    </div>
+
+    
+    <div class="d-none d-xl-block col-xl-2 docs-toc">
+      
+      <p class="docs-toc-title">On this page</p>
+      
+
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#why-not-use-linear-regression-model-for-classification">Why not use Linear Regression Model for classification?</a></li>
+    <li><a href="#classification-data">Classification Data</a></li>
+    <li><a href="#sigmoidlogistic-function">Sigmoid/Logistic Function</a></li>
+    <li><a href="#gx--dfrac11e-x">$g(x) = \dfrac{1}{1+e^{-x}}$</a></li>
+    <li><a href="#probabilities-with-sigmoid">Probabilities with Sigmoid</a></li>
+    <li><a href="#how-to-compare-the-models">How to compare the models?</a></li>
+    <li><a href="#maximum-likelihood">Maximum Likelihood</a>
+      <ul>
+        <li><a href="#likelihood">Likelihood</a></li>
+      </ul>
+    </li>
+    <li><a href="#finding-the-best-model--gradient-descent">Finding the best Model : Gradient Descent</a></li>
+  </ul>
+</nav>
+
+      <ul class="nav toc-top">
+        <li><a href="#">Back to top</a></li>
+      </ul>
+
+      
+    </div>
+    
+
+    <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 docs-content" role="main">
+
+      <article class="article" itemscope itemtype="http://schema.org/Article">
+
+        <div class="docs-article-container">
+          <h1 itemprop="name">Logistic Regression</h1>
+
+          <div class="article-style" itemprop="articleBody">
+            <p><a href="https://colab.research.google.com/github/shangeth/Google-ML-Academy/blob/master/1-Intro-to-Deep-Learning/1_3_Logistic_Regression.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a></p>
+<center><a href="https://github.com/shangeth/Google-ML-Academy/blob/master/1-Intro-to-Deep-Learning/1_3_Logistic_Regression.ipynb" target="_parent"><svg class="octicon octicon-mark-github v-align-middle" height="30" viewBox="0 0 16 16" version="1.1" width="30" aria-hidden="true"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path></svg> Open in GitHub</a></center>
+<center><h1><a href='https://shangeth.com/courses/'>Deep Learning - Beginners Track</a></h1></center>
+<center><h3>Instructor: <a href='https://shangeth.com/'>Shangeth Rajaa</a></h3></center>
+<hr>
+<p>Logistic Regression is one of the most commonly used classification models. Unlike Linear Regression which predicts a real unbounded value $\hat{y} = f(X) = WX+b$, Logistic Regression predicts the probability of a data belonging to a particular class.</p>
+<br>
+<p>For example for a given data (X,y) where X is a received email and y is 0 if email is spam and 1 if email is not spam. Logistic regression predicts the probability of the email X to be not spam.
+$\hat{y} = f(X) = P(y=1|X)$</p>
+<br>
+<p>So if $\hat{y} = P(y=1|X) &gt; 0.5$ then the probability of the email to be spam ih high, so $X$ is a spam email.</p>
+<p>Other examples of classification can be</p>
+<ul>
+<li>Classification of image as cat, dog, parrot $ y = {0, 1, 2}$. Here y can be a 0 or 1 or 2 depending on the probability of model prediction. (Multi class Classification)</li>
+<li>Classification of Cancer report as Malignant/Benign $y = {0, 1}$. (Binary Classification)</li>
+</ul>
+<h2 id="why-not-use-linear-regression-model-for-classification">Why not use Linear Regression Model for classification?</h2>
+<p>$\hat{y}_{linreg} = WX+b$ where $\hat{y} \in \mathbf{R} $, so the prediction can take value from $-\infty$ to $\infty$.</p>
+<p>$\hat{y}_{classification} \in { 0, 1, 2, ..., n }$, Classification prediction takes discrete values depending on number of classes.</p>
+<p>So we need a model which limits the prediction in the range ${0,1}$ for binary classification and ${0,1, 2, ..., n}$ for multi-class classification.</p>
+<h2 id="classification-data">Classification Data</h2>
+<p>Let's use <code>sklearn.datasets.make_blobs</code> to make a random classification dataset in 2D space so we can visualize it.</p>
+<p>We are generating less data for visualization, for training we will use more data.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> sklearn.datasets <span style="color:#f92672">import</span> make_blobs
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 10 examples, (X)2 features, (y)2 classes</span>
+</span></span><span style="display:flex;"><span>X, y <span style="color:#f92672">=</span> make_blobs(n_samples<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span>, n_features<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span>, centers<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span>, random_state<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>X<span style="color:#f92672">.</span>shape, y<span style="color:#f92672">.</span>shape
+</span></span></code></pre></div><pre><code>((10, 2), (10,))
+</code></pre>
+<p>Let's separate the 0 and 1 class to visualize it.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> numpy <span style="color:#66d9ef">as</span> np
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>class_0 <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>where(y <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>)
+</span></span><span style="display:flex;"><span>class_1 <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>where(y <span style="color:#f92672">==</span> <span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>X_0 <span style="color:#f92672">=</span> X[class_0]
+</span></span><span style="display:flex;"><span>X_1 <span style="color:#f92672">=</span> X[class_1]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>X_0<span style="color:#f92672">.</span>shape, X_1<span style="color:#f92672">.</span>shape
+</span></span></code></pre></div><pre><code>((5, 2), (5, 2))
+</code></pre>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> matplotlib.pyplot <span style="color:#66d9ef">as</span> plt
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>figure(figsize<span style="color:#f92672">=</span>(<span style="color:#ae81ff">12</span>,<span style="color:#ae81ff">9</span>))
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>scatter(X_0[:, <span style="color:#ae81ff">0</span>], X_0[:, <span style="color:#ae81ff">1</span>], marker<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;o&#39;</span>, s<span style="color:#f92672">=</span><span style="color:#ae81ff">150</span>, color<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;blue&#39;</span>, label<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;1&#39;</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>scatter(X_1[:, <span style="color:#ae81ff">0</span>], X_1[:, <span style="color:#ae81ff">1</span>], marker<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;x&#39;</span>, s<span style="color:#f92672">=</span><span style="color:#ae81ff">150</span>, color<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;red&#39;</span>, label<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;0&#39;</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>xlabel(<span style="color:#e6db74">&#39;$x1$&#39;</span>, fontsize<span style="color:#f92672">=</span><span style="color:#ae81ff">20</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>ylabel(<span style="color:#e6db74">&#39;$x2$&#39;</span>, fontsize<span style="color:#f92672">=</span><span style="color:#ae81ff">20</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>grid(<span style="color:#66d9ef">True</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>legend(fontsize<span style="color:#f92672">=</span><span style="color:#ae81ff">20</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>show()
+</span></span></code></pre></div><p><img src="../1_3/output_8_0.png" alt="png"></p>
+<p>One possible linear classifier for this dataset can be</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> matplotlib.pyplot <span style="color:#66d9ef">as</span> plt
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>x <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>arange(<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">0.5</span>)
+</span></span><span style="display:flex;"><span>y <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span> <span style="color:#f92672">-</span> <span style="color:#ae81ff">0.5</span> <span style="color:#f92672">*</span> x
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>figure(figsize<span style="color:#f92672">=</span>(<span style="color:#ae81ff">12</span>,<span style="color:#ae81ff">9</span>))
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>scatter(X_0[:, <span style="color:#ae81ff">0</span>], X_0[:, <span style="color:#ae81ff">1</span>], marker<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;o&#39;</span>, s<span style="color:#f92672">=</span><span style="color:#ae81ff">150</span>, color<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;blue&#39;</span>, label<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;1&#39;</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>scatter(X_1[:, <span style="color:#ae81ff">0</span>], X_1[:, <span style="color:#ae81ff">1</span>], marker<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;x&#39;</span>, s<span style="color:#f92672">=</span><span style="color:#ae81ff">150</span>, color<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;red&#39;</span>, label<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;0&#39;</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>plot(x, y, label<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Classifier&#39;</span>, color<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;black&#39;</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>xlabel(<span style="color:#e6db74">&#39;$x1$&#39;</span>, fontsize<span style="color:#f92672">=</span><span style="color:#ae81ff">20</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>ylabel(<span style="color:#e6db74">&#39;$x2$&#39;</span>, fontsize<span style="color:#f92672">=</span><span style="color:#ae81ff">20</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>grid(<span style="color:#66d9ef">True</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>legend(fontsize<span style="color:#f92672">=</span><span style="color:#ae81ff">20</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>show()
+</span></span></code></pre></div><p><img src="../1_3/output_10_0.png" alt="png"></p>
+<p>Let us consider the line $y = 3-x/2$ is the best classifier which separates the data.</p>
+<p>Let $C(x,y) = y + x/2-3 $.</p>
+<p>By basic school geometry, we know points in opposite side of a line $C(x,y)$ will give opposite values on $C(x,y)$.</p>
+<p>ie: $C(x_1,y_1).C(x_2,y_2) &lt; 0$, then $(x_1, y_1)$ and $(x_2, y_2)$ lies in the opposite side of $C(x,y)$.</p>
+<p>Why are we even talking about this property?
+Well, this can tell something about how good a classifier is.</p>
+<ul>
+<li>Let us take 2 classifiers</li>
+<li>one which classifies all points correctly</li>
+<li>one which misclassified few points</li>
+<li>calculate the $C(x,y)$ for every point and check how its different for both classifiers.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> matplotlib.pyplot <span style="color:#66d9ef">as</span> plt
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>x <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>arange(<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">0.5</span>)
+</span></span><span style="display:flex;"><span>y <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span> <span style="color:#f92672">-</span> <span style="color:#ae81ff">0.5</span> <span style="color:#f92672">*</span> x
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>figure(figsize<span style="color:#f92672">=</span>(<span style="color:#ae81ff">12</span>,<span style="color:#ae81ff">9</span>))
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>scatter(X_0[:, <span style="color:#ae81ff">0</span>], X_0[:, <span style="color:#ae81ff">1</span>], marker<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;o&#39;</span>, s<span style="color:#f92672">=</span><span style="color:#ae81ff">150</span>, color<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;blue&#39;</span>, label<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;1&#39;</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>scatter(X_1[:, <span style="color:#ae81ff">0</span>], X_1[:, <span style="color:#ae81ff">1</span>], marker<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;x&#39;</span>, s<span style="color:#f92672">=</span><span style="color:#ae81ff">150</span>, color<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;red&#39;</span>, label<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;0&#39;</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>plot(x, y, label<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Classifier&#39;</span>, color<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;black&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(len(X_0)):
+</span></span><span style="display:flex;"><span>  plt<span style="color:#f92672">.</span>text(X_0[i, <span style="color:#ae81ff">0</span>]<span style="color:#f92672">+</span><span style="color:#ae81ff">0.1</span>, X_0[i, <span style="color:#ae81ff">1</span>], <span style="color:#e6db74">&#39;$C = </span><span style="color:#e6db74">{:.3f}</span><span style="color:#e6db74">$&#39;</span><span style="color:#f92672">.</span>format(X_0[i, <span style="color:#ae81ff">0</span>]<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span> <span style="color:#f92672">+</span> X_0[i, <span style="color:#ae81ff">1</span>]<span style="color:#f92672">-</span> <span style="color:#ae81ff">3</span>), fontsize<span style="color:#f92672">=</span><span style="color:#ae81ff">20</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(len(X_1)):
+</span></span><span style="display:flex;"><span>  plt<span style="color:#f92672">.</span>text(X_1[i, <span style="color:#ae81ff">0</span>]<span style="color:#f92672">+</span><span style="color:#ae81ff">0.1</span>, X_1[i, <span style="color:#ae81ff">1</span>], <span style="color:#e6db74">&#39;$C = </span><span style="color:#e6db74">{:.3f}</span><span style="color:#e6db74">$&#39;</span><span style="color:#f92672">.</span>format(X_1[i, <span style="color:#ae81ff">0</span>]<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span> <span style="color:#f92672">+</span> X_1[i, <span style="color:#ae81ff">1</span>]<span style="color:#f92672">-</span> <span style="color:#ae81ff">3</span>), fontsize<span style="color:#f92672">=</span><span style="color:#ae81ff">20</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>xlabel(<span style="color:#e6db74">&#39;$x1$&#39;</span>, fontsize<span style="color:#f92672">=</span><span style="color:#ae81ff">20</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>ylabel(<span style="color:#e6db74">&#39;$x2$&#39;</span>, fontsize<span style="color:#f92672">=</span><span style="color:#ae81ff">20</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>grid(<span style="color:#66d9ef">True</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>legend(fontsize<span style="color:#f92672">=</span><span style="color:#ae81ff">20</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>show()
+</span></span></code></pre></div><p><img src="../1_3/output_12_0.png" alt="png"></p>
+<p>Now let's try with a bad classifier</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> matplotlib.pyplot <span style="color:#66d9ef">as</span> plt
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>x <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>arange(<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">0.5</span>)
+</span></span><span style="display:flex;"><span>y <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span> <span style="color:#f92672">-</span>   x
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>figure(figsize<span style="color:#f92672">=</span>(<span style="color:#ae81ff">12</span>,<span style="color:#ae81ff">9</span>))
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>scatter(X_0[:, <span style="color:#ae81ff">0</span>], X_0[:, <span style="color:#ae81ff">1</span>], marker<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;o&#39;</span>, s<span style="color:#f92672">=</span><span style="color:#ae81ff">150</span>, color<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;blue&#39;</span>, label<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;1&#39;</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>scatter(X_1[:, <span style="color:#ae81ff">0</span>], X_1[:, <span style="color:#ae81ff">1</span>], marker<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;x&#39;</span>, s<span style="color:#f92672">=</span><span style="color:#ae81ff">150</span>, color<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;red&#39;</span>, label<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;0&#39;</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>plot(x, y, label<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Classifier&#39;</span>, color<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;black&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(len(X_0)):
+</span></span><span style="display:flex;"><span>  plt<span style="color:#f92672">.</span>text(X_0[i, <span style="color:#ae81ff">0</span>]<span style="color:#f92672">+</span><span style="color:#ae81ff">0.1</span>, X_0[i, <span style="color:#ae81ff">1</span>], <span style="color:#e6db74">&#39;$C = </span><span style="color:#e6db74">{:.3f}</span><span style="color:#e6db74">$&#39;</span><span style="color:#f92672">.</span>format(X_0[i, <span style="color:#ae81ff">0</span>] <span style="color:#f92672">+</span> X_0[i, <span style="color:#ae81ff">1</span>]<span style="color:#f92672">-</span> <span style="color:#ae81ff">3</span>), fontsize<span style="color:#f92672">=</span><span style="color:#ae81ff">20</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(len(X_1)):
+</span></span><span style="display:flex;"><span>  plt<span style="color:#f92672">.</span>text(X_1[i, <span style="color:#ae81ff">0</span>]<span style="color:#f92672">+</span><span style="color:#ae81ff">0.1</span>, X_1[i, <span style="color:#ae81ff">1</span>], <span style="color:#e6db74">&#39;$C = </span><span style="color:#e6db74">{:.3f}</span><span style="color:#e6db74">$&#39;</span><span style="color:#f92672">.</span>format(X_1[i, <span style="color:#ae81ff">0</span>] <span style="color:#f92672">+</span> X_1[i, <span style="color:#ae81ff">1</span>]<span style="color:#f92672">-</span> <span style="color:#ae81ff">3</span>), fontsize<span style="color:#f92672">=</span><span style="color:#ae81ff">20</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>xlabel(<span style="color:#e6db74">&#39;$x1$&#39;</span>, fontsize<span style="color:#f92672">=</span><span style="color:#ae81ff">20</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>ylabel(<span style="color:#e6db74">&#39;$x2$&#39;</span>, fontsize<span style="color:#f92672">=</span><span style="color:#ae81ff">20</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>grid(<span style="color:#66d9ef">True</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>legend(fontsize<span style="color:#f92672">=</span><span style="color:#ae81ff">20</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>show()
+</span></span></code></pre></div><p><img src="../1_3/output_14_0.png" alt="png"></p>
+<p>You can see, the same class points have the same sign when the classifier is good. So this metric C is actually a good way to find out how good a classifier is.</p>
+<p>We would like to know the probability of a point to be class 1. $P(y=1|X)$</p>
+<p>We can do this by converting $C(x,y)$ into a range $[0,1]$ using a function called Sigmoid/Logistic.</p>
+<h2 id="sigmoidlogistic-function">Sigmoid/Logistic Function</h2>
+<h2 id="gx--dfrac11e-x">$g(x) = \dfrac{1}{1+e^{-x}}$</h2>
+<img src='https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Logistic-curve.svg/1200px-Logistic-curve.svg.png' height="300" width="400">
+<p>Sigmoid can convert a number in Real range to $[0, 1]$ which is what we need to convert the score $C(x,y)$ to probability $P(y=1|X)$.</p>
+<p>Let's code sigmoid in Numpy.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> numpy <span style="color:#66d9ef">as</span> np
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">sigmoid</span>(x):
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">1</span><span style="color:#f92672">/</span>(<span style="color:#ae81ff">1</span><span style="color:#f92672">+</span>np<span style="color:#f92672">.</span>exp(<span style="color:#f92672">-</span>x))
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>a <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>array([<span style="color:#f92672">-</span><span style="color:#ae81ff">200</span>,<span style="color:#ae81ff">980</span>, <span style="color:#ae81ff">0.1</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">23</span>, <span style="color:#ae81ff">1e-3</span>])
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>sigmoid(a)
+</span></span></code></pre></div><pre><code>array([1.38389653e-87, 1.00000000e+00, 5.24979187e-01, 1.02618796e-10,
+       5.00250000e-01])
+</code></pre>
+<p>Sigmoid converted all the number from range 980 to -200 into a range of [0,1].</p>
+<h2 id="probabilities-with-sigmoid">Probabilities with Sigmoid</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> matplotlib.pyplot <span style="color:#66d9ef">as</span> plt
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>x <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>arange(<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">0.5</span>)
+</span></span><span style="display:flex;"><span>y <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span> <span style="color:#f92672">-</span> <span style="color:#ae81ff">0.5</span> <span style="color:#f92672">*</span> x
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>figure(figsize<span style="color:#f92672">=</span>(<span style="color:#ae81ff">12</span>,<span style="color:#ae81ff">9</span>))
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>scatter(X_0[:, <span style="color:#ae81ff">0</span>], X_0[:, <span style="color:#ae81ff">1</span>], marker<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;o&#39;</span>, s<span style="color:#f92672">=</span><span style="color:#ae81ff">150</span>, color<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;blue&#39;</span>, label<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;1&#39;</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>scatter(X_1[:, <span style="color:#ae81ff">0</span>], X_1[:, <span style="color:#ae81ff">1</span>], marker<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;x&#39;</span>, s<span style="color:#f92672">=</span><span style="color:#ae81ff">150</span>, color<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;red&#39;</span>, label<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;0&#39;</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>plot(x, y, label<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Classifier&#39;</span>, color<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;black&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(len(X_0)):
+</span></span><span style="display:flex;"><span>  plt<span style="color:#f92672">.</span>text(X_0[i, <span style="color:#ae81ff">0</span>]<span style="color:#f92672">+</span><span style="color:#ae81ff">0.1</span>, X_0[i, <span style="color:#ae81ff">1</span>], <span style="color:#e6db74">&#39;$\hat{{y}} = </span><span style="color:#e6db74">{:.3f}</span><span style="color:#e6db74">$&#39;</span><span style="color:#f92672">.</span>format(sigmoid(X_0[i, <span style="color:#ae81ff">0</span>]<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span> <span style="color:#f92672">+</span> X_0[i, <span style="color:#ae81ff">1</span>]<span style="color:#f92672">-</span> <span style="color:#ae81ff">3</span>)), fontsize<span style="color:#f92672">=</span><span style="color:#ae81ff">20</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(len(X_1)):
+</span></span><span style="display:flex;"><span>  plt<span style="color:#f92672">.</span>text(X_1[i, <span style="color:#ae81ff">0</span>]<span style="color:#f92672">+</span><span style="color:#ae81ff">0.1</span>, X_1[i, <span style="color:#ae81ff">1</span>], <span style="color:#e6db74">&#39;$\hat{{y}} = </span><span style="color:#e6db74">{:.3f}</span><span style="color:#e6db74">$&#39;</span><span style="color:#f92672">.</span>format(sigmoid(X_1[i, <span style="color:#ae81ff">0</span>]<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span> <span style="color:#f92672">+</span> X_1[i, <span style="color:#ae81ff">1</span>]<span style="color:#f92672">-</span> <span style="color:#ae81ff">3</span>)), fontsize<span style="color:#f92672">=</span><span style="color:#ae81ff">20</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>xlabel(<span style="color:#e6db74">&#39;$x1$&#39;</span>, fontsize<span style="color:#f92672">=</span><span style="color:#ae81ff">20</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>ylabel(<span style="color:#e6db74">&#39;$x2$&#39;</span>, fontsize<span style="color:#f92672">=</span><span style="color:#ae81ff">20</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>grid(<span style="color:#66d9ef">True</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>legend(fontsize<span style="color:#f92672">=</span><span style="color:#ae81ff">20</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>show()
+</span></span></code></pre></div><p><img src="../1_3/output_21_0.png" alt="png"></p>
+<p>So sigmoid gives the probability of the point to be class '1' ie: $P(y=1|X)$.</p>
+<p><strong>Note: this can also be $\hat{y} = P(y=0|X)$, it depends on how you define 1 and 0 class. you can define it either way, but usually we use $\hat{y} = P(y=1|X)$.</strong></p>
+<p>When $\hat{y} &gt; 0.5$ we classify it as class &quot;1&quot; and when $\hat{y} &lt;= 0.5$ we classify it as class &quot;0&quot;.</p>
+<h2 id="how-to-compare-the-models">How to compare the models?</h2>
+<p>We still didn't learn about how to find the best model. But let's say we have 2 models, how do we compare which one is the best?</p>
+<p><strong>By comparing the $\hat{y}$(prediction of the model) and $y$(true label) of each data.</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> matplotlib.pyplot <span style="color:#66d9ef">as</span> plt
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>x <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>arange(<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">0.5</span>)
+</span></span><span style="display:flex;"><span>y <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span> <span style="color:#f92672">-</span> <span style="color:#ae81ff">0.5</span> <span style="color:#f92672">*</span> x
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>figure(figsize<span style="color:#f92672">=</span>(<span style="color:#ae81ff">12</span>,<span style="color:#ae81ff">9</span>))
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>scatter(X_0[:, <span style="color:#ae81ff">0</span>], X_0[:, <span style="color:#ae81ff">1</span>], marker<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;o&#39;</span>, s<span style="color:#f92672">=</span><span style="color:#ae81ff">150</span>, color<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;blue&#39;</span>, label<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;1&#39;</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>scatter(X_1[:, <span style="color:#ae81ff">0</span>], X_1[:, <span style="color:#ae81ff">1</span>], marker<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;x&#39;</span>, s<span style="color:#f92672">=</span><span style="color:#ae81ff">150</span>, color<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;red&#39;</span>, label<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;0&#39;</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>plot(x, y, label<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Classifier&#39;</span>, color<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;black&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(len(X_0)):
+</span></span><span style="display:flex;"><span>  plt<span style="color:#f92672">.</span>text(X_0[i, <span style="color:#ae81ff">0</span>]<span style="color:#f92672">+</span><span style="color:#ae81ff">0.1</span>, X_0[i, <span style="color:#ae81ff">1</span>]<span style="color:#f92672">-</span><span style="color:#ae81ff">0.2</span>, <span style="color:#e6db74">&#39;$\hat{{y}} = </span><span style="color:#e6db74">{:.3f}</span><span style="color:#e6db74">$</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">$y=1$&#39;</span><span style="color:#f92672">.</span>format(sigmoid(X_0[i, <span style="color:#ae81ff">0</span>]<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span> <span style="color:#f92672">+</span> X_0[i, <span style="color:#ae81ff">1</span>]<span style="color:#f92672">-</span> <span style="color:#ae81ff">3</span>)), fontsize<span style="color:#f92672">=</span><span style="color:#ae81ff">20</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(len(X_1)):
+</span></span><span style="display:flex;"><span>  plt<span style="color:#f92672">.</span>text(X_1[i, <span style="color:#ae81ff">0</span>]<span style="color:#f92672">+</span><span style="color:#ae81ff">0.1</span>, X_1[i, <span style="color:#ae81ff">1</span>]<span style="color:#f92672">-</span><span style="color:#ae81ff">0.2</span>, <span style="color:#e6db74">&#39;$\hat{{y}} = </span><span style="color:#e6db74">{:.3f}</span><span style="color:#e6db74">$</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">$y=0$&#39;</span><span style="color:#f92672">.</span>format(sigmoid(X_1[i, <span style="color:#ae81ff">0</span>]<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span> <span style="color:#f92672">+</span> X_1[i, <span style="color:#ae81ff">1</span>]<span style="color:#f92672">-</span> <span style="color:#ae81ff">3</span>)), fontsize<span style="color:#f92672">=</span><span style="color:#ae81ff">20</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>xlabel(<span style="color:#e6db74">&#39;$x1$&#39;</span>, fontsize<span style="color:#f92672">=</span><span style="color:#ae81ff">20</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>ylabel(<span style="color:#e6db74">&#39;$x2$&#39;</span>, fontsize<span style="color:#f92672">=</span><span style="color:#ae81ff">20</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>grid(<span style="color:#66d9ef">True</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>legend(fontsize<span style="color:#f92672">=</span><span style="color:#ae81ff">20</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>show()
+</span></span></code></pre></div><p><img src="../1_3/output_24_0.png" alt="png"></p>
+<h2 id="maximum-likelihood">Maximum Likelihood</h2>
+<p>$\hat{y} = g(W.X+b)$ gives the probability of $X$ belonging to class ${1}$. We want every point to have maximum predicted probability of that point to have its true label.ie:</p>
+<ul>
+<li>if true label $y=1$, then we want to maximize $\hat{y}_1 = \hat{y} = g(W.X+b)$.</li>
+<li>if true label $y=0$, then we want to maximize $\hat{y}_0 = 1 - \hat{y} = 1 - g(W.X+b)$.</li>
+</ul>
+<p>As a point can have only 2 options either ${0, 1}$. so $\hat{y}_0 + \hat{y}_1 = 1$.</p>
+<h3 id="likelihood">Likelihood</h3>
+<p>Product of predicted probabilities of every point to have its true label.</p>
+<p>$L = \prod_{i=1}^{m}{P(\hat{y}^i|X^i)}$</p>
+<p>where $\hat{y}^i$ means $i^{th}$ data prediction and $X^i$ means $i^{th}$ data.</p>
+<p>So the objective of any classification model in Machine Learning is to maximize this Likelihood $L$ thus its called Maximum Likelihood.</p>
+<p>Let's take an example to calculate the Maximum Likelihood.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> numpy <span style="color:#66d9ef">as</span> np
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>y_hat <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>array([<span style="color:#ae81ff">0.94</span>, <span style="color:#ae81ff">0.0271</span>, <span style="color:#ae81ff">0.43</span>, <span style="color:#ae81ff">0.56</span>, <span style="color:#ae81ff">0.012</span>])
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>MaxL <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(len(y_hat)):
+</span></span><span style="display:flex;"><span>    MaxL <span style="color:#f92672">*=</span> y_hat[i]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>MaxL
+</span></span></code></pre></div><pre><code>7.360967039999999e-05
+</code></pre>
+<p>The maximum Likelihood of just 5 numbers goes to an order of $10^{-5}$, in real dataset we will have thousands, sometimes millions of data which will give a MaximumLikelihood beyond the range of computation.</p>
+<p>So we use the property of logarithm $log(a.b) = log(a) + log(b)$ to make this multiplication to addition, so it remains in the range of computation.</p>
+<p>$Log(MaxL) = log(\prod_{i=1}^{m}{P(\hat{y}^i|X^i))}$</p>
+<p>$LogLikelihood = \sum_{i=1}^{m}{log(P(\hat{y}^i|X^i))}$</p>
+<p>Let's try this Log likelihood with Numpy</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> numpy <span style="color:#66d9ef">as</span> np
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>y_hat <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>array([<span style="color:#ae81ff">0.94</span>, <span style="color:#ae81ff">0.0271</span>, <span style="color:#ae81ff">0.43</span>, <span style="color:#ae81ff">0.56</span>, <span style="color:#ae81ff">0.012</span>])
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>LogL <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(len(y_hat)):
+</span></span><span style="display:flex;"><span>    LogL <span style="color:#f92672">+=</span> np<span style="color:#f92672">.</span>log(y_hat[i])
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>LogL
+</span></span></code></pre></div><pre><code>-8.516734149556177
+</code></pre>
+<p>This number can be used in computation easily and you can observe for any dataset Log likelihood will be in a good range of computation and it will be a negative number as log of any number less than one is negative.</p>
+<p>So we introduce a negative sign to make it positive. Why? We would like to make this problem to find minimum loss, optimization is relatively easier for convex functions than concave.</p>
+<p>$NegLogLikelihood = -\sum_{i=1}^{m}{log(P(\hat{y}^i|X^i))}$</p>
+<p>This is called as **Negative Log Likelihood Loss **or also as <strong>Cross Entropy Loss</strong>.</p>
+<p>Now there are 2 cases</p>
+<ul>
+<li>$y = 0$, then we want $P(\hat{y}^i|X^i) =  \hat{y}_0 = 1 - \hat{y} = 1 - g(W.X+b)$</li>
+<li>$y = 1$, then $P(\hat{y}^i|X^i) =  \hat{y}_1 = \hat{y} =  g(W.X+b)$</li>
+</ul>
+<p>So we generalize this 2 cases with</p>
+<p>$ NLL(y, \hat{y}) = -\dfrac{1}{m} \sum_{i=1}^{m}{y^i log(\hat{y}^i) + (1-y^i) log(1 - \hat{y}^i)}$</p>
+<p>We divide the loss with m, to get the average, so the number of example may not affect the loss.</p>
+<p>Let's code this loss with Numpy.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">CrossEntropy</span>(y_hat, y):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> (<span style="color:#f92672">-</span>y <span style="color:#f92672">*</span> np<span style="color:#f92672">.</span>log(y_hat) <span style="color:#f92672">-</span> (<span style="color:#ae81ff">1</span> <span style="color:#f92672">-</span> y) <span style="color:#f92672">*</span> np<span style="color:#f92672">.</span>log(<span style="color:#ae81ff">1</span> <span style="color:#f92672">-</span> y_hat))<span style="color:#f92672">.</span>mean()
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>y <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>array([<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">1</span> ])
+</span></span><span style="display:flex;"><span>y_hat_1 <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>array([<span style="color:#ae81ff">0.11</span>, <span style="color:#ae81ff">0.76</span>, <span style="color:#ae81ff">0.56</span>, <span style="color:#ae81ff">0.21</span>, <span style="color:#ae81ff">0.04</span>, <span style="color:#ae81ff">0.7</span>, <span style="color:#ae81ff">0.64</span>, <span style="color:#ae81ff">0.95</span>])
+</span></span><span style="display:flex;"><span>y_hat_2 <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>array([<span style="color:#ae81ff">0.71</span>, <span style="color:#ae81ff">0.36</span>, <span style="color:#ae81ff">0.16</span>, <span style="color:#ae81ff">0.61</span>, <span style="color:#ae81ff">0.34</span>, <span style="color:#ae81ff">0.5</span>, <span style="color:#ae81ff">0.14</span>, <span style="color:#ae81ff">0.8</span>])
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>CrossEntropy(y_hat_1, y),CrossEntropy(y_hat_2, y)
+</span></span></code></pre></div><pre><code>(0.26269860327583516, 1.041454329918626)
+</code></pre>
+<p>See how a bad prediction gives more CrossEntropy loss than a better prediction.</p>
+<h2 id="finding-the-best-model--gradient-descent">Finding the best Model : Gradient Descent</h2>
+<p>We are going to use the same optimization algorithm which we used for Linear Regression. In almost every deep learning problem, we will use gradient descent or a variation or better version of Gradient Descent. Adam and SGD are better versions of Gradient descent which also uses something called momentum. We will learn more about it later.</p>
+<ul>
+<li>randomly initialize W, b</li>
+<li>in loop for n steps/epochs{
+<ul>
+<li>find $\hat{y} = g(X.W + b)$</li>
+<li>find $ \mathcal{L}(y, \hat{y}) = NLL(y, \hat{y})$</li>
+<li>find $ \frac{\partial \mathcal{L}}{\partial w} $ and $ \frac{\partial \mathcal{L}}{\partial b} $</li>
+<li>Update W and b with $w := w - \alpha \frac{\partial \mathcal{L}}{\partial w}$ and $b := b - \alpha \frac{\partial \mathcal{L}}{\partial b}$
+}</li>
+</ul>
+</li>
+</ul>
+<p>Every thing remains same as Linear Regression except now the Loss function $\mathcal{L}(y, \hat{y})$ is different, so  $ \frac{\partial \mathcal{L}}{\partial w} $ and $ \frac{\partial \mathcal{L}}{\partial b} $ may be different. But it can easily be calculated with chain rule.</p>
+<p>If you didn't understand how we calculated  $ \frac{\partial \mathcal{L}}{\partial w} $ and $ \frac{\partial \mathcal{L}}{\partial b} $ in Linear Regression , I strongly recommend you to learn multi variable calculus. Its very easy and interesting.</p>
+<p>One good thing about frameworks like Tensorflow, PyTorch is that they have something called Automatic Gradient. So you don't need to perform these gradient calculation by hand and code it, you give the loss function and parameters, the framework will calculate the gradients of Loss wrt every parameter and update the parameter.</p>
+<p>So after chain rule,</p>
+<p>$\dfrac{\partial \mathcal{L}}{\partial w_i}  = \dfrac{1}{m} \sum_{j=1}^{m}{x_i^j(\hat{y}^j - y^j)}$</p>
+<p>$\dfrac{\partial \mathcal{L}}{\partial b}  = \dfrac{1}{m} \sum_{j=1}^{m}{(\hat{y}^j - y^j)}$</p>
+<p>We will update the parameters with</p>
+<p>$w_i := w_i - \alpha \dfrac{1}{m} \sum_{j=1}^{m}{x_i^j(\hat{y}^j - y^j)}$</p>
+<p>$b := b - \alpha \dfrac{1}{m} \sum_{j=1}^{m}{((\hat{y}^j - y^j)}$</p>
+<p>where $\alpha$ is called learning rate, if the learning rate is very high the model will learn faster, but may not converge well. if the learning rate is less, the model may take more time but will converge well ie: will get to less loss.</p>
+<p>Now Let's code Logistic Regression model in Numpy and train it. Then use Tensorflow's Keras API to train Logistic Regression Model.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> numpy <span style="color:#66d9ef">as</span> np
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">gradient_descent</span>(w, b, X, y, a):
+</span></span><span style="display:flex;"><span>  w <span style="color:#f92672">=</span> w <span style="color:#f92672">-</span> a <span style="color:#f92672">/</span> X<span style="color:#f92672">.</span>shape[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">*</span> np<span style="color:#f92672">.</span>dot(X<span style="color:#f92672">.</span>T, Log_Reg_model(X, w, b)<span style="color:#f92672">-</span> y)
+</span></span><span style="display:flex;"><span>  b <span style="color:#f92672">=</span> b <span style="color:#f92672">-</span> a <span style="color:#f92672">/</span> X<span style="color:#f92672">.</span>shape[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">*</span> np<span style="color:#f92672">.</span>sum(Log_Reg_model(X, w, b)<span style="color:#f92672">-</span> y)
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> w, b
+</span></span></code></pre></div><p>So far we have seen the math which is used in Logistic Regression model. But when you code, you will have to take care of the dimensions as well. we have seen $\hat{y} = g(X.W+b)$ here $X.W$ need to be in correct dimension for matrix multiplication.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">sigmoid</span>(x):
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">1</span><span style="color:#f92672">/</span>(<span style="color:#ae81ff">1</span><span style="color:#f92672">+</span>np<span style="color:#f92672">.</span>exp(<span style="color:#f92672">-</span>x))
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">Log_Reg_model</span>(x, w, b):
+</span></span><span style="display:flex;"><span>  y_hat <span style="color:#f92672">=</span> sigmoid(np<span style="color:#f92672">.</span>matmul(x, w) <span style="color:#f92672">+</span> b)
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> y_hat
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># here i am initializing w as (2,1) to match X(1000,2)</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># you can also initialize w as (1,2) and use np.matmul(X, w.T) + b</span>
+</span></span><span style="display:flex;"><span>w, b <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>random((<span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">1</span>)), np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>random((<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">1</span>))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> sklearn.datasets <span style="color:#f92672">import</span> make_blobs
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>X, y <span style="color:#f92672">=</span> make_blobs(n_samples<span style="color:#f92672">=</span><span style="color:#ae81ff">1000</span>, n_features<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span>, centers<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span>, random_state<span style="color:#f92672">=</span><span style="color:#ae81ff">9</span>)
+</span></span><span style="display:flex;"><span>y <span style="color:#f92672">=</span> y<span style="color:#f92672">.</span>reshape(<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>print(X<span style="color:#f92672">.</span>shape, y<span style="color:#f92672">.</span>shape, w<span style="color:#f92672">.</span>shape, b<span style="color:#f92672">.</span>shape)
+</span></span><span style="display:flex;"><span>print(sigmoid(np<span style="color:#f92672">.</span>matmul(X, w) <span style="color:#f92672">+</span> b)<span style="color:#f92672">.</span>shape) <span style="color:#75715e"># to check the dimension</span>
+</span></span></code></pre></div><pre><code>(1000, 2) (1000, 1) (2, 1) (1, 1)
+(1000, 1)
+</code></pre>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># shape of prediction and label should match</span>
+</span></span><span style="display:flex;"><span>Log_Reg_model(X, w, b)<span style="color:#f92672">.</span>shape, y<span style="color:#f92672">.</span>shape
+</span></span></code></pre></div><pre><code>((1000, 1), (1000, 1))
+</code></pre>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># Test the Cross entropy loss</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">CrossEntropy</span>(y_hat, y):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> (<span style="color:#f92672">-</span>y <span style="color:#f92672">*</span> np<span style="color:#f92672">.</span>log(y_hat) <span style="color:#f92672">-</span> (<span style="color:#ae81ff">1</span> <span style="color:#f92672">-</span> y) <span style="color:#f92672">*</span> np<span style="color:#f92672">.</span>log(<span style="color:#ae81ff">1</span> <span style="color:#f92672">-</span> y_hat))<span style="color:#f92672">.</span>mean()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>y_hat <span style="color:#f92672">=</span> Log_Reg_model(X, w, b)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>CrossEntropy(y_hat, y)
+</span></span></code></pre></div><pre><code>0.5361011603546345
+</code></pre>
+<p>Let's code a function to visualize</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> matplotlib.pyplot <span style="color:#66d9ef">as</span> plt
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">visualize_classification</span>(X, y, w, b, e<span style="color:#f92672">=</span><span style="color:#66d9ef">None</span>, loss<span style="color:#f92672">=</span><span style="color:#66d9ef">None</span>):
+</span></span><span style="display:flex;"><span>    class_0 <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>where(y <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>)
+</span></span><span style="display:flex;"><span>    class_1 <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>where(y <span style="color:#f92672">==</span> <span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    X_0 <span style="color:#f92672">=</span> X[class_0]
+</span></span><span style="display:flex;"><span>    X_1 <span style="color:#f92672">=</span> X[class_1]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># change this according to the plot scale</span>
+</span></span><span style="display:flex;"><span>    x0 <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>arange(<span style="color:#f92672">-</span><span style="color:#ae81ff">15</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">0.01</span>)
+</span></span><span style="display:flex;"><span>    y0 <span style="color:#f92672">=</span> ((<span style="color:#f92672">-</span>b <span style="color:#f92672">-</span> x0 <span style="color:#f92672">*</span> w[<span style="color:#ae81ff">1</span>])<span style="color:#f92672">/</span>w[<span style="color:#ae81ff">0</span>])<span style="color:#f92672">.</span>reshape(<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    plt<span style="color:#f92672">.</span>figure(figsize<span style="color:#f92672">=</span>(<span style="color:#ae81ff">12</span>,<span style="color:#ae81ff">9</span>))
+</span></span><span style="display:flex;"><span>    plt<span style="color:#f92672">.</span>scatter(X_0[:, <span style="color:#ae81ff">0</span>], X_0[:, <span style="color:#ae81ff">1</span>], marker<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;o&#39;</span>, s<span style="color:#f92672">=</span><span style="color:#ae81ff">150</span>, color<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;blue&#39;</span>, label<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;1&#39;</span>)
+</span></span><span style="display:flex;"><span>    plt<span style="color:#f92672">.</span>scatter(X_1[:, <span style="color:#ae81ff">0</span>], X_1[:, <span style="color:#ae81ff">1</span>], marker<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;x&#39;</span>, s<span style="color:#f92672">=</span><span style="color:#ae81ff">150</span>, color<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;red&#39;</span>, label<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;0&#39;</span>)
+</span></span><span style="display:flex;"><span>    plt<span style="color:#f92672">.</span>plot(x0, y0, label<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Classifier&#39;</span>, color<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;black&#39;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> e <span style="color:#f92672">is</span> <span style="color:#f92672">not</span> <span style="color:#66d9ef">None</span>:
+</span></span><span style="display:flex;"><span>        plt<span style="color:#f92672">.</span>text(<span style="color:#f92672">-</span><span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">3</span>,<span style="color:#e6db74">&#39;Epoch = </span><span style="color:#e6db74">{}</span><span style="color:#e6db74">&#39;</span><span style="color:#f92672">.</span>format(e), fontsize<span style="color:#f92672">=</span><span style="color:#ae81ff">20</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> loss <span style="color:#f92672">is</span> <span style="color:#f92672">not</span> <span style="color:#66d9ef">None</span>:
+</span></span><span style="display:flex;"><span>        plt<span style="color:#f92672">.</span>text(<span style="color:#f92672">-</span><span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">2</span>,<span style="color:#e6db74">&#39;CE = </span><span style="color:#e6db74">{:.3f}</span><span style="color:#e6db74">&#39;</span><span style="color:#f92672">.</span>format(loss), fontsize<span style="color:#f92672">=</span><span style="color:#ae81ff">20</span>)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    plt<span style="color:#f92672">.</span>xlabel(<span style="color:#e6db74">&#39;$x1$&#39;</span>, fontsize<span style="color:#f92672">=</span><span style="color:#ae81ff">20</span>)
+</span></span><span style="display:flex;"><span>    plt<span style="color:#f92672">.</span>ylabel(<span style="color:#e6db74">&#39;$x2$&#39;</span>, fontsize<span style="color:#f92672">=</span><span style="color:#ae81ff">20</span>)
+</span></span><span style="display:flex;"><span>    plt<span style="color:#f92672">.</span>grid(<span style="color:#66d9ef">True</span>)
+</span></span><span style="display:flex;"><span>    plt<span style="color:#f92672">.</span>legend(fontsize<span style="color:#f92672">=</span><span style="color:#ae81ff">20</span>)
+</span></span><span style="display:flex;"><span>    plt<span style="color:#f92672">.</span>show()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>visualize_classification(X, y<span style="color:#f92672">.</span>reshape(<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>), w, b, e<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>, loss<span style="color:#f92672">=</span><span style="color:#ae81ff">1.1</span>)
+</span></span></code></pre></div><p><img src="../1_3/output_42_0.png" alt="png"></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>losses <span style="color:#f92672">=</span> []
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>alpha <span style="color:#f92672">=</span> <span style="color:#ae81ff">0.001</span>
+</span></span><span style="display:flex;"><span>w, b <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>random((<span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">1</span>)), np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>random(<span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">10000</span>):
+</span></span><span style="display:flex;"><span>  y_hat <span style="color:#f92672">=</span> Log_Reg_model(X, w, b)
+</span></span><span style="display:flex;"><span>  ce <span style="color:#f92672">=</span> CrossEntropy(y_hat, y)
+</span></span><span style="display:flex;"><span>  losses<span style="color:#f92672">.</span>append(ce)
+</span></span><span style="display:flex;"><span>  w, b <span style="color:#f92672">=</span> gradient_descent(w, b, X, y, alpha)
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">if</span> i<span style="color:#f92672">%</span><span style="color:#ae81ff">2000</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>:
+</span></span><span style="display:flex;"><span>    y_hat <span style="color:#f92672">=</span> Log_Reg_model(X, w, b)
+</span></span><span style="display:flex;"><span>    ce <span style="color:#f92672">=</span> CrossEntropy(y_hat, y)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    visualize_classification(X, y<span style="color:#f92672">.</span>reshape(<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>), w, b, e<span style="color:#f92672">=</span>i<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>, loss<span style="color:#f92672">=</span>ce)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>plot(losses)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>xlabel(<span style="color:#e6db74">&#39;Epochs&#39;</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>ylabel(<span style="color:#e6db74">&#39;MSE Loss&#39;</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>show()
+</span></span></code></pre></div><p><img src="../1_3/output_43_0.png" alt="png"></p>
+<p><img src="../1_3/output_43_1.png" alt="png"></p>
+<p><img src="../1_3/output_43_2.png" alt="png"></p>
+<p><img src="../1_3/output_43_3.png" alt="png"></p>
+<p><img src="../1_3/output_43_4.png" alt="png"></p>
+<p><img src="../1_3/output_43_5.png" alt="png"></p>
+<p>Our classifier made a good classification on this toy dataset. Now Let's use Tensorflow to make a Logistic Regression model and train on this dataset.</p>
+<hr>
+<h1 id="logistic-regression-in-tensorflow">Logistic Regression in TensorFlow</h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> tensorflow <span style="color:#66d9ef">as</span> tf
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> tensorflow <span style="color:#f92672">import</span> keras
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> matplotlib.pyplot <span style="color:#66d9ef">as</span> plt
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> numpy <span style="color:#66d9ef">as</span> np
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">CrossEntropy</span>(y_hat, y):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> (<span style="color:#f92672">-</span>y <span style="color:#f92672">*</span> np<span style="color:#f92672">.</span>log(y_hat) <span style="color:#f92672">-</span> (<span style="color:#ae81ff">1</span> <span style="color:#f92672">-</span> y) <span style="color:#f92672">*</span> np<span style="color:#f92672">.</span>log(<span style="color:#ae81ff">1</span> <span style="color:#f92672">-</span> y_hat))<span style="color:#f92672">.</span>mean()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> sklearn.datasets <span style="color:#f92672">import</span> make_blobs
+</span></span><span style="display:flex;"><span>X, y <span style="color:#f92672">=</span> make_blobs(n_samples<span style="color:#f92672">=</span><span style="color:#ae81ff">10000</span>, n_features<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span>, centers<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span>, random_state<span style="color:#f92672">=</span><span style="color:#ae81ff">9</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>model <span style="color:#f92672">=</span> tf<span style="color:#f92672">.</span>keras<span style="color:#f92672">.</span>Sequential([keras<span style="color:#f92672">.</span>layers<span style="color:#f92672">.</span>Dense(units<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>, input_shape<span style="color:#f92672">=</span>[<span style="color:#ae81ff">2</span>]), keras<span style="color:#f92672">.</span>layers<span style="color:#f92672">.</span>Activation(<span style="color:#e6db74">&#39;sigmoid&#39;</span>)])
+</span></span><span style="display:flex;"><span>model<span style="color:#f92672">.</span>compile(optimizer<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;adam&#39;</span>, loss<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;binary_crossentropy&#39;</span>, metrics<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;accuracy&#39;</span>])
+</span></span><span style="display:flex;"><span>tf_history <span style="color:#f92672">=</span> model<span style="color:#f92672">.</span>fit(X, y, epochs<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span>, verbose<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)
+</span></span></code></pre></div><pre><code>Epoch 1/10
+10000/10000 [==============================] - 0s 42us/sample - loss: 1.8787 - acc: 0.5026
+Epoch 2/10
+10000/10000 [==============================] - 0s 34us/sample - loss: 0.8342 - acc: 0.5618
+.
+.
+Epoch 9/10
+10000/10000 [==============================] - 0s 35us/sample - loss: 0.0172 - acc: 1.0000
+Epoch 10/10
+10000/10000 [==============================] - 0s 34us/sample - loss: 0.0135 - acc: 1.0000
+</code></pre>
+<p>We used a new metric called accuray_score.</p>
+<p>$Accuracy = \dfrac{No\ of\ Correct\ Predictions}{Total\ no\ of\ Predictions}$</p>
+<p>so if out of 100 data, we made 64 correct predictions and 36 incorrect then the accuracy score is $\dfrac{64}{100} = 0.64$.</p>
+<p>This dataset was very easy, so it got accuracy score of 1.0 easily.</p>
+<p>Let's Try another dataset.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> tensorflow <span style="color:#66d9ef">as</span> tf
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> tensorflow <span style="color:#f92672">import</span> keras
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> matplotlib.pyplot <span style="color:#66d9ef">as</span> plt
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> numpy <span style="color:#66d9ef">as</span> np
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">CrossEntropy</span>(y_hat, y):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> (<span style="color:#f92672">-</span>y <span style="color:#f92672">*</span> np<span style="color:#f92672">.</span>log(y_hat) <span style="color:#f92672">-</span> (<span style="color:#ae81ff">1</span> <span style="color:#f92672">-</span> y) <span style="color:#f92672">*</span> np<span style="color:#f92672">.</span>log(<span style="color:#ae81ff">1</span> <span style="color:#f92672">-</span> y_hat))<span style="color:#f92672">.</span>mean()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> sklearn.datasets <span style="color:#f92672">import</span> make_blobs
+</span></span><span style="display:flex;"><span>X, y <span style="color:#f92672">=</span> make_blobs(n_samples<span style="color:#f92672">=</span><span style="color:#ae81ff">10000</span>, n_features<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span>, centers<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span>, random_state<span style="color:#f92672">=</span><span style="color:#ae81ff">27</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>class_0 <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>where(y <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>)
+</span></span><span style="display:flex;"><span>class_1 <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>where(y <span style="color:#f92672">==</span> <span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>X_0 <span style="color:#f92672">=</span> X[class_0]
+</span></span><span style="display:flex;"><span>X_1 <span style="color:#f92672">=</span> X[class_1]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>figure(figsize<span style="color:#f92672">=</span>(<span style="color:#ae81ff">12</span>,<span style="color:#ae81ff">9</span>))
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>scatter(X_0[:, <span style="color:#ae81ff">0</span>], X_0[:, <span style="color:#ae81ff">1</span>], marker<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;o&#39;</span>, s<span style="color:#f92672">=</span><span style="color:#ae81ff">150</span>, color<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;blue&#39;</span>, label<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;1&#39;</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>scatter(X_1[:, <span style="color:#ae81ff">0</span>], X_1[:, <span style="color:#ae81ff">1</span>], marker<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;x&#39;</span>, s<span style="color:#f92672">=</span><span style="color:#ae81ff">150</span>, color<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;red&#39;</span>, label<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;0&#39;</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>xlabel(<span style="color:#e6db74">&#39;$x1$&#39;</span>, fontsize<span style="color:#f92672">=</span><span style="color:#ae81ff">20</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>ylabel(<span style="color:#e6db74">&#39;$x2$&#39;</span>, fontsize<span style="color:#f92672">=</span><span style="color:#ae81ff">20</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>grid(<span style="color:#66d9ef">True</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>legend(fontsize<span style="color:#f92672">=</span><span style="color:#ae81ff">20</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>show()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>model <span style="color:#f92672">=</span> tf<span style="color:#f92672">.</span>keras<span style="color:#f92672">.</span>Sequential([keras<span style="color:#f92672">.</span>layers<span style="color:#f92672">.</span>Dense(units<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>, input_shape<span style="color:#f92672">=</span>[<span style="color:#ae81ff">2</span>]), keras<span style="color:#f92672">.</span>layers<span style="color:#f92672">.</span>Activation(<span style="color:#e6db74">&#39;sigmoid&#39;</span>)])
+</span></span><span style="display:flex;"><span>model<span style="color:#f92672">.</span>compile(optimizer<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;adam&#39;</span>, loss<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;binary_crossentropy&#39;</span>, metrics<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;accuracy&#39;</span>])
+</span></span><span style="display:flex;"><span>tf_history <span style="color:#f92672">=</span> model<span style="color:#f92672">.</span>fit(X, y, epochs<span style="color:#f92672">=</span><span style="color:#ae81ff">50</span>, verbose<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)
+</span></span></code></pre></div><p><img src="../1_3/output_48_0.png" alt="png"></p>
+<pre><code>Epoch 1/50
+10000/10000 [==============================] - 0s 44us/sample - loss: 5.3699 - acc: 0.5000
+Epoch 2/50
+10000/10000 [==============================] - 0s 37us/sample - loss: 3.3782 - acc: 0.5000
+.
+.
+Epoch 49/50
+10000/10000 [==============================] - 0s 38us/sample - loss: 0.0044 - acc: 0.9992
+Epoch 50/50
+10000/10000 [==============================] - 0s 37us/sample - loss: 0.0043 - acc: 0.9993
+</code></pre>
+<p>You can see from the plot, that is not possible to get an accuracy of 1.0 with a linear classifier like Logistic Regression for this dataset as few of the class points are overlapping. But it still gives a very good result with just a few lines of code.</p>
+
+          </div>
+
+          
+
+
+
+          
+          <div class="article-widget">
+            
+<div class="post-nav">
+  
+  
+  
+  <div class="post-nav-item">
+    <div class="meta-nav">Previous</div>
+    <a href="/courses/deeplearning/1.2/" rel="next">Polynomial Regression</a>
+  </div>
+  
+  
+  
+  <div class="post-nav-item">
+    <div class="meta-nav">Next</div>
+    <a href="/courses/deeplearning/1.4/" rel="prev">Multi Class Classification</a>
+  </div>
+  
+</div>
+
+          </div>
+          
+        </div>
+
+        
+<section id="comments">
+  <div id="disqus_thread"></div>
+<script>
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "shangeth-com" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
+
+
+        
+        <div class="body-footer">
+          Last updated on Aug 30, 2019
+        </div>
+
+      </article>
+
+      <footer class="site-footer">
+  
+
+  <p class="powered-by">
+    © 2026 Shangeth Rajaa &middot; 
+
+    Powered by the
+    <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+    <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+    
+  </p>
+</footer>
+
+
+    </main>
+  </div>
+</div>
+
+    
+
+    
+    
+    
+    <script src="/js/mathjax-config.js"></script>
+    
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js" integrity="sha256-X5PoE3KU5l+JcX+w09p/wHl9AzK333C4hJ2I9S5mD4M=" crossorigin="anonymous"></script>
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js" integrity="sha256-aYTdUrn6Ow1DDgh5JTc3aDGnnju48y/1c8s1dgkYPQ8=" crossorigin="anonymous"></script>
+        
+      
+
+      
+      
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS_CHTML-full" integrity="sha256-GhM+5JHb6QUzOQPXSJLEWP7R73CbkisjzK5Eyij4U9w=" crossorigin="anonymous" async></script>
+      
+    
+
+    
+    
+
+    
+    
+    
+    <script id="dsq-count-scr" src="//shangeth-com.disqus.com/count.js" async></script>
+    
+
+    
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+    <script>
+      const search_index_filename = "/index.json";
+      const i18n = {
+        'placeholder': "Search...",
+        'results': "results found",
+        'no_results': "No results found"
+      };
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'talk' : "Talks"
+        };
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.1/anchor.min.js" integrity="sha256-pB/deHc9CGfFpJRjC43imB29Rse8tak+5eXqntO94ck=" crossorigin="anonymous"></script>
+    <script>
+      anchors.add();
+    </script>
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+    
+    
+    <script src="/js/academic.min.77f2beb28ce612eb5c60ece074d9cc2c.js"></script>
+
+  </body>
+</html>
+
+

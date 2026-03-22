@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Recent &amp; Upcoming Talks on Shangeth</title>
+    <link>//localhost:1313/talk/</link>
+    <description>Recent content in Recent &amp; Upcoming Talks on Shangeth</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; {year} Shangeth Rajaa</copyright>
+    <lastBuildDate>Sat, 13 Apr 2019 13:00:00 +0000</lastBuildDate>
+    
+	    <atom:link href="//localhost:1313/talk/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Convolutional Feature Extraction and Neural Arithmetic Logic Units for Stock Prediction</title>
+      <link>//localhost:1313/talk/icacds/</link>
+      <pubDate>Sat, 13 Apr 2019 13:00:00 +0000</pubDate>
+      <guid>//localhost:1313/talk/icacds/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Multi Tasking Learning</title>
+      <link>//localhost:1313/talk/multi-tasking-learning/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/talk/multi-tasking-learning/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

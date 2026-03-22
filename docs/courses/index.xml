@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Courses on Shangeth</title>
+    <link>//localhost:1313/courses/</link>
+    <description>Recent content in Courses on Shangeth</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; {year} Shangeth Rajaa</copyright>
+    <lastBuildDate>Wed, 18 Sep 2019 00:00:00 +0100</lastBuildDate>
+    
+	    <atom:link href="//localhost:1313/courses/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Course Overview</title>
+      <link>//localhost:1313/courses/deeplearning/</link>
+      <pubDate>Thu, 29 Aug 2019 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/courses/deeplearning/</guid>
+      <description>&lt;p&gt;Explore Machine Learning (ML) is a Google-sponsored program for university students to get started with Machine Learning. The curriculum offers 3 tracks of machine learning content (Beginner, Intermediate, Advanced) and relies on university student facilitators to train other students on campus.&lt;/p&gt;
+&lt;h1 id=&#34;content&#34;&gt;Content&lt;/h1&gt;
+&lt;p&gt;This course will be part of Explore Machine Learning by Google. The Basic and Intermediate track will be taught in the Fall 2019 at BITS Pilani Goa Campus by Shangeth. The Basic track introduces to deep learning problems(regression and classification) and training Deep Neural Networks for a variety of real world problems like Text Sentiment analysis with ANNs.&lt;/p&gt;
+&lt;p&gt;The intermediate track will continue from basic track and introduce many deep learning architectures like CNNs, RNNs, GANs,..etc. Projects involving Computer vision and Natural language processing will be part of the Intermediate track.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Students will be certified separately for Basic and Intermediate track by Google AI. Attending all offline lectures at the campus is a must to be eligible for the certification.&lt;/strong&gt;
+Venue and Timing of lectures will be decided based on availability of instructor and students every week.&lt;/p&gt;
+&lt;!-- # Instructor
+&lt;div&gt;
+&lt;img alt=&#39;Instructor&#39; src=&#34;//localhost:1313/img/instructor.jpeg&#34;&gt;
+
+&lt;div &gt;
+Shangeth Rajaa&lt;br&gt;
+Deep Learning Content Developer, OpenCV.org
+
+&lt;/div&gt;
+&lt;/div&gt; --&gt;
+&lt;h1 id=&#34;prerequisites&#34;&gt;Prerequisites&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Python3&lt;/li&gt;
+&lt;li&gt;Basic Programming knowledge of functions, Object Oriented Programming.&lt;/li&gt;
+&lt;li&gt;Scientific libraries like Numpy, Pandas, Matplotlib.&lt;/li&gt;
+&lt;li&gt;Basic knowledge of Multi Variable Calculus, Linear Algebra, Probability &amp;amp; Statistics.&lt;/li&gt;
+&lt;li&gt;If you are BITS Pilani student the following course will be more than enough to get into the course.
+&lt;ul&gt;
+&lt;li&gt;CS F111&lt;/li&gt;
+&lt;li&gt;MATH F111&lt;/li&gt;
+&lt;li&gt;MATH F112&lt;/li&gt;
+&lt;li&gt;MATH F113&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;study-materials-and-references&#34;&gt;Study Materials and References&lt;/h1&gt;
+&lt;p&gt;If you do not have the prerequisite stated above, check these open study materials.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Python&lt;br&gt;
+If you are just starting Python, Do not spend much time on it. Just learn the basic syntax, functions, classes. That will be enough, you will have a lot of practice in this course through mini-assignments and mini-projects. These are some free courses for Python.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.udemy.com/course/learn-python-3-from-scratch-python-for-absolute-beginners/?LSNPUBID=JVFxdTr9V80&amp;amp;ranEAID=JVFxdTr9V80&amp;amp;ranMID=39197&amp;amp;ranSiteID=JVFxdTr9V80-KDYnTZwcvCy.urZwElKKRg&#34;&gt;Python for Absolute Beginners&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.udemy.com/course/pythonforbeginnersintro/?LSNPUBID=JVFxdTr9V80&amp;amp;ranEAID=JVFxdTr9V80&amp;amp;ranMID=39197&amp;amp;ranSiteID=JVFxdTr9V80-gao.csaRyEcNrD34avYj3w&#34;&gt;Introduction To Python Programming&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Basic Data Science Packages&lt;br&gt;
+You also need to learn about how to use packages like Numpy, Pandas, Matplotlib, sklearn..etc. You can also use their docs to learn these.A very basic understanding of these packages will be enough to start this course.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.udacity.com/course/intro-to-data-analysis--ud170&#34;&gt;Into to Data Analysis&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/cs231n/cs231n.github.io/blob/master/python-numpy-tutorial.md&#34;&gt;Numpy and Matplotlib&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/treehouse-projects/python-introducing-pandas&#34;&gt;Pandas&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Mathematics&lt;br&gt;
+You only need a basic understanding of simple concepts like differentiation, gradients, matrix multiplication, inverse of matrix,..etc. Youtube has loads of good videos on these concepts.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.coursera.org/specializations/mathematics-machine-learning&#34;&gt;Mathematics for ML&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Youtube channels like Khan Academy, 3Blue1Brown have some good content to start.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;help-me-improve-the-course-content&#34;&gt;Help Me improve the Course Content&lt;/h1&gt;
+&lt;iframe src=&#34;https://docs.google.com/forms/d/e/1FAIpQLSfNLcCuxTzY08uKodmTzKrJ69lKb_RhMzJCgZDPxgGcNjFzQw/viewform?embedded=true&#34; width=&#34;640&#34; height=&#34;1155&#34; frameborder=&#34;0&#34; marginheight=&#34;0&#34; marginwidth=&#34;0&#34;&gt;Loading…&lt;/iframe&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Course Overview</title>
+      <link>//localhost:1313/courses/deeplearning-2/</link>
+      <pubDate>Thu, 29 Aug 2019 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/courses/deeplearning-2/</guid>
+      <description>&lt;h1 id=&#34;will-be-live-soon&#34;&gt;Will be live soon&lt;/h1&gt;
+&lt;h2 id=&#34;check-out-the-basic-track&#34;&gt;Check out the Basic Track&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;//localhost:1313/courses/deeplearning/&#34;&gt;Deep Learning - Basic Track&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Course Overview</title>
+      <link>//localhost:1313/courses/deeplearning-3/</link>
+      <pubDate>Thu, 29 Aug 2019 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/courses/deeplearning-3/</guid>
+      <description>&lt;h1 id=&#34;will-be-added-after-fall-2019-smile&#34;&gt;Will be added after Fall 2019 &amp;#x1f604;&lt;/h1&gt;
+&lt;h2 id=&#34;check-out-the-basic-and-intermediate-tracks&#34;&gt;Check out the Basic and Intermediate Tracks&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;//localhost:1313/courses/deeplearning/&#34;&gt;Deep Learning - Basic Track&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;//localhost:1313/courses/deeplearning-2/&#34;&gt;Deep Learning - Intermediate Track&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

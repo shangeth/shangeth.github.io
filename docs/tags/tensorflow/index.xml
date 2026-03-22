@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tensorflow on Shangeth</title>
+    <link>//localhost:1313/tags/tensorflow/</link>
+    <description>Recent content in Tensorflow on Shangeth</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; {year} Shangeth Rajaa</copyright>
+    <lastBuildDate>Mon, 08 Jul 2019 01:07:01 +0530</lastBuildDate>
+    
+	    <atom:link href="//localhost:1313/tags/tensorflow/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Facial Emotion Recognition PyTorch ONNX</title>
+      <link>//localhost:1313/project/facial-emotion-recognition-pytorch/</link>
+      <pubDate>Mon, 08 Jul 2019 01:07:01 +0530</pubDate>
+      <guid>//localhost:1313/project/facial-emotion-recognition-pytorch/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Hand Gesture Recognition</title>
+      <link>//localhost:1313/project/hand-gesture-recognition/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/project/hand-gesture-recognition/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Self Driving Cars Steering Angle Prediction</title>
+      <link>//localhost:1313/project/self-driving-cars-steering-angle-prediction/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/project/self-driving-cars-steering-angle-prediction/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Self Driving Cars Vehicle Detection</title>
+      <link>//localhost:1313/project/self-driving-cars-vehicle-detection/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/project/self-driving-cars-vehicle-detection/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,59 @@
+# Shangeth Rajaa — Voice AI Researcher
+
+> Senior ML Scientist specializing in Turn-Taking, Full-Duplex Spoken Dialogue Systems, Multi-Modal Speech LLMs, and Conversational AI. 6+ years of Voice AI research and engineering experience across industry and academia. Built and led ML and research teams in early-stage startups. 7 peer-reviewed publications at Interspeech, ICASSP, NeurIPS, and PMLR.
+
+## Contact & Links
+
+- Website: https://shangeth.com
+- Email: shangethrajaa@gmail.com
+- LinkedIn: https://www.linkedin.com/in/shangeth
+- GitHub: https://github.com/shangeth
+- Google Scholar: https://scholar.google.com/citations?user=apmFPkAAAAAJ
+- Book a call: https://calendly.com/shangeth-anyreach/30min
+
+## Current Role
+
+Senior Machine Learning Scientist at Anyreach AI (Feb 2025 — Present)
+- Turn-Taking in Full-Duplex Spoken Dialogue Systems
+- Multi-Modal LLMs for Speech Understanding and Synthesis
+- Automatic Speech Translation with Multi-Modal LLMs
+
+## Research Interests
+
+- Turn-Taking & Full-Duplex Spoken Dialogue
+- Multi-Modal Speech LLMs
+- Spoken Language Understanding (SLU)
+- Speaker Profiling & Representation Learning
+- Conversational AI Systems (ASR, TTS, NLU, Dialogue Management)
+- RLHF/DPO for goal-driven spoken dialogue
+
+## Experience
+
+- Anyreach AI — Senior ML Scientist (Feb 2025 — Present)
+- ScoreTravel AI — Senior ML Researcher (Aug 2024 — Feb 2025)
+- Skit.ai (Vernacular.ai) — ML Researcher (Jun 2021 — Jun 2024)
+- Speech and Language Lab, NTU Singapore — Research Assistant (Aug 2020 — Jun 2021)
+- IBM Research Labs — Research Intern (May 2020 — Aug 2020)
+- INRIA Paris — Research Collaborator, AutoDL (Apr 2019 — Jul 2020)
+
+## Publications
+
+1. DualTurn: Learning Turn-Taking from Dual-Channel Generative Speech Pretraining — Submitted to Interspeech 2026. https://arxiv.org/abs/2603.08216
+2. Improving End-to-End SLU performance with Prosodic Attention and Distillation — Interspeech 2023. https://arxiv.org/abs/2305.08067
+3. Improving Spoken Language Identification with MAP-Mix — ICASSP 2023. https://arxiv.org/abs/2302.08229
+4. Skit-S2I: An Indian Accented Speech to Intent Dataset — arXiv 2022. https://arxiv.org/abs/2212.13015
+5. Learning Speaker Representation with Semi-supervised Learning for Speaker Profiling — arXiv 2021. https://arxiv.org/abs/2110.13653
+6. Towards Automated Deep Learning: Analysis of the AutoDL Challenge Series 2019 — NeurIPS / PMLR 2020. https://proceedings.mlr.press/v123/liu20a.html
+7. Overview and Unifying Conceptualization of Automated Machine Learning — ECML PKDD 2019.
+8. RL based framework for optimal data quality remediation sequence for ML — SIGMOD 2021.
+9. Convolutional Feature Extraction and Neural Arithmetic Logic Units for Stock Prediction — ICACDS 2019. https://arxiv.org/abs/1905.07581
+10. SpeechLLM: Multi-Modal LLM for Speech Understanding — GitHub/HuggingFace. https://github.com/skit-ai/SpeechLLM
+
+## Education
+
+Dual Degree — B.E. Electrical & Electronics Engineering and M.Sc. Mathematics, BITS Pilani, India
+
+## Availability
+
+Open to Voice AI consulting, research advisory, and technical collaborations.
+Rate reflects senior research expertise. Book a 30-min call: https://calendly.com/shangeth-anyreach/30min

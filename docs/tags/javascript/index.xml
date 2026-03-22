@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>JavaScript on Shangeth</title>
+    <link>//localhost:1313/tags/javascript/</link>
+    <description>Recent content in JavaScript on Shangeth</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; {year} Shangeth Rajaa</copyright>
+    <lastBuildDate>Mon, 08 Jul 2019 01:07:01 +0530</lastBuildDate>
+    
+	    <atom:link href="//localhost:1313/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Facial Emotion Recognition PyTorch ONNX</title>
+      <link>//localhost:1313/project/facial-emotion-recognition-pytorch/</link>
+      <pubDate>Mon, 08 Jul 2019 01:07:01 +0530</pubDate>
+      <guid>//localhost:1313/project/facial-emotion-recognition-pytorch/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Computer Vision Security System</title>
+      <link>//localhost:1313/project/computer-vision-security-system/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/project/computer-vision-security-system/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Emojification</title>
+      <link>//localhost:1313/project/emojification/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/project/emojification/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tic Tac Toe</title>
+      <link>//localhost:1313/project/tictactoe/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/project/tictactoe/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Twitter Sentiment analysis</title>
+      <link>//localhost:1313/project/nltk-sentiment-analysis/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/project/nltk-sentiment-analysis/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Web Builder</title>
+      <link>//localhost:1313/project/web-builder/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/project/web-builder/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Weekly Scheduler</title>
+      <link>//localhost:1313/project/weekly-scheduler/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/project/weekly-scheduler/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

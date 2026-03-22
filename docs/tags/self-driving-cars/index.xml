@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Self Driving Cars on Shangeth</title>
+    <link>//localhost:1313/tags/self-driving-cars/</link>
+    <description>Recent content in Self Driving Cars on Shangeth</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; {year} Shangeth Rajaa</copyright>
+    
+	    <atom:link href="//localhost:1313/tags/self-driving-cars/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Lane Detection with Deep Learning</title>
+      <link>//localhost:1313/project/lane-detection/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/project/lane-detection/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Self Driving Cars Steering Angle Prediction</title>
+      <link>//localhost:1313/project/self-driving-cars-steering-angle-prediction/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/project/self-driving-cars-steering-angle-prediction/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Self Driving Cars Vehicle Detection</title>
+      <link>//localhost:1313/project/self-driving-cars-vehicle-detection/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/project/self-driving-cars-vehicle-detection/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Vehicle Speed Estimation</title>
+      <link>//localhost:1313/project/vehicle-speed-estimation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/project/vehicle-speed-estimation/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

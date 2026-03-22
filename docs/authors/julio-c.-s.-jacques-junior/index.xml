@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Julio C. S. Jacques Junior on Shangeth</title>
+    <link>//localhost:1313/authors/julio-c.-s.-jacques-junior/</link>
+    <description>Recent content in Julio C. S. Jacques Junior on Shangeth</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; {year} Shangeth Rajaa</copyright>
+    <lastBuildDate>Mon, 01 Jun 2020 00:00:00 +0000</lastBuildDate>
+    
+	    <atom:link href="//localhost:1313/authors/julio-c.-s.-jacques-junior/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Towards Automated Deep Learning: Analysis of the AutoDL challenge series 2019</title>
+      <link>//localhost:1313/publication/pmlr/</link>
+      <pubDate>Mon, 01 Jun 2020 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/publication/pmlr/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Cite as:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Zhengying Liu, Zhen Xu, Shangeth Rajaa, Meysam Madadi, Julio C. S. Jacques Junior, Sergio Escalera, Adrien Pavao, Sebastien Treguer, Wei-Wei Tu, Isabelle Guyon ; Proceedings of the NeurIPS 2019 Competition and Demonstration Track, PMLR 123:242-252, 2020.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

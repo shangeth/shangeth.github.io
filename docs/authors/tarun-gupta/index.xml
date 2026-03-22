@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tarun Gupta on Shangeth</title>
+    <link>//localhost:1313/authors/tarun-gupta/</link>
+    <description>Recent content in Tarun Gupta on Shangeth</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; {year} Shangeth Rajaa</copyright>
+    <lastBuildDate>Thu, 01 Jun 2023 00:00:00 +0000</lastBuildDate>
+    
+	    <atom:link href="//localhost:1313/authors/tarun-gupta/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Improving spoken language identification with MAP-Mix</title>
+      <link>//localhost:1313/publication/icassp2023/</link>
+      <pubDate>Thu, 01 Jun 2023 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/publication/icassp2023/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
