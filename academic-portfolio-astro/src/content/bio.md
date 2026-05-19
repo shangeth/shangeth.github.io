@@ -25,7 +25,7 @@ My current research sits in full-duplex spoken dialogue, turn-taking, and dual-c
 
 ---
 
-If you're building something in Voice AI, I'm always up for a conversation - collaboration, consulting, or otherwise. [Book a 30-min call](https://calendly.com/shangeth/30min) &nbsp;·&nbsp; [Resume](/resume.pdf)
+If you're building something in Voice AI, I'm always up for a conversation - collaboration, consulting, or otherwise. [Book a 30-min call](https://calendly.com/shangeth/30min)
 
 ---
 
