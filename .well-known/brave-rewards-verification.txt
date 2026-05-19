@@ -1,4 +1,0 @@
-This is a Brave Rewards publisher verification file.
-
-Domain: shangeth.com
-Token: 0f140e5cc1ece94ee7b4b47d4b88706713ab6e31df81c96151191df34fad27b2
