@@ -12,7 +12,7 @@ I'm currently exploring what's next, open to full-time research roles in multi-m
 </div>
 
 
-Before this, I spent 6+ years building Voice AI across industry and academia — **Skit.ai**(previously Vernacular.ai), **ScoreTravel AI**, **NTU Singapore**, **IBM Research**, and **Inria Paris** — leading ML teams from zero to production and publishing at Top speech conferences like Interspeech and ICASSP.
+Before this, I spent 6+ years building Voice AI across industry and academia (**Skit.ai** (previously Vernacular.ai), **ScoreTravel AI**, **NTU Singapore**, **IBM Research**, and **Inria Paris**), leading ML teams from zero to production and publishing at Top speech conferences like Interspeech and ICASSP.
 
 
 ## Research

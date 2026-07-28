@@ -2,7 +2,7 @@
 title: "Improving Spoken Language Identification with Map-Mix"
 author: "Shangeth Rajaa, Kriti Anandan, Swaraj Dalmia, Tarun Gupta, Eng Siong Chng"
 date: "2023-06-04"
-journal: "ICASSP 2023 — IEEE International Conference on Acoustics, Speech and Signal Processing, pp. 1–5"
+journal: "ICASSP 2023: IEEE International Conference on Acoustics, Speech and Signal Processing, pp. 1–5"
 external_url: "https://doi.org/10.1109/ICASSP49357.2023.10095765"
 description: "Map-Mix: a data augmentation approach using model training dynamics to guide latent mixup sampling, giving ~2% weighted F1 improvement on low-resource dialect classification."
 tags:

@@ -52,14 +52,14 @@ All ML and research projects are on [github.com/shangeth](https://github.com/sha
 
 ## Open Source
 
-- **[wavencoder](https://github.com/shangeth/wavencoder)** — Python package for audio encoder models and transforms for speech deep learning tasks.
-- **[SpeechLLM](https://github.com/skit-ai/SpeechLLM)** — Multimodal LLM for speech understanding: ASR, gender, age, accent, emotion, and speech activity detection. [HuggingFace](https://huggingface.co/collections/shangeth/speechllm)
-- **[Wren](https://github.com/shangeth/wren-tts)** — Family of multimodal LLMs under 3B params for speech understanding, synthesis, and conversational agents. [HuggingFace](https://huggingface.co/collections/shangeth/wren)
-- **[Semantic Turn-Taking LLM](https://huggingface.co/collections/shangeth/turn-taking)** — Small LLM that predicts agent action (speak, listen, continue) from conversation context.
+- **[wavencoder](https://github.com/shangeth/wavencoder)**: Python package for audio encoder models and transforms for speech deep learning tasks.
+- **[SpeechLLM](https://github.com/skit-ai/SpeechLLM)**: Multimodal LLM for speech understanding: ASR, gender, age, accent, emotion, and speech activity detection. [HuggingFace](https://huggingface.co/collections/shangeth/speechllm)
+- **[Wren](https://github.com/shangeth/wren-tts)**: Family of multimodal LLMs under 3B params for speech understanding, synthesis, and conversational agents. [HuggingFace](https://huggingface.co/collections/shangeth/wren)
+- **[Semantic Turn-Taking LLM](https://huggingface.co/collections/shangeth/turn-taking)**: Small LLM that predicts agent action (speak, listen, continue) from conversation context.
 
 ## Community
 
-- **Google AI Explore ML** — Instructor for a deep learning course across India.
-- **Google Code-In** — Mentor under the TensorFlow org.
-- **OpenCV.org** — Built projects and wrote content for the "Deep Learning with PyTorch" course.
-- **NeurIPS 2019 AutoDL** — Helped organize AutoDL competitions (AutoCV, AutoNLP, AutoSpeech) with INRIA Paris.
+- **Google AI Explore ML**: Instructor for a deep learning course across India.
+- **Google Code-In**: Mentor under the TensorFlow org.
+- **OpenCV.org**: Built projects and wrote content for the "Deep Learning with PyTorch" course.
+- **NeurIPS 2019 AutoDL**: Helped organize AutoDL competitions (AutoCV, AutoNLP, AutoSpeech) with INRIA Paris.

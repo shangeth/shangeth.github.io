@@ -14,6 +14,6 @@ tags:
 
 ## Abstract
 
-Traditional conversation systems extract text from speech using ASR, then predict intent from transcriptions. We present Skit-S2I — the first publicly available Indian-accented SLU dataset in the banking domain in a conversational tonality — as an alternative using end-to-end spoken language understanding that directly predicts speaker intent from speech, avoiding cascading ASR errors and reducing latency.
+Traditional conversation systems extract text from speech using ASR, then predict intent from transcriptions. We present Skit-S2I (the first publicly available Indian-accented SLU dataset in the banking domain in a conversational tonality) as an alternative using end-to-end spoken language understanding that directly predicts speaker intent from speech, avoiding cascading ASR errors and reducing latency.
 
 We tested various baseline models and pretrained speech encoders, finding that self-supervised learning representations performed slightly better than ASR-based representations for this classification task.
