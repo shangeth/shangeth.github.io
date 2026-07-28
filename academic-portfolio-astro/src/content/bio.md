@@ -2,10 +2,14 @@
 name: "Shangeth Rajaa"
 avatar: "avatar.jpeg"
 shortBio: "Senior ML Scientist working on Voice AI, Turn-Taking, Full-Duplex Spoken Dialogue Systems, and Multi-Modal Speech LLMs."
-institution: "Anyreach AI"
+institution: "Open to new roles in Voice AI"
 ---
 
-I'm a Senior ML Scientist at **Anyreach AI**, working on turn-taking in full-duplex spoken dialogue systems, multimodal speech LLMs, and speech-to-speech translation.
+I'm a Senior ML Scientist, most recently at **Anyreach AI**, working on turn-taking in full-duplex spoken dialogue systems, multimodal speech LLMs, and speech-to-speech translation.
+
+<div class="status-highlight">
+I'm currently exploring what's next, open to full-time research roles in multi-modal speech LLMs, full-duplex conversation, and speech-to-speech models. <a href="https://calendly.com/shangeth/30min">Get in touch</a> if you're building in this space.
+</div>
 
 
 Before this, I spent 6+ years building Voice AI across industry and academia — **Skit.ai**(previously Vernacular.ai), **ScoreTravel AI**, **NTU Singapore**, **IBM Research**, and **Inria Paris** — leading ML teams from zero to production and publishing at Top speech conferences like Interspeech and ICASSP.
