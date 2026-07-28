@@ -255,3 +255,19 @@ Linear GAN Model does a decent job in generating MNIST images. In next post we w
 
 [Check this Awesome Repo](https://github.com/znxlwm/pytorch-MNIST-CelebA-GAN-DCGAN) on comparing Linear GAN and DCGAN for MNIST.
 Also [this notebook](https://github.com/Yangyangii/GAN-Tutorial/blob/master/MNIST/VanillaGAN.ipynb) for pytorch implementation of vanilla GAN(Linear).
+
+---
+
+## Citation
+
+If you'd like to cite this post:
+
+```bibtex
+@misc{rajaa2019-gan-3,
+  author = {Rajaa, Shangeth},
+  title  = {{GAN 3: Implementing a Linear GAN on MNIST in PyTorch}},
+  year   = {2019},
+  url    = {https://shangeth.com/posts/gan-3},
+  note   = {Blog post}
+}
+```

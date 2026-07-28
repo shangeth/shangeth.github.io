@@ -252,3 +252,19 @@ def plot_policy(policy):
 policy = dict((k,np.argmax(v)) for k, v in Q.items())
 plot_policy(policy)
 ```
+
+---
+
+## Citation
+
+If you'd like to cite this post:
+
+```bibtex
+@misc{rajaa2020-off-policy-monte-carlo,
+  author = {Rajaa, Shangeth},
+  title  = {{Off-Policy Monte Carlo Prediction with Importance Sampling}},
+  year   = {2020},
+  url    = {https://shangeth.com/posts/off-policy-monte-carlo},
+  note   = {Blog post}
+}
+```

@@ -50,3 +50,19 @@ Some examples of Unsupervised Learning are:
 - The world has a lot of unlabelled data, which can be used directly or with a little pre processing for unsupervised learning.
 
 Unsupervised Learning is still an ameature area of research, which has a lot of potential. Unsupervised learning is less expensive and can accelerate the AI field so much.
+
+---
+
+## Citation
+
+If you'd like to cite this post:
+
+```bibtex
+@misc{rajaa2019-unsupervised-learning,
+  author = {Rajaa, Shangeth},
+  title  = {{Unsupervised Learning 101}},
+  year   = {2019},
+  url    = {https://shangeth.com/posts/unsupervised-learning},
+  note   = {Blog post}
+}
+```

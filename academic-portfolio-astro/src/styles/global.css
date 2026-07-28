@@ -685,6 +685,43 @@ a:hover,
     padding: 0;
 }
 
+/* Copy button on code blocks (injected by script) */
+.code-block {
+    position: relative;
+}
+
+.code-copy-btn {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.75rem;
+    height: 1.75rem;
+    padding: 0;
+    border: 1px solid var(--border);
+    border-radius: 0.25rem;
+    background: var(--background);
+    color: var(--text-muted);
+    cursor: pointer;
+    opacity: 0.55;
+    transition: opacity 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+
+.code-copy-btn:hover,
+.code-copy-btn:focus-visible,
+.code-copy-btn.copied {
+    opacity: 1;
+    color: var(--accent);
+    border-color: var(--accent);
+}
+
+.code-copy-btn svg {
+    width: 14px;
+    height: 14px;
+}
+
 /* Output blocks — slightly dimmed to distinguish from code */
 .prose pre:has(code.language-text) {
     opacity: 0.8;
@@ -696,6 +733,16 @@ a:hover,
     height: auto;
     border-radius: 0.25rem;
     margin: 1rem 0;
+}
+
+/* shields.io-style badges (code/model links) render inline, not as block figures */
+.prose img[src*="shields.io"] {
+    display: inline-block;
+    height: 20px;
+    width: auto;
+    margin: 0 0.25rem 0.5rem 0;
+    border-radius: 0;
+    vertical-align: middle;
 }
 
 .prose blockquote {
@@ -710,6 +757,64 @@ a:hover,
     border: none;
     border-top: 1px solid var(--border);
     margin: 2rem 0;
+}
+
+/* Tables */
+.prose table {
+    display: block;
+    overflow-x: auto;
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0 1.5rem;
+    font-size: 0.85rem;
+}
+
+.prose th,
+.prose td {
+    border: 1px solid var(--border);
+    padding: 0.5rem 0.75rem;
+    text-align: left;
+    white-space: nowrap;
+}
+
+.prose th {
+    background: var(--surface);
+    font-weight: 700;
+}
+
+.prose td:not(:first-child) {
+    text-align: center;
+}
+
+/* Numbered references / bibliography */
+.prose .references {
+    list-style: none;
+    counter-reset: ref;
+    padding-left: 0;
+    margin: 1rem 0;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+.prose .references li {
+    counter-increment: ref;
+    position: relative;
+    padding-left: 2.25rem;
+    margin-bottom: 0.85rem;
+    line-height: 1.6;
+}
+
+.prose .references li::before {
+    content: "[" counter(ref) "]";
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+}
+
+.prose .references a {
+    font-weight: 500;
 }
 
 

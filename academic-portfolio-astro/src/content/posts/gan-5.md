@@ -53,3 +53,19 @@ The generator G will get a pair of images:
 - training x and generated y (different x) — G will classify as fake
 
 This way a conditional GAN(CGAN) or pix2pix GAN is trained, which has massive applications. In the next post we will see how to train a GAN to do a image to image translation(pix2pix) without labelled pair.
+
+---
+
+## Citation
+
+If you'd like to cite this post:
+
+```bibtex
+@misc{rajaa2019-gan-5,
+  author = {Rajaa, Shangeth},
+  title  = {{GAN 5: Conditional GAN and Pix2Pix}},
+  year   = {2019},
+  url    = {https://shangeth.com/posts/gan-5},
+  note   = {Blog post}
+}
+```

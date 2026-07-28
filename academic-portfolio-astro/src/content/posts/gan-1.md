@@ -39,3 +39,19 @@ GANs are [unsupervised machine learning models](https://shangeth.com/post/unsupe
 [Check out](https://github.com/wiseodd/generative-models) all of these Generative models.
 
 In the next few posts, we will look deep into how GANs work and code GANs with PyTorch for different applications.
+
+---
+
+## Citation
+
+If you'd like to cite this post:
+
+```bibtex
+@misc{rajaa2019-gan-1,
+  author = {Rajaa, Shangeth},
+  title  = {{GAN 1: Introduction to Generative Adversarial Networks}},
+  year   = {2019},
+  url    = {https://shangeth.com/posts/gan-1},
+  note   = {Blog post}
+}
+```

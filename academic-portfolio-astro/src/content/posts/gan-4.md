@@ -299,3 +299,19 @@ def view_samples(epoch, samples):
 Training a DCGAN is same as the Linear/Vanilla GAN. DCGANs can extract more features in an image with the CNN and can help in generating the distributions well.
 
 In the next post, we will look at Pix2Pix GAN and its applications.
+
+---
+
+## Citation
+
+If you'd like to cite this post:
+
+```bibtex
+@misc{rajaa2019-gan-4,
+  author = {Rajaa, Shangeth},
+  title  = {{GAN 4: Deep Convolutional GAN (DCGAN) on SVHN}},
+  year   = {2019},
+  url    = {https://shangeth.com/posts/gan-4},
+  note   = {Blog post}
+}
+```

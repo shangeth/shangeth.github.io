@@ -67,3 +67,19 @@ Generator gets a local maxima when the distribution learned by generator is equa
 We will use 2 seperate optimization algorithms for D and G, so it is not possible for us to find the equilibrium. But if we can use a single optimization algorithm which reduces both D & G costs together, then we may encounter perfect equilibirum.
 
 In the next post, we will look into the practical implementation of GANs by coding and training it in PyTorch.
+
+---
+
+## Citation
+
+If you'd like to cite this post:
+
+```bibtex
+@misc{rajaa2019-gan-2,
+  author = {Rajaa, Shangeth},
+  title  = {{GAN 2: The Game Theory Behind Generator and Discriminator}},
+  year   = {2019},
+  url    = {https://shangeth.com/posts/gan-2},
+  note   = {Blog post}
+}
+```

@@ -161,6 +161,22 @@ Cross Entropy of [0.1 0.2 0.4 0.3] and [0.9 0.  0.  0.1] = 16.957033157348633
 Cross Entropy of [0.9 0.  0.  0.1] and [0.8  0.   0.05 0.15] = 0.5634317994117737
 ```
 
+---
+
+## Citation
+
+If you'd like to cite this post:
+
+```bibtex
+@misc{rajaa2020-kl-divergence,
+  author = {Rajaa, Shangeth},
+  title  = {{KL Divergence: Entropy, Cross Entropy, and Mutual Information in PyTorch}},
+  year   = {2020},
+  url    = {https://shangeth.com/posts/kl-divergence},
+  note   = {Blog post}
+}
+```
+
 ## Reference
 
 - Elements of Information Theory — Thomas M. Cover, Joy A. Thomas
