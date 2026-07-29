@@ -43,6 +43,8 @@ const bio = bioCollection[0]?.data;
                         target="_blank"
                         rel="noreferrer"
                         class="social-link"
+                        data-umami-event="social-click"
+                        data-umami-event-network={social.name}
                     >
                         <Icon name={SOCIAL_ICONS[social.name] || social.name} size={24} />
                     </a>
@@ -53,6 +55,7 @@ const bio = bioCollection[0]?.data;
                     target="_blank"
                     rel="noreferrer"
                     class="social-link px-2 text-xs font-bold tracking-wider"
+                    data-umami-event="resume-download"
                 >
                     Resume
                 </a>

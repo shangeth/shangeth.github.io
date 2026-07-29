@@ -95,6 +95,9 @@ const ogImage = entry.data.image || SITE.ogImage;
             button.addEventListener("click", async () => {
                 const code = pre.querySelector("code");
                 const text = code ? code.innerText : pre.innerText;
+                if (pre.dataset.language === "bibtex") {
+                    window.umami?.track("citation-copy");
+                }
                 try {
                     await navigator.clipboard.writeText(text);
                 } catch (e) {

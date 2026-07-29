@@ -8,7 +8,7 @@ institution: "Open to new roles in Voice AI"
 I'm a Senior ML Scientist, most recently at **Anyreach AI**, working on turn-taking in full-duplex spoken dialogue systems, multimodal speech LLMs, and speech-to-speech translation.
 
 <div class="status-highlight">
-I'm currently exploring what's next, open to full-time research roles in multi-modal speech LLMs, full-duplex conversation, and speech-to-speech models. <a href="https://calendly.com/shangeth/30min">Get in touch</a> if you're building in this space.
+I'm currently exploring what's next, open to full-time research roles in multi-modal speech LLMs, full-duplex conversation, and speech-to-speech models. <a href="https://calendly.com/shangeth/30min" data-umami-event="cta-click" data-umami-event-location="highlight">Get in touch</a> if you're building in this space.
 </div>
 
 
@@ -29,7 +29,7 @@ My current research sits in full-duplex spoken dialogue, turn-taking, and dual-c
 
 ---
 
-If you're building something in Voice AI, I'm always up for a conversation - collaboration, consulting, or otherwise. [Book a 30-min call](https://calendly.com/shangeth/30min)
+If you're building something in Voice AI, I'm always up for a conversation - collaboration, consulting, or otherwise. <a href="https://calendly.com/shangeth/30min" data-umami-event="cta-click" data-umami-event-location="bio-footer">Book a 30-min call</a>
 
 ---
 

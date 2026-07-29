@@ -24,7 +24,7 @@ export const SETTINGS: SettingsConfig = {
 };
 
 const umami: UmamiAnalyticsConfig = {
-    websiteId: "",
+    websiteId: "f98471af-a3c9-483d-8af6-59cc81d51877",
     src: "https://cloud.umami.is/script.js",
 }
 
