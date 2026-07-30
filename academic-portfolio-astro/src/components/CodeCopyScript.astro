@@ -1,0 +1,54 @@
+---
+---
+
+<script is:inline>
+    function initCodeCopyButtons() {
+        document.querySelectorAll(".prose pre").forEach((pre) => {
+            if (pre.parentElement?.classList.contains("code-block")) return;
+
+            const wrapper = document.createElement("div");
+            wrapper.className = "code-block";
+            pre.parentNode.insertBefore(wrapper, pre);
+            wrapper.appendChild(pre);
+
+            const button = document.createElement("button");
+            button.type = "button";
+            button.className = "code-copy-btn";
+            button.setAttribute("aria-label", "Copy code");
+            const copyIcon = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M8 8m0 2a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v8a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2z" /><path d="M16 8v-2a2 2 0 0 0 -2 -2h-8a2 2 0 0 0 -2 2v8a2 2 0 0 0 2 2h2" /></svg>';
+            const checkIcon = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 12l5 5l10 -10" /></svg>';
+            button.innerHTML = copyIcon;
+
+            button.addEventListener("click", async () => {
+                const code = pre.querySelector("code");
+                const text = code ? code.innerText : pre.innerText;
+                if (pre.dataset.language === "bibtex") {
+                    window.umami?.track("citation-copy");
+                }
+                try {
+                    await navigator.clipboard.writeText(text);
+                } catch (e) {
+                    const textarea = document.createElement("textarea");
+                    textarea.value = text;
+                    textarea.style.position = "fixed";
+                    textarea.style.opacity = "0";
+                    document.body.appendChild(textarea);
+                    textarea.select();
+                    document.execCommand("copy");
+                    document.body.removeChild(textarea);
+                }
+                button.classList.add("copied");
+                button.innerHTML = checkIcon;
+                setTimeout(() => {
+                    button.classList.remove("copied");
+                    button.innerHTML = copyIcon;
+                }, 1500);
+            });
+
+            wrapper.appendChild(button);
+        });
+    }
+
+    document.addEventListener("astro:page-load", initCodeCopyButtons);
+    document.addEventListener("DOMContentLoaded", initCodeCopyButtons);
+</script>

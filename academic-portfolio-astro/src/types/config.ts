@@ -35,6 +35,7 @@ export interface NavLink {
     href: string;
     label: string;
     isActive: boolean;
+    alignRight?: boolean;
 }
 
 export interface SocialLink {

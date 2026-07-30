@@ -486,11 +486,16 @@ a:hover,
 
 .nav-links {
     display: flex;
+    width: 100%;
     gap: 1.5rem;
     list-style: none;
     padding: 0;
     margin: 0;
     flex-wrap: wrap;
+}
+
+.nav-item-right {
+    margin-left: auto;
 }
 
 .nav-link {
@@ -844,6 +849,62 @@ a:hover,
 
 .back-link:hover {
     opacity: 1;
+}
+
+/* Course lesson list */
+.lesson-group {
+    margin-bottom: 2rem;
+}
+
+.lesson-group-title {
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--text-muted);
+    margin-bottom: 0.5rem;
+}
+
+.lesson-list {
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid var(--border);
+}
+
+.lesson-row {
+    display: flex;
+    align-items: baseline;
+    gap: 0.85rem;
+    padding: 0.7rem 0.5rem;
+    margin: 0 -0.5rem;
+    border-bottom: 1px solid var(--border);
+    text-decoration: none;
+    color: var(--foreground);
+    border-radius: 0.25rem;
+    transition: background 0.15s ease;
+}
+
+.lesson-row:hover {
+    background: var(--surface);
+}
+
+.lesson-row:hover .lesson-title {
+    color: var(--accent);
+}
+
+.lesson-number {
+    flex: none;
+    width: 2.5rem;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 0.8rem;
+    color: var(--accent);
+    font-weight: 700;
+}
+
+.lesson-title {
+    font-size: 1rem;
+    font-weight: 500;
+    transition: color 0.15s ease;
 }
 
 /* Item List */

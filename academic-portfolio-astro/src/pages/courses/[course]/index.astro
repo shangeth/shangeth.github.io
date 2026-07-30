@@ -1,0 +1,84 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import BackLink from "../../../components/ui/BackLink.astro";
+
+export async function getStaticPaths() {
+    const allLessons = await getCollection("courses");
+    const courses = [...new Set(allLessons.map((e) => e.data.course))];
+    return courses.map((course) => ({ params: { course } }));
+}
+
+const { course } = Astro.params;
+const allLessons = await getCollection("courses");
+const lessons = allLessons
+    .filter((e) => e.data.course === course)
+    .sort((a, b) => a.data.order - b.data.order);
+
+const courseTitle = lessons[0]?.data.courseTitle || course;
+
+const COURSE_META: Record<string, { description: string; prerequisites: string[] }> = {
+    deeplearning: {
+        description:
+            "Taught as part of Google's Explore ML program at BITS Pilani Goa Campus (Fall 2019). Covers the fundamentals of deep learning — regression and classification, gradient descent, and neural network architectures for computer vision and NLP — through hands-on notebooks.",
+        prerequisites: [
+            "Python 3 and basic programming (functions, OOP)",
+            "NumPy, Pandas, Matplotlib",
+            "Basic multivariable calculus, linear algebra, probability & statistics",
+        ],
+    },
+};
+
+const meta = COURSE_META[course];
+
+const SECTION_TITLES: Record<number, string> = {
+    0: "Data & Learning Problem",
+    1: "Intro to Deep Learning",
+    2: "Deep Neural Networks",
+};
+
+const sections = new Map<number, typeof lessons>();
+for (const entry of lessons) {
+    const key = Math.floor(entry.data.order);
+    if (!sections.has(key)) sections.set(key, []);
+    sections.get(key)!.push(entry);
+}
+---
+
+<BaseLayout title={courseTitle}>
+    <div class="flex justify-between items-center mb-4">
+        <BackLink href="/courses" label="Courses" />
+    </div>
+
+    <header class="page-header">
+        <h1 class="page-title">{courseTitle}</h1>
+    </header>
+
+    <div class="prose">
+        {meta && <p>{meta.description}</p>}
+        {meta && (
+            <>
+                <h2>Prerequisites</h2>
+                <ul>
+                    {meta.prerequisites.map((p) => <li>{p}</li>)}
+                </ul>
+            </>
+        )}
+    </div>
+
+    <div class="lesson-groups mt-8">
+        {[...sections.entries()].map(([key, groupLessons]) => (
+            <div class="lesson-group">
+                <h3 class="lesson-group-title">{SECTION_TITLES[key] || `Section ${key}`}</h3>
+                <div class="lesson-list">
+                    {groupLessons.map((entry) => (
+                        <a href={`/courses/${course}/${entry.data.order}`} class="lesson-row">
+                            <span class="lesson-number">{entry.data.order}</span>
+                            <span class="lesson-title">{entry.data.title}</span>
+                        </a>
+                    ))}
+                </div>
+            </div>
+        ))}
+    </div>
+</BaseLayout>

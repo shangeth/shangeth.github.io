@@ -59,7 +59,7 @@ All ML and research projects are on [github.com/shangeth](https://github.com/sha
 
 ## Community
 
-- **Google AI Explore ML**: Instructor for a deep learning course across India.
+- **[Google AI Explore ML](/courses/deeplearning)**: Instructor for a deep learning course across India.
 - **Google Code-In**: Mentor under the TensorFlow org.
 - **OpenCV.org**: Built projects and wrote content for the "Deep Learning with PyTorch" course.
 - **NeurIPS 2019 AutoDL**: Helped organize AutoDL competitions (AutoCV, AutoNLP, AutoSpeech) with INRIA Paris.

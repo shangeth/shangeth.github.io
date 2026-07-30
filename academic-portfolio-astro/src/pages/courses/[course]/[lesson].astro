@@ -1,0 +1,36 @@
+---
+import { getCollection } from "astro:content";
+import CourseLessonLayout from "../../../layouts/CourseLessonLayout.astro";
+
+export async function getStaticPaths() {
+    const allLessons = await getCollection("courses");
+
+    const byCourse = new Map<string, any[]>();
+    for (const entry of allLessons) {
+        const course = entry.data.course;
+        if (!byCourse.has(course)) byCourse.set(course, []);
+        byCourse.get(course)!.push(entry);
+    }
+
+    const paths: any[] = [];
+    for (const [course, lessons] of byCourse) {
+        const sorted = lessons.sort((a, b) => a.data.order - b.data.order);
+        sorted.forEach((entry, i) => {
+            const lessonSlug = String(entry.data.order);
+            paths.push({
+                params: { course, lesson: lessonSlug },
+                props: {
+                    entry,
+                    prevLesson: i > 0 ? sorted[i - 1] : null,
+                    nextLesson: i < sorted.length - 1 ? sorted[i + 1] : null,
+                },
+            });
+        });
+    }
+    return paths;
+}
+
+const { entry, prevLesson, nextLesson } = Astro.props;
+---
+
+<CourseLessonLayout entry={entry} prevLesson={prevLesson} nextLesson={nextLesson} />

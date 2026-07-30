@@ -15,7 +15,7 @@ const currentPath = Astro.url.pathname;
                 const pageConfig = (PAGES as any)[pageKey];
                 return link.isActive !== false && pageConfig?.active !== false;
             }).map((link) => (
-                <li>
+                <li class={link.alignRight ? "nav-item-right" : ""}>
                     <a
                         href={link.href}
                         class={`nav-link ${

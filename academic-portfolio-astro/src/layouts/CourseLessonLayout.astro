@@ -1,0 +1,49 @@
+---
+import { render } from "astro:content";
+import BaseLayout from "./BaseLayout.astro";
+import BackLink from "../components/ui/BackLink.astro";
+import CodeCopyScript from "../components/CodeCopyScript.astro";
+import { SITE } from "../config";
+
+interface Props {
+    entry: any;
+    prevLesson: any;
+    nextLesson: any;
+}
+
+const { entry, prevLesson, nextLesson } = Astro.props;
+const { Content } = await render(entry);
+
+const description = entry.data.description || SITE.desc;
+---
+
+<BaseLayout title={`${entry.data.title} | ${entry.data.courseTitle}`} description={description} ogType="article">
+    <div class="flex justify-between items-center mb-4">
+        <BackLink href={`/courses/${entry.data.course}`} label={entry.data.courseTitle} />
+    </div>
+
+    <article>
+        <h1 class="page-title mb-4">{entry.data.title}</h1>
+
+        <div class="prose">
+            <Content />
+        </div>
+
+        <nav class="post-navigation container-narrow flex justify-between mt-24 pt-12 gap-8">
+            {prevLesson ? (
+                <a href={`/courses/${entry.data.course}/${prevLesson.data.order}`} class="nav-prev flex flex-col group max-w-[45%] no-underline">
+                    <span class="nav-label text-[0.8rem] uppercase tracking-wider opacity-75 font-bold mb-2">Previous Lesson</span>
+                    <span class="nav-title text-lg font-semibold text-foreground group-hover:text-accent transition-colors duration-200 leading-snug">{prevLesson.data.title}</span>
+                </a>
+            ) : <div />}
+            {nextLesson ? (
+                <a href={`/courses/${entry.data.course}/${nextLesson.data.order}`} class="nav-next flex flex-col items-end text-right group max-w-[45%] no-underline">
+                    <span class="nav-label text-[0.8rem] uppercase tracking-wider opacity-75 font-bold mb-2">Next Lesson</span>
+                    <span class="nav-title text-lg font-semibold text-foreground group-hover:text-accent transition-colors duration-200 leading-snug">{nextLesson.data.title}</span>
+                </a>
+            ) : <div />}
+        </nav>
+    </article>
+</BaseLayout>
+
+<CodeCopyScript />

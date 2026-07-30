@@ -1,0 +1,46 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import BaseItemCard from "../../components/ui/BaseItemCard.astro";
+
+const allLessons = await getCollection("courses");
+
+const courseMap = new Map<string, { courseTitle: string; count: number }>();
+for (const entry of allLessons) {
+    const course = entry.data.course;
+    if (!courseMap.has(course)) {
+        courseMap.set(course, { courseTitle: entry.data.courseTitle, count: 0 });
+    }
+    courseMap.get(course)!.count += 1;
+}
+
+const COURSE_INFO: Record<string, { instructor: string; date: string; institution: string }> = {
+    deeplearning: {
+        instructor: "Shangeth Rajaa",
+        date: "Fall 2019",
+        institution: "BITS Pilani, Goa Campus",
+    },
+};
+---
+
+<BaseLayout title="Courses">
+    <header class="page-header">
+        <h1 class="page-title">Courses</h1>
+    </header>
+
+    <section class="item-list">
+        {[...courseMap.entries()].map(([course, { courseTitle, count }]) => {
+            const info = COURSE_INFO[course];
+            return (
+                <BaseItemCard
+                    title={courseTitle}
+                    href={`/courses/${course}`}
+                    description={`${count} lessons`}
+                    authors={info?.instructor}
+                    date={info?.date}
+                    extraInput={info?.institution}
+                />
+            );
+        })}
+    </section>
+</BaseLayout>
