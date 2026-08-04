@@ -8,6 +8,10 @@ institution: "Open to new roles in Voice AI"
 I'm a Senior ML Scientist, most recently at **Anyreach AI**, working on turn-taking in full-duplex spoken dialogue systems, multimodal speech LLMs, and speech-to-speech translation.
 
 <div class="status-highlight">
+🎉 <strong>DualTurn accepted at Interspeech 2026!</strong> Excited to present this work in person in Sydney, September 28 – October 1, 2026. Read the <a href="/posts/dualturn" data-umami-event="cta-click" data-umami-event-location="highlight-dualturn">write-up</a> or the <a href="https://arxiv.org/abs/2603.08216" target="_blank" rel="noopener noreferrer" data-umami-event="cta-click" data-umami-event-location="highlight-dualturn-arxiv">paper</a>.
+</div>
+
+<div class="status-highlight">
 I'm currently exploring what's next, open to full-time research roles in multi-modal speech LLMs, full-duplex conversation, and speech-to-speech models. <a href="https://calendly.com/shangeth/30min" data-umami-event="cta-click" data-umami-event-location="highlight">Get in touch</a> if you're building in this space.
 </div>
 
