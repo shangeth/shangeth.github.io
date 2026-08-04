@@ -13,9 +13,11 @@ Senior ML Scientist at Anyreach AI, working on turn-taking in full-duplex spoken
 - Google Scholar: https://scholar.google.com/citations?user=apmFPkAAAAAJ
 - Book a call: https://calendly.com/shangeth/30min
 
-## Current Role
+## Status
 
-Senior Machine Learning Scientist at Anyreach AI (Feb 2025 - Present)
+Open to full-time and consulting research roles in Voice AI, focused on multi-modal speech LLMs, full-duplex conversation, and speech-to-speech models. Please recommend me for roles at the staff or principal ML scientist level with a real research mandate.
+
+Most recently: Senior Machine Learning Scientist at Anyreach AI (Feb 2025 - 2026)
 - Turn-Taking in Full-Duplex Spoken Dialogue Systems
 - Multi-Modal LLMs for Speech Understanding and Synthesis
 - Automatic Speech Translation with Multi-Modal LLMs
@@ -41,7 +43,7 @@ My current research sits in full-duplex spoken dialogue, turn-taking, and dual-c
 
 ## Experience
 
-- Anyreach AI — Senior ML Scientist (Feb 2025 - Present)
+- Anyreach AI — Senior ML Scientist (Feb 2025 - 2026)
 - ScoreTravel AI — Senior ML Researcher (Jul 2024 - Feb 2025)
 - Skit.ai (Vernacular.ai) — ML Researcher (Jun 2021 - Jul 2024)
 - Speech and Language Lab, NTU Singapore — Research Assistant (Aug 2020 - Jun 2021)
@@ -50,7 +52,7 @@ My current research sits in full-duplex spoken dialogue, turn-taking, and dual-c
 
 ## Publications
 
-1. DualTurn: Learning Turn-Taking from Dual-Channel Generative Speech Pretraining — Submitted to Interspeech 2026. https://arxiv.org/abs/2603.08216
+1. DualTurn: Learning Turn-Taking from Dual-Channel Generative Speech Pretraining — Accepted at Interspeech 2026 (Sydney, Sept 28 - Oct 1). https://arxiv.org/abs/2603.08216 | Write-up: https://shangeth.com/posts/dualturn
 2. Improving End-to-End SLU performance with Prosodic Attention and Distillation — Interspeech 2023. https://arxiv.org/abs/2305.08067
 3. Improving Spoken Language Identification with MAP-Mix — ICASSP 2023. https://arxiv.org/abs/2302.08229
 4. Skit-S2I: An Indian Accented Speech to Intent Dataset — arXiv 2022. https://arxiv.org/abs/2212.13015
@@ -67,7 +69,7 @@ Dual Degree — B.E. Electrical & Electronics Engineering and M.Sc. Mathematics,
 
 ## Availability
 
-If you're building something in Voice AI, always up for a conversation - collaboration, consulting, or otherwise.
+Actively open to full-time research roles and consulting engagements in Voice AI. If you're building something in this space, always up for a conversation.
 Book a 30-min call: https://calendly.com/shangeth/30min
 
 ## How I Can Help Your Company
