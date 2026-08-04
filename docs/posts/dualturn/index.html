@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en" style="--lightBg: #f9fafb;--lightFg: #111827;--lightAccent: #3b82f6;--lightMuted: #6b7280;--lightBorder: #e5e7eb;--lightSurface: #f9fafb;--darkBg: #241f1c;--darkFg: #e6dfd3;--darkAccent: #d97757;--darkMuted: #8a7d71;--darkBorder: #3d342d;--darkSurface: #241f1c;"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="icon" href="/favicon.ico" sizes="any"><meta name="generator" content="Astro v6.1.7"><!-- Robots / Indexing --><meta name="robots" content="index, follow"><!-- Canonical URL --><link rel="canonical" href="https://shangeth.com/posts/llmranker/"><!-- General Meta Tags --><title>llmranker: LLM-based ranking and reasoning algorithms for search and recommendation | Shangeth Rajaa</title><meta name="title" content="llmranker: LLM-based ranking and reasoning algorithms for search and recommendation | Shangeth Rajaa"><meta name="description" content="LLM-based ranking and reasoning algorithms for search and recommendation: why asking an LLM to rank a shortlist outperforms embedding distance on compositional queries, a research-grounded tour of pointwise, pairwise, listwise, setwise, and tournament-style ranking, and a package that implements all of them over any provider."><meta name="author" content="Shangeth Rajaa"><!-- Open Graph / Facebook --><meta property="og:type" content="article"><meta property="og:url" content="https://shangeth.com/posts/llmranker/"><meta property="og:title" content="llmranker: LLM-based ranking and reasoning algorithms for search and recommendation"><meta property="og:description" content="LLM-based ranking and reasoning algorithms for search and recommendation: why asking an LLM to rank a shortlist outperforms embedding distance on compositional queries, a research-grounded tour of pointwise, pairwise, listwise, setwise, and tournament-style ranking, and a package that implements all of them over any provider."><meta property="og:image" content="https://shangeth.com/posts/llmranker/avatar.jpeg"><!-- Twitter --><meta property="twitter:card" content="summary_large_image"><meta property="twitter:url" content="https://shangeth.com/posts/llmranker/"><meta property="twitter:title" content="llmranker: LLM-based ranking and reasoning algorithms for search and recommendation"><meta property="twitter:description" content="LLM-based ranking and reasoning algorithms for search and recommendation: why asking an LLM to rank a shortlist outperforms embedding distance on compositional queries, a research-grounded tour of pointwise, pairwise, listwise, setwise, and tournament-style ranking, and a package that implements all of them over any provider."><meta property="twitter:image" content="https://shangeth.com/posts/llmranker/avatar.jpeg"><!-- Structured Data (JSON-LD) --><script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Shangeth Rajaa","url":"https://shangeth.com/","jobTitle":"Professor","description":"Shangeth Rajaa, Senior ML Scientist at Anyreach AI (ex-Skit.ai). Voice AI research on full-duplex spoken dialogue, turn-taking, and speech LLMs."}</script><meta name="astro-view-transitions-enabled" content="true"><meta name="astro-view-transitions-fallback" content="animate"><script type="module" src="/_astro/ClientRouter.astro_astro_type_script_index_0_lang.j56hQv-j.js"></script><script>(function(){const umamiId = "f98471af-a3c9-483d-8af6-59cc81d51877";
+<!DOCTYPE html><html lang="en" style="--lightBg: #f9fafb;--lightFg: #111827;--lightAccent: #3b82f6;--lightMuted: #6b7280;--lightBorder: #e5e7eb;--lightSurface: #f9fafb;--darkBg: #241f1c;--darkFg: #e6dfd3;--darkAccent: #d97757;--darkMuted: #8a7d71;--darkBorder: #3d342d;--darkSurface: #241f1c;"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="icon" href="/favicon.ico" sizes="any"><meta name="generator" content="Astro v6.1.7"><!-- Robots / Indexing --><meta name="robots" content="index, follow"><!-- Canonical URL --><link rel="canonical" href="https://shangeth.com/posts/dualturn/"><!-- General Meta Tags --><title>DualTurn: Learning Turn-Taking from Dual-Channel Generative Speech Pretraining | Shangeth Rajaa</title><meta name="title" content="DualTurn: Learning Turn-Taking from Dual-Channel Generative Speech Pretraining | Shangeth Rajaa"><meta name="description" content="Speech-to-speech models know when to speak but can't reason. Cascaded LLM pipelines can reason but only react to silence. DualTurn pretrains on dual-channel human conversation to bring S2S-level turn-taking into a standard ASR-LLM-TTS stack."><meta name="author" content="Shangeth Rajaa"><!-- Open Graph / Facebook --><meta property="og:type" content="article"><meta property="og:url" content="https://shangeth.com/posts/dualturn/"><meta property="og:title" content="DualTurn: Learning Turn-Taking from Dual-Channel Generative Speech Pretraining"><meta property="og:description" content="Speech-to-speech models know when to speak but can't reason. Cascaded LLM pipelines can reason but only react to silence. DualTurn pretrains on dual-channel human conversation to bring S2S-level turn-taking into a standard ASR-LLM-TTS stack."><meta property="og:image" content="https://shangeth.com/posts/dualturn/avatar.jpeg"><!-- Twitter --><meta property="twitter:card" content="summary_large_image"><meta property="twitter:url" content="https://shangeth.com/posts/dualturn/"><meta property="twitter:title" content="DualTurn: Learning Turn-Taking from Dual-Channel Generative Speech Pretraining"><meta property="twitter:description" content="Speech-to-speech models know when to speak but can't reason. Cascaded LLM pipelines can reason but only react to silence. DualTurn pretrains on dual-channel human conversation to bring S2S-level turn-taking into a standard ASR-LLM-TTS stack."><meta property="twitter:image" content="https://shangeth.com/posts/dualturn/avatar.jpeg"><!-- Structured Data (JSON-LD) --><script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Shangeth Rajaa","url":"https://shangeth.com/","jobTitle":"Professor","description":"Shangeth Rajaa, Senior ML Scientist at Anyreach AI (ex-Skit.ai). Voice AI research on full-duplex spoken dialogue, turn-taking, and speech LLMs."}</script><meta name="astro-view-transitions-enabled" content="true"><meta name="astro-view-transitions-fallback" content="animate"><script type="module" src="/_astro/ClientRouter.astro_astro_type_script_index_0_lang.j56hQv-j.js"></script><script>(function(){const umamiId = "f98471af-a3c9-483d-8af6-59cc81d51877";
 const umamiSrc = "https://cloud.umami.is/script.js";
 const ga4Id = "G-733WY72RFD";
 
@@ -136,166 +136,307 @@ const ga4Id = "G-733WY72RFD";
 </svg> </a> <a href="/resume.pdf" title="Resume" target="_blank" rel="noreferrer" class="social-link px-2 text-xs font-bold tracking-wider" data-umami-event="resume-download">
 Resume
 </a> </div> </div> </div> </aside> <div class="main-content"> <nav class="navbar"> <ul class="nav-links"> <li class> <a href="/" class="nav-link inactive"> About <span class="nav-link-line"></span> </a> </li><li class> <a href="/cv" class="nav-link inactive"> CV <span class="nav-link-line"></span> </a> </li><li class> <a href="/publications" class="nav-link inactive"> Publications <span class="nav-link-line"></span> </a> </li><li class> <a href="/posts" class="nav-link active"> Blog <span class="nav-link-line"></span> </a> </li><li class="nav-item-right"> <a href="/courses" class="nav-link inactive"> Courses <span class="nav-link-line"></span> </a> </li> </ul> </nav> <div class="main-body animate-in">   <div class="flex justify-between items-center mb-4"> <a href="/posts" class="back-link">
-Go back to posts </a>  </div> <article> <h1 class="page-title mb-4">llmranker: LLM-based ranking and reasoning algorithms for search and recommendation</h1> <div class="card-meta mb-4"> <span class="flex items-center gap-1"> <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-calendar-event"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M4 7a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2l0 -12" /><path d="M16 3l0 4" /><path d="M8 3l0 4" /><path d="M4 11l16 0" /><path d="M8 15h2v2h-2l0 -2" /></svg>
-</svg> <span>August 2026</span> </span> </div> <div class="flex gap-2 flex-wrap mb-4"> <a href="/tags/llm" class="tag text-xs">
-#LLM  </a><a href="/tags/information retrieval" class="tag text-xs">
-#Information Retrieval  </a><a href="/tags/search" class="tag text-xs">
-#Search  </a><a href="/tags/recommendation systems" class="tag text-xs">
-#Recommendation Systems  </a><a href="/tags/python" class="tag text-xs">
-#Python  </a> </div> <div class="prose"> <p><a href="https://github.com/shangeth/llmranker"><img src="https://img.shields.io/badge/-Github-black?logo=github" alt="GitHub"></a> <a href="https://pypi.org/project/llmranker/"><img src="https://img.shields.io/pypi/v/llmranker.svg" alt="PyPI"></a> <a href="https://colab.research.google.com/github/shangeth/llmranker/blob/main/examples/quickstart.ipynb"><img src="https://img.shields.io/badge/Open%20in%20Colab-F9AB00?logo=googlecolab&#x26;color=blue" alt="Open in Colab"></a> <a href="#citing-this-package"><img src="https://img.shields.io/badge/Cite-BibTeX-yellow.svg" alt="Cite this work"></a></p>
-<h2 id="ranking-is-not-retrieval">Ranking is not retrieval</h2>
-<p>“Search” usually means two problems stacked on top of each other. First, retrieval: pull a candidate set out of a much larger corpus, cheaply, without missing anything relevant. Second, ranking: given that candidate set, put the best few at the top. Retrieval has to be fast over millions of items. Ranking only has to be good over dozens.</p>
-<p>Almost all of the recent argument about LLMs in search is really about the second problem. Nobody is proposing an LLM forward pass per document across a million-item index. The question is what to do with the shortlist a cheap retriever already produced, and that’s a much smaller compute budget to spend.</p>
-<h2 id="the-default-embed-then-sort-by-distance">The default: embed, then sort by distance</h2>
-<p>The standard approach to both halves is the same tool. Encode the query and every candidate as a vector with a bi-encoder, and rank by cosine similarity or another distance metric. It’s fast, it’s a single ANN index lookup, and it generalizes past exact keyword overlap in a way lexical search (BM25) cannot.</p>
-<p>It also works by compressing an entire query into one fixed-width vector. That compression is where the trouble starts.</p>
-<h2 id="where-a-single-vector-runs-out-of-room">Where a single vector runs out of room</h2>
-<p>A 2026 SIGIR reproducibility study on compositional information retrieval makes the failure precise rather than anecdotal (<a href="https://arxiv.org/abs/2605.03824">Degenhart et al., 2026</a>). On QUEST, a benchmark whose queries carry real semantic content, dense single-vector models like GritLM-7B reach Recall@100 around 0.42, respectable, and better than BM25’s 0.197. But the authors also built LIMIT+, a controlled benchmark stripped of incidental semantic cues so that only constraint satisfaction is left to solve. On LIMIT+, BM25 holds at 0.837 recall while dense single-vector embeddings collapse to under 0.13. A multi-vector method (a ColBERT-style model, GTE-ModernColBERT), which keeps per-token representations instead of compressing to one vector, reaches 0.73, meaningfully better than single-vector dense retrieval’s collapse, though still trailing BM25.</p>
-<p>The gap between the two benchmarks is the finding. What looked like compositional reasoning on QUEST was mostly the model keying on semantic correlations, not actually satisfying the conjunction of constraints. A single embedding has no slot to independently hold “family friendly” AND “near historic sites” AND NOT “on the beach,” three constraints, one of them negated. It has to blend all of that into one point in space, and blending is lossy in exactly the way conjunction and negation aren’t supposed to be.</p>
-<p>Here’s what that looks like on an actual query, not just a benchmark number. Say someone searches for a “family friendly hotel near the historic center, not directly on the beach, with a pool.” Two listings come back:</p>
-<blockquote>
-<p><strong>Hotel A.</strong> Beachfront resort steps from the sand. Kids’ pool, family suites, lively boardwalk nightlife just outside.</p>
-<p><strong>Hotel B.</strong> Quiet family-run inn two blocks from the old town’s museums and cathedral. Small courtyard pool, cots and high chairs on request, five minutes’ walk to the beach promenade.</p>
-</blockquote>
-<p>Hotel B is the one that actually satisfies every constraint in the query: family friendly, near the historic center, has a pool, and isn’t on the beach. Hotel A fails the one constraint that was stated as a negative. But Hotel A shares more surface vocabulary with the query: beach, pool, family. “Beachfront” sits close to “beach” in embedding space whether the query asked for that or explicitly ruled it out, because the encoder has no separate slot for “must have,” “nice to have,” and “must not have.” It produces one vector for the whole query and one for the whole listing, and measures how close the two are overall. Hotel A wins that comparison even though it fails the query outright. That’s not a cherry-picked example; it’s the same failure the LIMIT+ numbers above are measuring at scale.</p>
-<p>This is an architectural limit, not a training-data problem. No amount of additional training data fixes a representation with nowhere to put “and not this.”</p>
-<h2 id="the-llm-is-a-reasoner-not-a-better-scorer">The LLM is a reasoner, not a better scorer</h2>
-<p>It’s tempting to describe an LLM reranker as “a smarter distance function,” something that plays the same role as cosine similarity but happens to score things more accurately. That undersells what’s actually happening and it’s worth being precise about, because the mechanism is the whole reason this works.</p>
-<p>An embedding model never reads Hotel B’s listing the way a person does. It maps the text to a point in space and that’s the entire computation; there’s no step where it checks off “near the historic center: yes” or “on the beach: no.” An LLM asked to rank Hotel A against Hotel B for that query does something categorically different: it can work through the requirements one at a time against the actual text. Near the historic center? Hotel B says two blocks from the museums and cathedral, yes. Has a pool? Yes, a courtyard pool. On the beach? No, five minutes away on foot, and the phrase “beach promenade” is a landmark being used to give directions, not a description of the hotel’s location. It can also bring in judgment the embedding never had access to: “lively boardwalk nightlife” at Hotel A cuts against “family friendly” even though the word “family” also appears in that same listing, because a reasoning model knows what nightlife next to a family hotel usually implies, and a bi-encoder has no comparable notion of one phrase in a passage undercutting another.</p>
-<p>That’s inference over a set of stated constraints, weighing evidence, resolving a contradiction inside one listing, and reaching a conclusion it could explain if asked. It’s closer to what happens when you hand two hotel write-ups to a knowledgeable friend and ask which one to book. None of the ranking strategies below change that basic fact. Pointwise, pairwise, listwise, setwise, and tournament-style prompting are all different ways of applying that same evaluative reasoning across more than one candidate and turning the results into an order; the reasoning is the mechanism doing the work, and the sorting logic around it is bookkeeping.</p>
-<h2 id="retrieve-cheap-rank-smart">Retrieve cheap, rank smart</h2>
-<p>The natural fix is the one IR has used since long before LLMs: retrieve a shortlist cheaply (BM25, dense retrieval, or both), then spend a more expensive, more capable model re-scoring just that shortlist. This is the setting every paper below operates in: reranking dozens of candidates a first-pass retriever already narrowed down, not scoring a corpus. It’s also why the cost of an LLM call per comparison is a real budget question but not a disqualifying one. You’re not paying it a million times, you’re paying it a few dozen times per query.</p>
-<p>The rest of this post is about what to actually ask the LLM to do with that shortlist. There isn’t one obvious answer. Pointwise, pairwise, listwise, setwise, and tournament-style prompting each frame the same reranking problem differently, with different cost and robustness tradeoffs, and each has a specific paper behind it.</p>
-<h2 id="pointwise-score-each-candidate-alone">Pointwise: score each candidate alone</h2>
-<p>The simplest formulation asks the LLM to score one candidate against the query at a time, something like “how relevant is this, 0 to 10?”, then sorts by score. It costs exactly one call per candidate and every call is independent, so it parallelizes trivially.</p>
-<p>The problem is calibration. A score of 7 from one call and a score of 6 from a separate, unrelated call are supposed to be comparable, but nothing in the prompting forces the model to use a consistent internal scale across calls. The <a href="https://arxiv.org/abs/2310.09497">Setwise paper</a> notes this directly: pointwise relevance generation needs output calibration across documents, and its effectiveness doesn’t reliably improve with model scale the way you’d expect if the model were doing something more like genuine comparison.</p>
-<h2 id="pairwise-which-is-more-relevant-a-or-b">Pairwise: which is more relevant, A or B?</h2>
-<p>Pairwise prompting sidesteps calibration by never asking for an absolute score, only “which of these two is more relevant to the query?” <a href="https://arxiv.org/abs/2306.17563">Qin et al. (2023)</a> formalized this as Pairwise Ranking Prompting (PRP), with a prompt as blunt as:</p>
-<blockquote>
-<p>Given a query {query}, which of the following two passages is more relevant to the query? Passage A: {document1} Passage B: {document2} Output Passage A or Passage B:</p>
-</blockquote>
-<p>A relative judgment like this is a much easier task for an LLM than an absolute score, and PRP’s numbers reflect it: with Flan-UL2 (20B parameters), PRP-Allpair reaches NDCG@10 of 72.42 on TREC-DL 2019, within a point of RankT5, a 3B-parameter <em>supervised</em> ranker (72.95), and well past a pointwise baseline using text-davinci-003 (64.61).</p>
-<p>That result comes at a cost that scales with how the comparisons are organized into a full ranking. PRP proposes three:</p>
-<ul>
-<li><strong>All-pairs</strong>: compare every pair once, rank by win count. O(n²) comparisons, most robust to any single noisy comparison, embarrassingly parallel.</li>
-<li><strong>Sorting (heapsort)</strong>: O(n log n) comparisons, sequential, since each comparison’s result determines the next one.</li>
-<li><strong>Sliding window</strong>: repeated backward passes, similar to bubble sort, O(n) per pass with as many passes as top-k positions needed.</li>
-</ul>
-<h2 id="position-bias-and-prps-fix">Position bias, and PRP’s fix</h2>
-<p>Pairwise comparison has its own failure mode: LLMs are biased toward whichever candidate is listed first (or second, model-dependent), independent of content. <a href="https://arxiv.org/abs/2305.17926">Wang et al. (2023)</a> demonstrated how severe this can get: using ChatGPT as a pairwise evaluator on the Vicuna benchmark, simply swapping presentation order let Vicuna-13B “beat” ChatGPT on 66 of 80 queries, a result driven entirely by position, not quality. Their proposed fix, balanced position calibration, aggregates judgments across multiple presentation orders rather than trusting a single one.</p>
-<p>PRP applies a lighter version of the same idea: run every comparison both ways (A-then-B and B-then-A), keep the result only if both orderings agree, and treat disagreement as a tie rather than as a coin flip. It roughly doubles the calls for whichever comparisons use it, and it’s the reason “swap and check agreement” is a load-bearing design pattern in pairwise ranking rather than an afterthought.</p>
-<h2 id="listwise-output-the-whole-ordering-at-once">Listwise: output the whole ordering at once</h2>
-<p>Rather than comparing two or a handful of items per call, listwise prompting shows the LLM a batch of candidates and asks for a full ranked permutation in one shot. <a href="https://arxiv.org/abs/2304.09542">Sun et al. (2023)</a>, “Is ChatGPT Good at Search?”, the paper behind RankGPT, argue this fits an LLM’s pretraining better than pointwise scoring: generating an ordering is a text-generation task, which is what these models were trained to do, rather than an isolated numerical judgment. Since one call handles many candidates, it needs far fewer calls than pairwise for the same list. For lists too long for one context window, RankGPT slides a window across the list, repeatedly re-ranking overlapping chunks.</p>
-<p>It has a distinct weakness, though, and it’s the one that motivates the next two methods: RankGPT’s output is a refinement of whatever order the candidates arrived in, and refinement is order-dependent. <a href="https://arxiv.org/abs/2406.11678">Chen et al. (2025)</a> test this directly, running RankGPT on the same TREC DL candidates under BM25 order, randomly shuffled order, and reversed order, and find RankGPT’s effectiveness drops sharply once the input order is perturbed. A ranker that’s supposed to be judging relevance is partly just reporting back the order it was handed.</p>
-<h2 id="setwise-compare-a-small-set-at-a-time">Setwise: compare a small set at a time</h2>
-<p>Setwise prompting, from <a href="https://arxiv.org/abs/2310.09497">Zhuang et al. (2023)</a>, generalizes the pairwise question from “which of these 2 is best” to “which of these <em>c</em> is best,” then plugs that n-ary comparator into the same sorting algorithms pairwise uses (heapsort, bubblesort). Comparing c candidates per call instead of 2 shrinks a heap’s branching factor from 2 to c, which changes the call complexity from O(k log₂ N) to O(k log_c N) for heapsort, and from O(kN) to O(kN/(c−1)) for bubblesort.</p>
-<p>On TREC DL 2019 with Flan-T5-large, the paper reports NDCG@10 of 0.670 for setwise heapsort against 0.657 for pairwise heapsort, 0.654 for pointwise, and 0.561 for listwise generation, so setwise is the best of the four, not just the cheapest. And it is also the cheapest by a wide margin: setwise heapsort needs 125.4 LLM calls and 8.0s latency for the same ranking task that pairwise heapsort needs 230.3 calls and 16.1s for, roughly 46% fewer calls at higher effectiveness.</p>
-<h2 id="setwise-insertion-use-the-order-you-already-have">Setwise insertion: use the order you already have</h2>
-<p>Heapsort and bubblesort both treat the incoming candidate order as irrelevant; every comparison starts from scratch. But candidates rarely arrive in a genuinely random order; they usually come from an upstream retriever that already got some of the ranking right. <a href="https://arxiv.org/abs/2504.10509">Podolak et al. (2025)</a> (SIGIR’25) build “Setwise Insertion” around that observation: sort the first k candidates into a heap, then walk the rest in chunks, each time comparing the chunk against the current worst-of-top-k (the “guard”). If the guard beats the whole chunk, the entire chunk is discarded in a single call; only when a chunk contains a genuine improvement does the method spend calls binary-inserting it into position. Across Flan-T5, Vicuna, and Llama backbones, this cuts query time by 31% and LLM calls by 23% versus baseline setwise, with a slight effectiveness gain too. The saving is proportional to how good the prior order already is, though, so it degrades toward ordinary setwise cost (not incorrect results) if the input order carries no signal.</p>
-<h2 id="tournament-style-make-ranking-robust-to-whatever-order-you-started-with">Tournament-style: make ranking robust to whatever order you started with</h2>
-<p>TourRank (<a href="https://arxiv.org/abs/2406.11678">Chen et al., 2025</a>, WWW’25) takes a different approach to the same order-sensitivity problem RankGPT has: instead of refining an initial order, discard it as a signal entirely. Candidates are split into small groups, an LLM picks winners from each group (like a tournament’s group stage), and winners advance through several stages while earning points along the way. A 100-candidate run in the paper’s setup funnels through six stages (100 → 50 → 20 → 10 → 5 → 2), and earlier survivors earn fewer points than later ones. The whole tournament is repeated <em>r</em> times with fresh random grouping and within-group shuffling each time, and a candidate’s final score is its point total summed across every run.</p>
-<p>The random regrouping is the point. Because a candidate’s fate depends on being selected across many different groupings rather than its position in one linear pass, TourRank’s effectiveness is close to unaffected when the paper reruns the same experiment with the input candidates shuffled or fully reversed, the exact perturbation that visibly degrades RankGPT. On TREC DL 2019/2020, TourRank-10 (r=10) reaches NDCG@10 of 71.63/69.56, ahead of setwise bubblesort (71.16/69.04) and well ahead of RankGPT (68.19/63.60); on the BEIR average across 8 datasets, TourRank-10 leads at 50.94 against RankGPT’s 49.37. Even TourRank-2, just two tournament runs, already edges past RankGPT on both benchmarks (comfortably on TREC DL, narrowly on BEIR), at roughly twice RankGPT’s per-query document-to-LLM count but with a lower time complexity, since groups within a stage run independently rather than as one long sequential refinement.</p>
-<h2 id="reasoning-before-judging">Reasoning before judging</h2>
-<p>A separate axis, orthogonal to which sorting/comparison method is used: does the model think before it answers? Two 2025 papers built dedicated reasoning rerankers. <a href="https://arxiv.org/abs/2502.18418">Weller et al.</a> (Rank1, CoLM 2025) distilled over 600,000 R1 reasoning traces over MS MARCO queries and passages into a reranker that generates an explicit reasoning chain before its relevance judgment, and report state-of-the-art results on reasoning-heavy IR benchmarks along with strong out-of-distribution generalization. <a href="https://arxiv.org/abs/2503.06034">Zhuang et al.</a> (Rank-R1) get a comparable effect via reinforcement learning instead of distillation, training on relevance labels alone with no reasoning supervision, and match supervised fine-tuning in-domain using only 18% of the training data, while clearly outperforming both zero-shot and supervised baselines out-of-domain on complex queries, especially at 14B scale.</p>
-<p>Both are trained models. A prompting-only technique can approximate the effect, just asking any off-the-shelf chat model to reason step by step before giving a final answer, without training a dedicated reranker. It’s a fair approximation precisely because both papers’ gains trace back to reasoning-before-answering as the mechanism, not to anything specific to their training procedure. It’s a strictly weaker version, though: no distillation, no RL, just a longer, more deliberate completion in exchange for more output tokens and latency.</p>
-<h2 id="llmranker">llmranker</h2>
-<p>Everything above is a research literature, not a single tool: five different prompting strategies, each requiring the sorting/grouping logic that turns individual comparisons into a full ranking, each with real tradeoffs in call count, latency, and robustness to input order, plus cross-cutting concerns like position-bias correction and reasoning prompting layered on top. <a href="https://github.com/shangeth/llmranker">llmranker</a> is a Python package that implements all of it: pointwise, pairwise, setwise, listwise, and TourRank, with position-debiasing and reasoning prompting available where they apply, as one consistent interface, built on <a href="https://github.com/BerriAI/litellm">LiteLLM</a> so the same code runs against OpenAI, Gemini, Anthropic, Azure, Bedrock, local Ollama models, or any of LiteLLM’s 100+ supported providers.</p>
-<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">pip</span><span style="color:#9ECBFF"> install</span><span style="color:#9ECBFF"> llmranker</span></span></code></pre>
-<h2 id="quickstart">Quickstart</h2>
-<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="python"><code><span class="line"><span style="color:#F97583">from</span><span style="color:#E1E4E8"> llmranker </span><span style="color:#F97583">import</span><span style="color:#E1E4E8"> Candidate, LLMConfig, SetwiseRanker</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#E1E4E8">ranker </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> SetwiseRanker(LLMConfig(</span><span style="color:#FFAB70">model</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"gpt-4o-mini"</span><span style="color:#E1E4E8">), </span><span style="color:#FFAB70">num_child</span><span style="color:#F97583">=</span><span style="color:#79B8FF">4</span><span style="color:#E1E4E8">, </span><span style="color:#FFAB70">k</span><span style="color:#F97583">=</span><span style="color:#79B8FF">5</span><span style="color:#E1E4E8">)</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#E1E4E8">candidates </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> [</span></span>
-<span class="line"><span style="color:#E1E4E8">    Candidate(</span><span style="color:#FFAB70">id</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"1"</span><span style="color:#E1E4E8">, </span><span style="color:#FFAB70">text</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"A budget hostel in the city center."</span><span style="color:#E1E4E8">),</span></span>
-<span class="line"><span style="color:#E1E4E8">    Candidate(</span><span style="color:#FFAB70">id</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"2"</span><span style="color:#E1E4E8">, </span><span style="color:#FFAB70">text</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"A five-star beachfront resort with a spa."</span><span style="color:#E1E4E8">),</span></span>
-<span class="line"><span style="color:#E1E4E8">    Candidate(</span><span style="color:#FFAB70">id</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"3"</span><span style="color:#E1E4E8">, </span><span style="color:#FFAB70">text</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"A family-run guesthouse near the old town, kid-friendly."</span><span style="color:#E1E4E8">),</span></span>
-<span class="line"><span style="color:#E1E4E8">]</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#E1E4E8">result </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> ranker.rank(</span></span>
-<span class="line"><span style="color:#FFAB70">    query</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"affordable, family friendly, near historical sites"</span><span style="color:#E1E4E8">,</span></span>
-<span class="line"><span style="color:#FFAB70">    candidates</span><span style="color:#F97583">=</span><span style="color:#E1E4E8">candidates,</span></span>
-<span class="line"><span style="color:#E1E4E8">)</span></span>
-<span class="line"><span style="color:#79B8FF">print</span><span style="color:#E1E4E8">([c.id </span><span style="color:#F97583">for</span><span style="color:#E1E4E8"> c </span><span style="color:#F97583">in</span><span style="color:#E1E4E8"> result])  </span><span style="color:#6A737D"># ['3', '1', '2']</span></span></code></pre>
-<p>This is the same shape of query as the hotel example earlier: three soft constraints, none of them a keyword match, and exactly the case where reasoning through the constraints beats measuring distance to them.</p>
-<p>Or, pairwise, sorted by heapsort:</p>
-<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="python"><code><span class="line"><span style="color:#F97583">from</span><span style="color:#E1E4E8"> llmranker </span><span style="color:#F97583">import</span><span style="color:#E1E4E8"> Candidate, LLMConfig, PairwiseRanker</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#E1E4E8">ranker </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> PairwiseRanker(LLMConfig(</span><span style="color:#FFAB70">model</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"gpt-4o-mini"</span><span style="color:#E1E4E8">), </span><span style="color:#FFAB70">method</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"heapsort"</span><span style="color:#E1E4E8">, </span><span style="color:#FFAB70">k</span><span style="color:#F97583">=</span><span style="color:#79B8FF">10</span><span style="color:#E1E4E8">)</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#E1E4E8">candidates </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> [Candidate(</span><span style="color:#FFAB70">id</span><span style="color:#F97583">=</span><span style="color:#79B8FF">str</span><span style="color:#E1E4E8">(i), </span><span style="color:#FFAB70">text</span><span style="color:#F97583">=</span><span style="color:#E1E4E8">doc) </span><span style="color:#F97583">for</span><span style="color:#E1E4E8"> i, doc </span><span style="color:#F97583">in</span><span style="color:#79B8FF"> enumerate</span><span style="color:#E1E4E8">(my_documents)]</span></span>
-<span class="line"><span style="color:#E1E4E8">result </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> ranker.rank(</span><span style="color:#FFAB70">query</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"my search query"</span><span style="color:#E1E4E8">, </span><span style="color:#FFAB70">candidates</span><span style="color:#F97583">=</span><span style="color:#E1E4E8">candidates)</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#F97583">for</span><span style="color:#E1E4E8"> c </span><span style="color:#F97583">in</span><span style="color:#E1E4E8"> result:</span></span>
-<span class="line"><span style="color:#79B8FF">    print</span><span style="color:#E1E4E8">(c.id, c.score)</span></span></code></pre>
-<p>For a longer worked example, with all five strategies run against the same hotel-recommendation query and compared side by side on ranking quality, LLM calls, tokens, cost, and latency, see <a href="https://github.com/shangeth/llmranker/tree/main/examples/hotel_recommendation"><code>examples/hotel_recommendation/</code></a>, or open <a href="https://colab.research.google.com/github/shangeth/llmranker/blob/main/examples/quickstart.ipynb"><code>examples/quickstart.ipynb</code></a> directly in Colab.</p>
-<h2 id="choosing-a-strategy">Choosing a strategy</h2>
-<p>Given the cost/effectiveness/robustness tradeoffs above, the package’s own guidance follows directly from them:</p>
-<table class="table-left">
-<thead>
-<tr><th>Strategy</th><th>Reach for it when</th></tr>
-</thead>
-<tbody>
-<tr><td><strong>Setwise</strong> (<code>num_child=4-8</code>, heapsort)</td><td>Default starting point: best effectiveness-per-call in the numbers above</td></tr>
-<tr><td><strong>Pairwise</strong></td><td>You want the simplest mental model and don't mind more calls</td></tr>
-<tr><td><strong>Listwise</strong></td><td>Latency matters more than call count and the candidate list fits in one window</td></tr>
-<tr><td><strong>Pointwise</strong></td><td>You need a standalone score per candidate (e.g. relevance thresholding), or n is too large for any comparison-based method</td></tr>
-<tr><td><strong>TourRank</strong></td><td>The order candidates arrive in is unreliable, or you need a result that provably doesn't depend on it</td></tr>
-</tbody>
-</table>
-<h2 id="swapping-providers">Swapping providers</h2>
-<p>Every ranker takes an <code>LLMConfig</code>, whose <code>model</code> field is a LiteLLM model string. Nothing else about the code changes:</p>
-<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="python"><code><span class="line"><span style="color:#E1E4E8">LLMConfig(</span><span style="color:#FFAB70">model</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"gpt-4o-mini"</span><span style="color:#E1E4E8">)                                      </span><span style="color:#6A737D"># OpenAI</span></span>
-<span class="line"><span style="color:#E1E4E8">LLMConfig(</span><span style="color:#FFAB70">model</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"gemini/gemini-1.5-flash"</span><span style="color:#E1E4E8">)                          </span><span style="color:#6A737D"># Google Gemini</span></span>
-<span class="line"><span style="color:#E1E4E8">LLMConfig(</span><span style="color:#FFAB70">model</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"claude-3-5-sonnet-20241022"</span><span style="color:#E1E4E8">)                       </span><span style="color:#6A737D"># Anthropic</span></span>
-<span class="line"><span style="color:#E1E4E8">LLMConfig(</span><span style="color:#FFAB70">model</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"azure/my-deployment-name"</span><span style="color:#E1E4E8">)                         </span><span style="color:#6A737D"># Azure OpenAI</span></span>
-<span class="line"><span style="color:#E1E4E8">LLMConfig(</span><span style="color:#FFAB70">model</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"bedrock/anthropic.claude-3-sonnet-20240229-v1:0"</span><span style="color:#E1E4E8">)  </span><span style="color:#6A737D"># AWS Bedrock</span></span>
-<span class="line"><span style="color:#E1E4E8">LLMConfig(</span><span style="color:#FFAB70">model</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"ollama/llama3"</span><span style="color:#E1E4E8">)                                    </span><span style="color:#6A737D"># local, via Ollama</span></span></code></pre>
-<h2 id="whats-not-solved-yet">What’s not solved yet</h2>
-<p>Two honest caveats, tracked in the package’s <a href="https://github.com/shangeth/llmranker/blob/main/ROADMAP.md">ROADMAP</a>:</p>
-<ul>
-<li><strong>Position-bias correction is pairwise-only for now.</strong> <code>debias_position</code>’s run-both-orders-and-check-agreement trick doesn’t yet extend to setwise or tournament groupings, even though the same bias almost certainly applies there. A setwise equivalent would need repeating each group comparison under a reshuffled order, at more than double the cost.</li>
-<li><strong>Prompt injection.</strong> Every ranker in this package puts candidate text directly into the prompt sent to the LLM, which means a candidate could contain adversarial text aimed at manipulating its own ranking. <a href="https://arxiv.org/abs/2602.16752">Yin et al. (2026)</a> study exactly this vulnerability across LLM ranking paradigms and find it varies by model family and architecture, with encoder-decoder models showing more inherent resilience than decoder-only ones. Nothing in <code>llmranker</code> currently sanitizes or detects injected instructions in candidate text. Treat it as untrusted input if it comes from anywhere outside your own pipeline.</li>
-</ul>
-<h2 id="citing-this-package">Citing this package</h2>
-<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bibtex"><code><span class="line"><span style="color:#F97583">@misc</span><span style="color:#E1E4E8">{</span><span style="color:#B392F0">Rajaa_llmranker</span><span style="color:#E1E4E8">,</span></span>
-<span class="line"><span style="color:#79B8FF">author</span><span style="color:#E1E4E8"> = </span><span style="color:#9ECBFF">{</span><span style="color:#E1E4E8">Rajaa, Shangeth</span><span style="color:#9ECBFF">}</span><span style="color:#E1E4E8">,</span></span>
-<span class="line"><span style="color:#79B8FF">title</span><span style="color:#E1E4E8"> = </span><span style="color:#9ECBFF">{</span><span style="color:#E1E4E8">{llmranker: LLM-based ranking and reasoning algorithms for search and recommendation}</span><span style="color:#9ECBFF">}</span><span style="color:#E1E4E8">,</span></span>
-<span class="line"><span style="color:#79B8FF">url</span><span style="color:#E1E4E8"> = </span><span style="color:#9ECBFF">{</span><span style="color:#E1E4E8">https://github.com/shangeth/llmranker</span><span style="color:#9ECBFF">}</span></span>
+Go back to posts </a>  </div> <article> <h1 class="page-title mb-4">DualTurn: Learning Turn-Taking from Dual-Channel Generative Speech Pretraining</h1> <div class="card-meta mb-4"> <span class="flex items-center gap-1"> <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-calendar-event"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M4 7a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2l0 -12" /><path d="M16 3l0 4" /><path d="M8 3l0 4" /><path d="M4 11l16 0" /><path d="M8 15h2v2h-2l0 -2" /></svg>
+</svg> <span>April 2026</span> </span><span class="flex items-center gap-1"> <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-user">
+	<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+	<path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" />
+	<path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg></svg> <span>Shangeth Rajaa</span> </span> </div> <div class="flex gap-2 flex-wrap mb-4"> <a href="/tags/voice ai" class="tag text-xs">
+#Voice AI  </a><a href="/tags/turn-taking" class="tag text-xs">
+#Turn-Taking  </a><a href="/tags/full-duplex" class="tag text-xs">
+#Full-Duplex  </a><a href="/tags/spoken dialogue" class="tag text-xs">
+#Spoken Dialogue  </a><a href="/tags/speech llm" class="tag text-xs">
+#Speech LLM  </a> </div> <div class="prose"> <p><a href="https://github.com/anyreachai/dualturn"><img src="https://img.shields.io/badge/-Github-black?logo=github" alt="GitHub"></a>
+<a href="https://huggingface.co/collections/anyreach-ai/dualturn"><img src="https://img.shields.io/badge/%F0%9F%A4%97-DualTurn-blue.svg" alt="HuggingFace"></a>
+<a href="https://arxiv.org/abs/2603.08216"><img src="https://img.shields.io/badge/arXiv-2603.08216-b31b1b.svg" alt="arXiv"></a>
+<a href="#citation"><img src="https://img.shields.io/badge/Cite-BibTeX-yellow.svg" alt="Cite this work"></a></p>
+<div class="status-highlight">
+🎉 <strong>Accepted at Interspeech 2026!</strong> Excited to present DualTurn in person in Sydney, September 28 – October 1, 2026.
+</div>
+<h2 id="the-turn-taking-problem-hasnt-actually-been-solved">The turn-taking problem hasn’t actually been solved</h2>
+<p>Every voice agent has to answer the same question tens of times per call: has the other person finished talking? Get it wrong in one direction and the agent talks over the user; get it wrong in the other and the user sits through a dead-air pause wondering if the call dropped. Neither failure is rare in production voice AI today, and the reason is structural, not incidental.</p>
+<p>The default mechanism is still a silence timer sitting on top of <a href="https://www.cekura.ai/blogs/voice-activity-detection">voice activity detection</a> (VAD): the moment acoustic energy drops for long enough, the system assumes the turn is over and fires. The industry has spent real effort making this less crude. <a href="https://gradium.ai/content/semantic-vad-voice-agents-turn-detection-2026">Semantic endpointing</a> reads the transcript for syntactic and lexical completeness instead of just measuring silence duration; <a href="https://livekit.com/blog/solving-end-of-turn-detection">LiveKit’s Turn Detector</a> and <a href="https://deepgram.com/learn/introducing-flux-conversational-speech-recognition">Deepgram’s Flux</a> fuse acoustic and linguistic cues into a learned classifier; recent work adds neural-codec features (<a href="https://arxiv.org/abs/2506.07081">Udupa et al., 2025</a>) and multimodal fusion (<a href="https://arxiv.org/abs/2509.23938">Li et al., 2025</a>) to the same basic recipe. All of it is a real improvement over a fixed-duration timeout.</p>
+<p>But look at where every one of these systems sits in the pipeline: downstream of VAD. VAD has to fire a candidate pause before the smarter model ever gets to weigh in. The classifier can be arbitrarily sophisticated about <em>whether</em> a detected pause is a real end of turn, but it has no opinion on turns that haven’t paused yet. It is a better reflex, not anticipation. Structurally, every production system in this category is reactive. It can only classify silence that has already happened.</p>
+<p>This is also, if you look closely, a <strong>half-duplex</strong> problem dressed up as a classification problem. A half-duplex system is a walkie-talkie: one side transmits, the other is deaf to anything but a fixed interrupt signal. That is what a standard ASR-LLM-TTS pipeline is functionally doing. It generates and plays a full agent turn, and “listening” during that turn usually means nothing more than watching for a VAD spike to cut playback for barge-in. It is not actually processing the user’s channel the way a person would. A <strong>full-duplex</strong> system keeps both channels open and modeled continuously and simultaneously, the way two people on a call behave: you can hear the other person while you’re still forming your own sentence, overlap for a moment, back off, backchannel without stopping them. Continuous, simultaneous processing of both channels is what makes anticipation possible in the first place. A half-duplex system cannot anticipate a turn it isn’t listening for yet, no matter how good its classifier is once the pause finally shows up.</p>
+<p>Full-duplex speech-to-speech (S2S) models are built around exactly that continuous, simultaneous processing, and it’s worth being precise about why they end up good at turn-taking as a side effect. Models like <a href="https://arxiv.org/abs/2410.00037">Moshi</a>, <a href="https://arxiv.org/abs/2203.16502">dGSLM</a>, <a href="https://arxiv.org/abs/2602.06053">PersonaPlex</a>, and <a href="https://arxiv.org/abs/2506.00975">NTPP</a> are trained to generate <em>both</em> speakers’ audio streams jointly, frame by frame, continuously. There’s no separate turn-detection module, because turn-taking was never factored out as a separate problem in the first place. To predict the next audio frame on either channel well, the model has to implicitly track who’s about to speak, whether a pause is a hesitation or a completion, whether an overlap is a backchannel or an interruption. Generation <em>is</em> the anticipation mechanism here. Moshi reports human raters preferring it specifically on prosody, turn-taking, and empathy over cascaded baselines, and that’s not a coincidence. It’s what joint dual-channel generative training optimizes for.</p>
+<p>The catch is everything these models are <em>not</em> trained to do. They’re end-to-end audio-in, audio-out language models, but generic ones: no tool calling, no retrieval, no reliable structured output, none of the reasoning scaffolding that a production voice agent (booking a flight, pulling account data, checking a policy) actually needs. And their turn-taking competence lives inside the joint generative process itself, so there’s no clean way to lift it out and bolt it onto a conventional ASR-LLM-TTS stack, which is what most deployed systems still are, for good reason: reasoning and tool-calling are considerably easier to get right in a modular pipeline with a text LLM at the center.</p>
+<p>So the field has two model classes, each with the thing the other lacks. S2S models have the turn-taking, cascaded pipelines have the reasoning. <strong><a href="https://arxiv.org/abs/2603.08216">DualTurn</a></strong> is my attempt to move the turn-taking half across that boundary. It takes exactly the ingredient that makes S2S models good at turn-taking (dual-channel generative pretraining), but uses it only to build a <em>perception</em> component: a small model that listens to both channels of a live call full-duplex, continuously, and emits interpretable signals a standard half-duplex pipeline can act on, rather than a model that has to also generate the reply.</p>
+<p>The closest existing attempt at this is <a href="https://doi.org/10.21437/Interspeech.2022-10955">Voice Activity Projection</a> (VAP), a self-supervised, dual-channel model that continuously predicts future voice activity from raw audio rather than waiting on VAD. VAP is the right idea, but its 5.8M-parameter CPC encoder collapses everything into a single binary voice-activity probability. It cannot tell a backchannel (“mhm”, “right”) from an actual turn-taking bid, and needs additional fine-tuning just to beat chance at backchannel prediction at all (<a href="https://aclanthology.org/2025.naacl-long.367/">Inoue et al., 2025</a>). Text-based models like <a href="https://doi.org/10.18653/v1/2020.findings-emnlp.268">TurnGPT</a> ignore prosody entirely. Single-channel audio classifiers (<a href="https://doi.org/10.21437/Interspeech.2018-2124">Roddy et al., 2018</a>) can flag that speech ended but, without the other speaker’s channel, can’t tell you what kind of ending it was. The strongest prior model, <a href="https://doi.org/10.1109/ICASSP48485.2024.10447196">Wang et al. (2024)</a>, fuses a 3.1B-parameter LLM with audio and gets good word-level predictions, at a parameter count well past what a low-latency, always-on turn-taking component can afford.</p>
+<h2 id="architecture">Architecture</h2>
+<img src="/images/posts/dualturn-architecture.png" alt="DualTurn architecture: Stage-1 generative pretraining of the backbone and depth predictor, and Stage-2 fine-tuning of twelve classification heads">
+<p>Both channels, the user’s and the agent’s, go through a frozen <a href="https://arxiv.org/abs/2410.00037">Mimi</a> neural codec, which turns each 24kHz waveform into a sequence of 8 RVQ codebooks at 12.5 frames/second. Rather than the discrete codebook indices, DualTurn uses Mimi’s <em>continuous</em> 512-dim encoder embeddings per channel, an ablation choice that turns out to matter a lot, as I’ll get to below. Each channel gets its own MLP projection, the two representations are concatenated, and the result feeds a Qwen2.5-0.5B backbone.</p>
+<p>Twelve lightweight classification heads (six per channel) read off the backbone’s final hidden state: two-layer MLPs with GELU and dropout for the sparse, event-like signals (EOT, HOLD, BOT, BC), and plain linear projections for the dense per-frame signals (VAD, FVAD). At inference the model streams both channels continuously with a 240ms stride (3 audio frames per step) and KV-caching, with no waiting for VAD to nominate a pause. That’s the full-duplex listening part in practice: both channels are processed every 240ms regardless of who’s talking, even though the agent’s own speech still comes out of a standard TTS turn at the end of the pipeline. Latency is about 78ms on CPU, 27ms on an A100, well inside budget for a component that has to run continuously alongside the rest of the stack rather than firing occasionally.</p>
+<h3 id="stage-1-generative-pretraining-no-labels">Stage 1: generative pretraining, no labels</h3>
+<p>The backbone is first trained to autoregressively predict <em>both</em> speakers’ next audio frame simultaneously, with a small (~10.6M-parameter) depth predictor generating the next-frame RVQ tokens per channel from the backbone’s output. This is the same objective family that gives S2S models their turn-taking sense: the model can’t get good at predicting what either speaker says next without implicitly modeling semantics, prosody, and the interaction pattern between the two channels (who’s about to jump in, whether a pause is filled or terminal, whether an overlap is a backchannel). Once pretraining finishes, the depth predictor is thrown away (DualTurn never needs to actually generate audio) and only the backbone carries into Stage 2.</p>
+<h3 id="stage-2-turn-taking-signals-still-no-manual-labels">Stage 2: turn-taking signals, still no manual labels</h3>
+<p>Six per-channel signals are fine-tuned on top of the pretrained backbone, and critically, every label is derived automatically from voice-activity alignment, with no human annotation anywhere in the pipeline:</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Signal</th><th>Definition</th></tr></thead><tbody><tr><td><strong>EOT</strong> (end-of-turn)</td><td>Speech offset where the other speaker takes the floor within 4s</td></tr><tr><td><strong>HOLD</strong></td><td>Any other speech offset (i.e., not an EOT)</td></tr><tr><td><strong>BOT</strong> (beginning-of-turn)</td><td>Speech onset (≥1s) following the other speaker</td></tr><tr><td><strong>BC</strong> (backchannel)</td><td>Isolated utterance ≤1s with ≥1s silence on both sides</td></tr><tr><td><strong>VAD</strong></td><td>Binary voice activity, per frame</td></tr><tr><td><strong>FVAD</strong> (future VAD)</td><td>Mean voice activity over four look-ahead windows: 0–240ms, 240–480ms, 480–960ms, 960ms–2s</td></tr></tbody></table>
+<p>EOT and HOLD are complementary by construction (exactly one fires at every speech offset), which is what lets the model learn to separate a genuine turn end from a mid-turn thinking pause without anyone labeling the difference. The 4-second EOT window (versus VAP’s 1 second) matters more than it looks: about 12% of Switchboard turn transfers involve pauses longer than a second, and a 1s cutoff just throws that data away. Labels are also smoothed with an asymmetric Gaussian (σ=3 frames before an event, σ=1 after), which explicitly trains the model to anticipate each signal up to 240ms early rather than only recognize it after the fact.</p>
+<p>These six raw signals aren’t directly useful to a dialogue policy; what a pipeline actually needs is an action. So Stage 2 maps them to five:</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Action</th><th>Definition</th></tr></thead><tbody><tr><td><strong>ST</strong> (start-talking)</td><td>User offset; agent begins speaking within 4s</td></tr><tr><td><strong>CL</strong> (continue-listening)</td><td>User offset; user resumes within 2s</td></tr><tr><td><strong>SL</strong> (start-listening)</td><td>Overlap onset; incoming speech is >1s</td></tr><tr><td><strong>CT</strong> (continue-talking)</td><td>Overlap onset; incoming speech is &#x3C;1s</td></tr><tr><td><strong>BC</strong> (backchannel)</td><td>Agent vocalization &#x3C;1s during user speech</td></tr></tbody></table>
+<p>ST/CL are essentially VAP’s shift/hold decision; SL, CT, and BC are the overlap and backchannel behavior that no prior turn-taking model addresses directly. The mapping from six signals to five actions can be a zero-parameter heuristic (e.g. <code>EOT_user > 0.5 AND BOT_agent > 0.5 → ST</code>) or a multinomial logistic regression probe fit on held-out data. The LR coefficients are legible: the start-talking action weighs <code>EOT_user</code> and <code>VAD_agent</code> positively while weighing <code>VAD_user</code> and <code>BOT_user</code> negatively, which is exactly the “user has stopped and isn’t restarting” pattern you’d hand-design if you were writing the heuristic yourself.</p>
+<h2 id="results">Results</h2>
+<p>Training used about 453 hours of dual-channel conversational audio: 289 hours of <a href="https://huggingface.co/datasets/otoearth/otoSpeech-full-duplex-280h">otoSpeech</a> (English, full-duplex, 24kHz) and 220 hours of <a href="https://doi.org/10.1109/ICASSP.1992.225858">Switchboard</a> (telephone speech, 8kHz). A 138-session Switchboard split and a disjoint 113-session otoSpeech split were held out for evaluation, the same test protocol used by VAP and Wang et al., so the numbers are directly comparable.</p>
+<p><strong>Word-level turn prediction</strong>, against Wang et al.’s 3.1B audio+text model and a text-only GPT-2 baseline:</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Model</th><th>AUC(Continue)</th><th>AUC(Backchannel)</th><th>AUC(Turn)</th><th>Avg AUC</th><th>EER</th></tr></thead><tbody><tr><td>GPT-2 (text-only)</td><td>0.851</td><td>0.774</td><td>0.862</td><td>0.829</td><td>24.5</td></tr><tr><td>RP+HuBERT+hist (3.1B)</td><td>0.903</td><td>0.818</td><td>0.920</td><td>0.880</td><td>19.3</td></tr><tr><td>DualTurn (EOT signal alone)</td><td>0.918</td><td>0.904</td><td>0.919</td><td>0.914</td><td>15.2</td></tr><tr><td>DualTurn (heuristic)</td><td>0.940</td><td>0.925</td><td>0.924</td><td>0.930</td><td>13.2</td></tr><tr><td>DualTurn (LR probe)</td><td><strong>0.961</strong></td><td><strong>0.979</strong></td><td><strong>0.950</strong></td><td><strong>0.963</strong></td><td><strong>9.7</strong></td></tr></tbody></table>
+<p>A single raw signal from the 0.5B model, with zero combination logic, already beats a 3.1B fusion model that has both audio and transcript access. The equal-error-rate column tells the same story in a more intuitive unit: it goes from 24.5% for a text-only model, to 19.3% once you add audio and a 3.1B backbone, down to 9.7% for DualTurn’s LR probe.</p>
+<p><strong>Agent action prediction</strong>, against VAP:</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Model</th><th>wF1 (Switchboard)</th><th>BC F1 (Switchboard)</th><th>wF1 (otoSpeech)</th><th>BC F1 (otoSpeech)</th></tr></thead><tbody><tr><td>VAP (native)</td><td>0.276</td><td>—</td><td>—</td><td>—</td></tr><tr><td>VAP (LR probe)</td><td>0.389</td><td>0.000</td><td>0.461</td><td>0.000</td></tr><tr><td><strong>DualTurn</strong></td><td><strong>0.633</strong></td><td><strong>0.349</strong></td><td><strong>0.707</strong></td><td><strong>0.512</strong></td></tr></tbody></table>
+<p>VAP’s BC F1 is not a rounding artifact. It’s a model with no dedicated backchannel signal, and no amount of post-hoc logistic regression over its outputs can invent one. DualTurn’s 0.349 (chance ≈ 0.080) is the first result I know of where a self-supervised, dual-channel turn-taking model, trained the same way VAP is on the same kind of unlabeled data, gets meaningfully above chance on this.</p>
+<p><strong>Anticipation.</strong> Plotting shift/hold AUC against time relative to speech offset makes the gap visual: DualTurn’s curve sits above VAP’s at every point, and the two are already clearly separated well before the turn actually ends, not just after:</p>
+<img src="/images/posts/dualturn-anticipation.png" alt="Shift-vs-hold AUC across time relative to speech offset: DualTurn leads VAP by roughly 220ms">
+<p>Median reaction time is -360ms relative to turn end for DualTurn versus -140ms for VAP, about 220ms of extra anticipation. That also shows up as fewer mistakes: start-talking-for-continue-listening confusions drop from 27.4% to 22.4%, ST F1 improves from 0.808 to 0.829, and interruptions fall by 5 percentage points.</p>
+<p>One obvious objection to all of this: DualTurn is trained on a broader 4-second turn definition than VAP’s original 1-second one, so maybe the gains are just an artifact of an easier label. Re-running VAP’s own 1-second frame-level protocol, VAP’s home turf, rules that out:</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Protocol (VAP’s original 1s definitions)</th><th>Shift/Hold</th><th>Short/Long</th><th>Shift-Prediction</th><th>BC-Prediction</th></tr></thead><tbody><tr><td>VAP</td><td>0.843</td><td>0.916</td><td>0.720</td><td>0.838</td></tr><tr><td>DualTurn</td><td><strong>0.985</strong></td><td><strong>0.979</strong></td><td><strong>0.764</strong></td><td><strong>0.864</strong></td></tr></tbody></table>
+<p>DualTurn wins on all four, including the exact task VAP was designed and tuned for. The gain is in the representation, not the label definition.</p>
+<h2 id="why-does-pretraining-matter-this-much">Why does pretraining matter this much?</h2>
+<p>The most useful result in the paper, honestly, isn’t a leaderboard number. It’s the ablation that explains <em>where</em> the backchannel gain actually comes from, because the answer is not “a bigger model.”</p>
+<p>Compare an 8M-parameter LSTM against the 0.5B-parameter LLM backbone, both <em>without</em> Stage-1 pretraining: wF1 0.602 vs. 0.604, BC F1 0.077 vs. 0.079. Statistically identical. Sixty-two times the parameters buys essentially nothing on backchannel detection if the model never went through dual-channel generative pretraining. Now compare the pretrained LLM (A) against the same architecture without pretraining (C): BC F1 jumps from 0.079 to 0.349, a 340% relative improvement. Over 99% of the total backchannel gain traces to pretraining, not architecture. The LLM’s capacity advantage over the LSTM contributes roughly +0.002 BC F1 on its own.</p>
+<p>That’s the core claim of the paper stated as a measurement rather than a slogan: <strong>the backbone is a vessel, not the source of turn-taking knowledge. Generative pretraining is the teacher.</strong> A model only benefits from more capacity once that capacity has something to hold.</p>
+<p>Two more analyses back this up:</p>
+<p><strong>Signal difficulty splits cleanly along the same line.</strong> VAD and FVAD, dense per-frame signals, are learned fine by every variant, including the plain LSTM. BOT, BC, and EOT are sparse interactional events that require modeling two-speaker dynamics, and pretraining is what closes the gap on exactly those: +188% on BOT, +41% on BC, near-zero change on VAD/FVAD. Pretraining isn’t making the model uniformly better. It’s specifically teaching it the interactional structure that per-frame classifiers never needed.</p>
+<p><strong>Multi-scale attention emerges without being asked for.</strong> Probing attended temporal distance per head/layer in the pretrained backbone shows six layers attending short-range (&#x3C;1s, presumably frame-level acoustic detail) and three attending long-range (L7 at 14.9s, L9 at 12.6s, L11 at 14.8s), tracking conversational context at a horizon an 8M LSTM structurally can’t reach. Strip out pretraining and only three layers stay short-range, with long-range attention scattered rather than structured; this is the mechanistic reason C and D perform the same. The pretrained model also develops action-specific attention with no supervision telling it to: the user channel gets attended 3.77× more for continue-listening decisions and 2.21× more for backchannel decisions, and the two action classes reach back over different windows (3.41s for BC, 4.91s for CT).</p>
+<p>A codebook ablation adds a consistent, independent line of evidence: zeroing individual Mimi codebooks shows CB0 (semantic content) contributing 56% of shift/hold discrimination, CB1 another 26%, and the remaining six fine-acoustic codebooks together only 18%. Turn-taking is mostly a semantics-and-prosody problem, not a fine-acoustic-detail problem, which lines up with <a href="https://doi.org/10.1016/j.csl.2010.10.003">Gravano &#x26; Hirschberg (2011)</a>.</p>
+<p>Two negative results are worth keeping too, because they cut against intuitions I had going in. Keeping the Stage-1 generative loss active as an auxiliary objective during Stage-2 hurts: BC F1 drops from 0.349 to 0.077, because the generative and classification gradients compete and the sparse classification signal loses. And adding a text-output (ASR) objective during Stage-1, specifically to align the representation with the LLM’s pretrained text capability, also hurts Stage-2 performance (BC F1 0.349 → 0.085). Audio-only pretraining produces a better turn-taking representation than a text-aligned one. On a more mundane note, LoRA adapters slightly <em>beat</em> full fine-tuning of all 500M parameters (BC F1 0.349 vs. 0.337) using 55× fewer trainable parameters, and continuous Mimi embeddings clearly beat discrete codebook indices as input (BC F1 0.349 vs. 0.072), since quantization throws away exactly the prosodic nuance the sparse signals depend on.</p>
+<h2 id="limitations">Limitations</h2>
+<p>None of this is deployment-ready as-is, and it’s worth being specific about where it falls short rather than leaving that implicit.</p>
+<p><strong>Backchannel precision is still modest.</strong> 0.349 F1 sounds strong against chance (≈0.080), but it decomposes into recall 0.458 and precision 0.282, meaning roughly 72% of predicted backchannels are still false positives. Real, not solved. Backchannels are under 8% of evaluation events, so the signal is real but sparse enough that it shouldn’t be a standalone trigger in production. It belongs as a soft input to a decision policy, at a raised threshold, not as the sole gate on whether the agent says “mhm.”</p>
+<p><strong>453 hours, English, two-party only.</strong> That’s a small pretraining corpus by generative-model standards, and everything reported here is single-language, two-speaker telephone/online conversation. Multi-party dynamics (who’s addressed, who’s expected to yield) and cross-lingual turn-taking norms (which do differ, prosodically and structurally) are untested.</p>
+<p><strong>The signal-to-action mapping is still linear.</strong> Both the heuristic and the LR probe can only combine what the twelve heads already output; neither can recover information the pretrained representation didn’t surface. A more expressive probe, or joint end-to-end training of the mapping, is an obvious next step that wasn’t tried here.</p>
+<p><strong>Evaluation is still Switchboard-shaped.</strong> Both benchmarks are telephone-style, sequential, two-party dialogue. Real deployed voice agents increasingly involve tool-use latency (the agent goes silent mid-turn while a function call resolves, which looks like a pause but isn’t one) and multi-turn task state that this evaluation doesn’t exercise.</p>
+<h2 id="where-this-leaves-the-field">Where this leaves the field</h2>
+<p>Scaling to larger, multilingual, multi-party corpora and improving the generative pretraining recipe itself are the natural next steps. The 453-hour, English-only, two-party setup here is a floor, not a ceiling. But the result I’d want to hold onto even as the numbers move is the ablation, not the leaderboard: architecture bought almost nothing without pretraining, and pretraining bought almost everything without architecture. If that generalizes, the lesson for anyone building the next generation of turn-taking components isn’t “use a bigger model.” It’s “give the model something to predict that forces it to model both speakers at once.” The backbone is the vessel. Generative pretraining is the teacher.</p>
+<p>Code, the trained checkpoints, and the datasets are public: <a href="https://github.com/anyreachai/dualturn">GitHub</a> has the training and inference code, and the <a href="https://huggingface.co/collections/anyreach-ai/dualturn">Hugging Face collection</a> has the open model weights and datasets, if you want to run it yourself or pick the ablations apart.</p>
+<hr>
+<h2 id="citation">Citation</h2>
+<p>If you use this work, please cite:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bibtex"><code><span class="line"><span style="color:#F97583">@misc</span><span style="color:#E1E4E8">{</span><span style="color:#B392F0">rajaa2026dualturn</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">  author</span><span style="color:#E1E4E8">        = </span><span style="color:#9ECBFF">{</span><span style="color:#E1E4E8">Rajaa, Shangeth</span><span style="color:#9ECBFF">}</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">  title</span><span style="color:#E1E4E8">         = </span><span style="color:#9ECBFF">{</span><span style="color:#E1E4E8">{DualTurn: Learning Turn-Taking from Dual-Channel Generative Speech Pretraining}</span><span style="color:#9ECBFF">}</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">  year</span><span style="color:#E1E4E8">          = </span><span style="color:#9ECBFF">{</span><span style="color:#E1E4E8">2026</span><span style="color:#9ECBFF">}</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">  eprint</span><span style="color:#E1E4E8">        = </span><span style="color:#9ECBFF">{</span><span style="color:#E1E4E8">2603.08216</span><span style="color:#9ECBFF">}</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">  archivePrefix</span><span style="color:#E1E4E8"> = </span><span style="color:#9ECBFF">{</span><span style="color:#E1E4E8">arXiv</span><span style="color:#9ECBFF">}</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">  primaryClass</span><span style="color:#E1E4E8">  = </span><span style="color:#9ECBFF">{</span><span style="color:#E1E4E8">eess.AS</span><span style="color:#9ECBFF">}</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">  url</span><span style="color:#E1E4E8">           = </span><span style="color:#9ECBFF">{</span><span style="color:#E1E4E8">https://arxiv.org/abs/2603.08216</span><span style="color:#9ECBFF">}</span></span>
 <span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
 <h2 id="references">References</h2>
 <ol class="references">
-<li>Degenhart, V., Timman, D., de Vries, A. P., Hasibi, F., &#x26; Hoveyda, M. (2026). <em>Reproducing Complex Set-Compositional Information Retrieval.</em> SIGIR 2026 Reproducibility Track. <a href="https://arxiv.org/abs/2605.03824" target="_blank" rel="noopener noreferrer">arXiv:2605.03824</a>.</li>
-<li>Zhuang, S., Zhuang, H., Koopman, B., &#x26; Zuccon, G. (2023). <em>A Setwise Approach for Effective and Highly Efficient Zero-shot Ranking with Large Language Models.</em> <a href="https://arxiv.org/abs/2310.09497" target="_blank" rel="noopener noreferrer">arXiv:2310.09497</a>.</li>
-<li>Qin, Z., Jagerman, R., Hui, K., Zhuang, H., Wu, J., Yan, L., Shen, J., Liu, T., Liu, J., Metzler, D., Wang, X., &#x26; Bendersky, M. (2023). <em>Large Language Models are Effective Text Rankers with Pairwise Ranking Prompting.</em> <a href="https://arxiv.org/abs/2306.17563" target="_blank" rel="noopener noreferrer">arXiv:2306.17563</a>.</li>
-<li>Wang, P., Li, L., Chen, L., Cai, Z., Zhu, D., Lin, B., Cao, Y., Liu, Q., Liu, T., &#x26; Sui, Z. (2023). <em>Large Language Models are not Fair Evaluators.</em> <a href="https://arxiv.org/abs/2305.17926" target="_blank" rel="noopener noreferrer">arXiv:2305.17926</a>.</li>
-<li>Sun, W., Yan, L., Ma, X., Wang, S., Ren, P., Chen, Z., Yin, D., &#x26; Ren, Z. (2023). <em>Is ChatGPT Good at Search? Investigating Large Language Models as Re-Ranking Agents.</em> EMNLP 2023. <a href="https://arxiv.org/abs/2304.09542" target="_blank" rel="noopener noreferrer">arXiv:2304.09542</a>.</li>
-<li>Podolak, J., Perić, L., Janićijević, M., &#x26; Petcu, R. (2025). <em>Beyond Reproducibility: Advancing Zero-shot LLM Reranking Efficiency with Setwise Insertion.</em> SIGIR 2025. <a href="https://arxiv.org/abs/2504.10509" target="_blank" rel="noopener noreferrer">arXiv:2504.10509</a>.</li>
-<li>Chen, Y., Liu, Q., Zhang, Y., Sun, W., Ma, X., Yang, W., Shi, D., Mao, J., &#x26; Yin, D. (2025). <em>TourRank: Utilizing Large Language Models for Documents Ranking with a Tournament-Inspired Strategy.</em> WWW 2025. <a href="https://arxiv.org/abs/2406.11678" target="_blank" rel="noopener noreferrer">arXiv:2406.11678</a>.</li>
-<li>Weller, O., Ricci, K., Yang, E., Yates, A., Lawrie, D., &#x26; Van Durme, B. (2025). <em>Rank1: Test-Time Compute for Reranking in Information Retrieval.</em> CoLM 2025. <a href="https://arxiv.org/abs/2502.18418" target="_blank" rel="noopener noreferrer">arXiv:2502.18418</a>.</li>
-<li>Zhuang, S., Ma, X., Koopman, B., Lin, J., &#x26; Zuccon, G. (2025). <em>Rank-R1: Enhancing Reasoning in LLM-based Document Rerankers via Reinforcement Learning.</em> <a href="https://arxiv.org/abs/2503.06034" target="_blank" rel="noopener noreferrer">arXiv:2503.06034</a>.</li>
-<li>Yin, Y., Wang, S., Koopman, B., &#x26; Zuccon, G. (2026). <em>The Vulnerability of LLM Rankers to Prompt Injection Attacks.</em> <a href="https://arxiv.org/abs/2602.16752" target="_blank" rel="noopener noreferrer">arXiv:2602.16752</a>.</li>
-</ol> </div> <div class="container-narrow"> <div class="flex items-center gap-4 mt-8"> <span class="body-sm font-semibold" style="opacity: 0.75;">Share:</span> <div class="flex gap-2"> <a href="https://twitter.com/intent/tweet?text=llmranker%3A%20LLM-based%20ranking%20and%20reasoning%20algorithms%20for%20search%20and%20recommendation&#38;url=https%3A%2F%2Fshangeth.com%2Fposts%2Fllmranker" target="_blank" rel="noopener noreferrer" aria-label="Share on Twitter" class="icon-btn"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-x">
+<li>Défossez, A., et al. (2024). <em>Moshi: A Speech-Text Foundation Model for Real-Time Dialogue.</em> <a href="https://arxiv.org/abs/2410.00037" target="_blank" rel="noopener noreferrer">arXiv:2410.00037</a>.</li>
+<li>Deepgram (2026). <em>Introducing Flux: Conversational Speech Recognition to Solve the Biggest Problem in Voice Agents — Interruptions.</em> <a href="https://deepgram.com/learn/introducing-flux-conversational-speech-recognition" target="_blank" rel="noopener noreferrer">deepgram.com</a>.</li>
+<li>Ekstedt, E., &#x26; Skantze, G. (2020). <em>TurnGPT: A Transformer-based Language Model for Predicting Turn-taking in Spoken Dialog.</em> Findings of ACL: EMNLP 2020, 2981-2990.</li>
+<li>Ekstedt, E., &#x26; Skantze, G. (2022). <em>Voice Activity Projection: Self-supervised Learning of Turn-taking Events.</em> Interspeech 2022, 5190-5194.</li>
+<li>Godfrey, J. J., Holliman, E. C., &#x26; McDaniel, J. (1992). <em>Switchboard: Telephone Speech Corpus for Research and Development.</em> ICASSP 1992, 517-520.</li>
+<li>Gravano, A., &#x26; Hirschberg, J. (2011). <em>Turn-taking cues in task-oriented dialogue.</em> Computer Speech &#x26; Language, 25(3), 601-634.</li>
+<li>Hu, E. J., et al. (2022). <em>LoRA: Low-Rank Adaptation of Large Language Models.</em> ICLR 2022. <a href="https://arxiv.org/abs/2106.09685" target="_blank" rel="noopener noreferrer">arXiv:2106.09685</a>.</li>
+<li>Inoue, K., Lala, D., Skantze, G., &#x26; Kawahara, T. (2025). <em>Yeah, Un, Oh: Continuous and Real-time Backchannel Prediction with Fine-tuning of Voice Activity Projection.</em> NAACL 2025, 7171-7181. <a href="https://aclanthology.org/2025.naacl-long.367/" target="_blank" rel="noopener noreferrer">aclanthology.org</a>.</li>
+<li>Li, G., et al. (2025). <em>Easy Turn: Integrating Acoustic and Linguistic Modalities for Robust Turn-Taking in Full-Duplex Spoken Dialogue Systems.</em> <a href="https://arxiv.org/abs/2509.23938" target="_blank" rel="noopener noreferrer">arXiv:2509.23938</a>.</li>
+<li>LiveKit (2026). <em>Solving End-of-Turn Detection: LiveKit Turn Detector v1.0.</em> <a href="https://livekit.com/blog/solving-end-of-turn-detection" target="_blank" rel="noopener noreferrer">livekit.com</a>.</li>
+<li>Nguyen, T. A., et al. (2023). <em>Generative Spoken Dialogue Language Modeling.</em> TACL, 11, 250-266. <a href="https://arxiv.org/abs/2203.16502" target="_blank" rel="noopener noreferrer">arXiv:2203.16502</a>.</li>
+<li>otoearth (2025). <em>otoSpeech-full-duplex-280h: Full-Duplex Conversational Speech Dataset.</em> <a href="https://huggingface.co/datasets/otoearth/otoSpeech-full-duplex-280h" target="_blank" rel="noopener noreferrer">huggingface.co</a>.</li>
+<li>Qwen Team (2025). <em>Qwen2.5 Technical Report.</em> <a href="https://arxiv.org/abs/2412.15115" target="_blank" rel="noopener noreferrer">arXiv:2412.15115</a>.</li>
+<li>Rajaa, S. (2026). <em>DualTurn: Learning Turn-Taking from Dual-Channel Generative Speech Pretraining.</em> Interspeech 2026. <a href="https://arxiv.org/abs/2603.08216" target="_blank" rel="noopener noreferrer">arXiv:2603.08216</a>.</li>
+<li>Roddy, M., Skantze, G., &#x26; Harte, N. (2018). <em>Investigating Speech Features for Continuous Turn-Taking Prediction Using LSTMs.</em> Interspeech 2018, 586-590.</li>
+<li>Roy, R., et al. (2026). <em>PersonaPlex: Voice and Role Control for Full Duplex Conversational Speech Models.</em> <a href="https://arxiv.org/abs/2602.06053" target="_blank" rel="noopener noreferrer">arXiv:2602.06053</a>.</li>
+<li>Udupa, S., Kumar, K., Majumdar, S., Balam, J., &#x26; Ginsburg, B. (2025). <em>Streaming Endpointer for Spoken Dialogue using Neural Audio Codecs and Label-Delayed Training.</em> <a href="https://arxiv.org/abs/2506.07081" target="_blank" rel="noopener noreferrer">arXiv:2506.07081</a>.</li>
+<li>Wang, J., et al. (2024). <em>Turn-taking and Backchannel Prediction with Acoustic and Large Language Model Fusion.</em> ICASSP 2024.</li>
+<li>Wang, Q., et al. (2025). <em>NTPP: Generative Speech Language Modeling for Dual-Channel Spoken Dialogue via Next-Token-Pair Prediction.</em> <a href="https://arxiv.org/abs/2506.00975" target="_blank" rel="noopener noreferrer">arXiv:2506.00975</a>.</li>
+</ol> </div> <div class="container-narrow"> <div class="flex items-center gap-4 mt-8"> <span class="body-sm font-semibold" style="opacity: 0.75;">Share:</span> <div class="flex gap-2"> <a href="https://twitter.com/intent/tweet?text=DualTurn%3A%20Learning%20Turn-Taking%20from%20Dual-Channel%20Generative%20Speech%20Pretraining&#38;url=https%3A%2F%2Fshangeth.com%2Fposts%2Fdualturn" target="_blank" rel="noopener noreferrer" aria-label="Share on Twitter" class="icon-btn"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-x">
 	<path stroke="none" d="M0 0h24v24H0z" fill="none" />
 	<path d="M4 4l11.733 16h4.267l-11.733 -16l-4.267 0" />
 	<path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772" />
-</svg></svg> </a> <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fshangeth.com%2Fposts%2Fllmranker" target="_blank" rel="noopener noreferrer" aria-label="Share on Facebook" class="icon-btn"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-facebook">
+</svg></svg> </a> <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fshangeth.com%2Fposts%2Fdualturn" target="_blank" rel="noopener noreferrer" aria-label="Share on Facebook" class="icon-btn"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-facebook">
 	<path stroke="none" d="M0 0h24v24H0z" fill="none" />
 	<path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3" />
-</svg></svg> </a> <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fshangeth.com%2Fposts%2Fllmranker" target="_blank" rel="noopener noreferrer" aria-label="Share on LinkedIn" class="icon-btn"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-linkedin">
+</svg></svg> </a> <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fshangeth.com%2Fposts%2Fdualturn" target="_blank" rel="noopener noreferrer" aria-label="Share on LinkedIn" class="icon-btn"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-linkedin">
 	<path stroke="none" d="M0 0h24v24H0z" fill="none" />
 	<path d="M8 11v5" />
 	<path d="M8 8v.01" />
 	<path d="M12 16v-5" />
 	<path d="M16 16v-3a2 2 0 1 0 -4 0" />
 	<path d="M3 7a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v10a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4l0 -10" />
-</svg></svg> </a> <a href="mailto:?subject=llmranker%3A%20LLM-based%20ranking%20and%20reasoning%20algorithms%20for%20search%20and%20recommendation&#38;body=https%3A%2F%2Fshangeth.com%2Fposts%2Fllmranker" aria-label="Share via Email" class="icon-btn"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-mail">
+</svg></svg> </a> <a href="mailto:?subject=DualTurn%3A%20Learning%20Turn-Taking%20from%20Dual-Channel%20Generative%20Speech%20Pretraining&#38;body=https%3A%2F%2Fshangeth.com%2Fposts%2Fdualturn" aria-label="Share via Email" class="icon-btn"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-mail">
 	<path stroke="none" d="M0 0h24v24H0z" fill="none" />
 	<path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10" />
 	<path d="M3 7l9 6l9 -6" />
-</svg></svg> </a> </div> </div> </div> <nav class="post-navigation container-narrow flex justify-between mt-24 pt-12 gap-8">  <div class="nav-spacer flex-1"></div> <a href="/posts/dualturn" class="nav-next flex flex-col items-end text-right group max-w-[45%] no-underline"> <span class="nav-label text-[0.8rem] uppercase tracking-wider opacity-75 font-bold mb-2">
+</svg></svg> </a> </div> </div> </div> <nav class="post-navigation container-narrow flex justify-between mt-24 pt-12 gap-8"> <a href="/posts/llmranker" class="nav-prev flex flex-col group max-w-[45%] no-underline"> <span class="nav-label text-[0.8rem] uppercase tracking-wider opacity-75 font-bold mb-2">
+Previous Post
+</span> <span class="nav-title text-lg font-semibold text-foreground group-hover:text-accent transition-colors duration-200 leading-snug"> llmranker: LLM-based ranking and reasoning algorithms for search and recommendation </span> </a> <div class="nav-spacer flex-1"></div> <a href="/posts/speechllm" class="nav-next flex flex-col items-end text-right group max-w-[45%] no-underline"> <span class="nav-label text-[0.8rem] uppercase tracking-wider opacity-75 font-bold mb-2">
 Next Post
-</span> <span class="nav-title text-lg font-semibold text-foreground group-hover:text-accent transition-colors duration-200 leading-snug"> DualTurn: Learning Turn-Taking from Dual-Channel Generative Speech Pretraining </span> </a> </nav> </article>   </div> <footer class="footer"> <div class="flex items-center gap-4"> <span class="body-xs">&copy; 2026 Shangeth Rajaa.</span> </div> <div class="flex items-center gap-4"> <a href="/rss.xml" aria-label="RSS Feed" title="RSS Feed" target="_blank" rel="noreferrer" class="btn-icon"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-rss">
+</span> <span class="nav-title text-lg font-semibold text-foreground group-hover:text-accent transition-colors duration-200 leading-snug"> SpeechLLM: Multi-Modal LLM for Speech Understanding </span> </a> </nav> </article>   </div> <footer class="footer"> <div class="flex items-center gap-4"> <span class="body-xs">&copy; 2026 Shangeth Rajaa.</span> </div> <div class="flex items-center gap-4"> <a href="/rss.xml" aria-label="RSS Feed" title="RSS Feed" target="_blank" rel="noreferrer" class="btn-icon"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-rss">
 	<path stroke="none" d="M0 0h24v24H0z" fill="none" />
 	<path d="M4 19a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
 	<path d="M4 4a16 16 0 0 1 16 16" />
