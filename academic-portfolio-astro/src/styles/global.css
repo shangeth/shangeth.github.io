@@ -801,6 +801,12 @@ a:hover,
     text-align: center;
 }
 
+/* Descriptive (non-numeric) tables: keep every column left-aligned */
+.prose table.table-left td {
+    text-align: left;
+    white-space: normal;
+}
+
 /* Numbered references / bibliography */
 .prose .references {
     list-style: none;

@@ -52,6 +52,7 @@ All ML and research projects are on [github.com/shangeth](https://github.com/sha
 
 ## Open Source
 
+- **[llmranker](https://github.com/shangeth/llmranker)**: Python package for LLM-based ranking and reasoning algorithms for search and recommendation, pointwise, pairwise, setwise, listwise, and tournament-style ranking over any LLM provider via LiteLLM. [PyPI](https://pypi.org/project/llmranker/)
 - **[wavencoder](https://github.com/shangeth/wavencoder)**: Python package for audio encoder models and transforms for speech deep learning tasks.
 - **[SpeechLLM](https://github.com/skit-ai/SpeechLLM)**: Multimodal LLM for speech understanding: ASR, gender, age, accent, emotion, and speech activity detection. [HuggingFace](https://huggingface.co/collections/shangeth/speechllm)
 - **[Wren](https://github.com/shangeth/wren-tts)**: Family of multimodal LLMs under 3B params for speech understanding, synthesis, and conversational agents. [HuggingFace](https://huggingface.co/collections/shangeth/wren)
