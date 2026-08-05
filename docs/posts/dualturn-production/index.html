@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en" style="--lightBg: #f9fafb;--lightFg: #111827;--lightAccent: #3b82f6;--lightMuted: #6b7280;--lightBorder: #e5e7eb;--lightSurface: #f9fafb;--darkBg: #241f1c;--darkFg: #e6dfd3;--darkAccent: #d97757;--darkMuted: #8a7d71;--darkBorder: #3d342d;--darkSurface: #241f1c;"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="icon" href="/favicon.ico" sizes="any"><meta name="generator" content="Astro v6.1.7"><!-- Robots / Indexing --><meta name="robots" content="index, follow"><!-- Canonical URL --><link rel="canonical" href="https://shangeth.com/posts/"><!-- General Meta Tags --><title>Blog | Shangeth Rajaa</title><meta name="title" content="Blog | Shangeth Rajaa"><meta name="description" content="Shangeth Rajaa, Senior ML Scientist at Anyreach AI (ex-Skit.ai). Voice AI research on full-duplex spoken dialogue, turn-taking, and speech LLMs."><meta name="author" content="Shangeth Rajaa"><!-- Open Graph / Facebook --><meta property="og:type" content="website"><meta property="og:url" content="https://shangeth.com/posts/"><meta property="og:title" content="Blog"><meta property="og:description" content="Shangeth Rajaa, Senior ML Scientist at Anyreach AI (ex-Skit.ai). Voice AI research on full-duplex spoken dialogue, turn-taking, and speech LLMs."><meta property="og:image" content="https://shangeth.com/posts/avatar.jpeg"><!-- Twitter --><meta property="twitter:card" content="summary_large_image"><meta property="twitter:url" content="https://shangeth.com/posts/"><meta property="twitter:title" content="Blog"><meta property="twitter:description" content="Shangeth Rajaa, Senior ML Scientist at Anyreach AI (ex-Skit.ai). Voice AI research on full-duplex spoken dialogue, turn-taking, and speech LLMs."><meta property="twitter:image" content="https://shangeth.com/posts/avatar.jpeg"><!-- Structured Data (JSON-LD) --><script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Shangeth Rajaa","url":"https://shangeth.com/","jobTitle":"Professor","description":"Shangeth Rajaa, Senior ML Scientist at Anyreach AI (ex-Skit.ai). Voice AI research on full-duplex spoken dialogue, turn-taking, and speech LLMs."}</script><meta name="astro-view-transitions-enabled" content="true"><meta name="astro-view-transitions-fallback" content="animate"><script type="module" src="/_astro/ClientRouter.astro_astro_type_script_index_0_lang.j56hQv-j.js"></script><script>(function(){const umamiId = "f98471af-a3c9-483d-8af6-59cc81d51877";
+<!DOCTYPE html><html lang="en" style="--lightBg: #f9fafb;--lightFg: #111827;--lightAccent: #3b82f6;--lightMuted: #6b7280;--lightBorder: #e5e7eb;--lightSurface: #f9fafb;--darkBg: #241f1c;--darkFg: #e6dfd3;--darkAccent: #d97757;--darkMuted: #8a7d71;--darkBorder: #3d342d;--darkSurface: #241f1c;"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="icon" href="/favicon.ico" sizes="any"><meta name="generator" content="Astro v6.1.7"><!-- Robots / Indexing --><meta name="robots" content="index, follow"><!-- Canonical URL --><link rel="canonical" href="https://shangeth.com/posts/dualturn-production/"><!-- General Meta Tags --><title>DualTurn in Production: From Research Checkpoint to Continual Learning on Live Calls | Shangeth Rajaa</title><meta name="title" content="DualTurn in Production: From Research Checkpoint to Continual Learning on Live Calls | Shangeth Rajaa"><meta name="description" content="Taking DualTurn from an Interspeech 2026 paper into a live voice agent: a ~1.5M-parameter model trained with zero manual labels, fastest end-to-end in real-call testing against cloud and open-source turn detectors, the only one in the industry that tells a backchannel from a real interruption, and set up to keep improving for free from every call it handles."><meta name="author" content="Shangeth Rajaa"><!-- Open Graph / Facebook --><meta property="og:type" content="article"><meta property="og:url" content="https://shangeth.com/posts/dualturn-production/"><meta property="og:title" content="DualTurn in Production: From Research Checkpoint to Continual Learning on Live Calls"><meta property="og:description" content="Taking DualTurn from an Interspeech 2026 paper into a live voice agent: a ~1.5M-parameter model trained with zero manual labels, fastest end-to-end in real-call testing against cloud and open-source turn detectors, the only one in the industry that tells a backchannel from a real interruption, and set up to keep improving for free from every call it handles."><meta property="og:image" content="https://shangeth.com/posts/dualturn-production/avatar.jpeg"><!-- Twitter --><meta property="twitter:card" content="summary_large_image"><meta property="twitter:url" content="https://shangeth.com/posts/dualturn-production/"><meta property="twitter:title" content="DualTurn in Production: From Research Checkpoint to Continual Learning on Live Calls"><meta property="twitter:description" content="Taking DualTurn from an Interspeech 2026 paper into a live voice agent: a ~1.5M-parameter model trained with zero manual labels, fastest end-to-end in real-call testing against cloud and open-source turn detectors, the only one in the industry that tells a backchannel from a real interruption, and set up to keep improving for free from every call it handles."><meta property="twitter:image" content="https://shangeth.com/posts/dualturn-production/avatar.jpeg"><!-- Structured Data (JSON-LD) --><script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Shangeth Rajaa","url":"https://shangeth.com/","jobTitle":"Professor","description":"Shangeth Rajaa, Senior ML Scientist at Anyreach AI (ex-Skit.ai). Voice AI research on full-duplex spoken dialogue, turn-taking, and speech LLMs."}</script><meta name="astro-view-transitions-enabled" content="true"><meta name="astro-view-transitions-fallback" content="animate"><script type="module" src="/_astro/ClientRouter.astro_astro_type_script_index_0_lang.j56hQv-j.js"></script><script>(function(){const umamiId = "f98471af-a3c9-483d-8af6-59cc81d51877";
 const umamiSrc = "https://cloud.umami.is/script.js";
 const ga4Id = "G-733WY72RFD";
 
@@ -135,44 +135,241 @@ const ga4Id = "G-733WY72RFD";
 </svg>
 </svg> </a> <a href="/resume.pdf" title="Resume" target="_blank" rel="noreferrer" class="social-link px-2 text-xs font-bold tracking-wider" data-umami-event="resume-download">
 Resume
-</a> </div> </div> </div> </aside> <div class="main-content"> <nav class="navbar"> <ul class="nav-links"> <li class> <a href="/" class="nav-link inactive"> About <span class="nav-link-line"></span> </a> </li><li class> <a href="/cv" class="nav-link inactive"> CV <span class="nav-link-line"></span> </a> </li><li class> <a href="/publications" class="nav-link inactive"> Publications <span class="nav-link-line"></span> </a> </li><li class> <a href="/posts" class="nav-link active"> Blog <span class="nav-link-line"></span> </a> </li><li class="nav-item-right"> <a href="/courses" class="nav-link inactive"> Courses <span class="nav-link-line"></span> </a> </li> </ul> </nav> <div class="main-body animate-in">  <header class="page-header"> <h1 class="page-title">Blog</h1> <p class="page-subtitle">Writing on Voice AI, speech research, and machine learning.</p> </header><section class="item-list"> <article class="card"> <div class="card-content"> <a href="/posts/llmranker" class="card-title">llmranker: LLM-based ranking and reasoning algorithms for search and recommendation</a> <div class="card-meta"> <span class="flex items-center gap-1"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-calendar-event"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M4 7a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2l0 -12" /><path d="M16 3l0 4" /><path d="M8 3l0 4" /><path d="M4 11l16 0" /><path d="M8 15h2v2h-2l0 -2" /></svg>
-</svg> <span>August 2026</span> </span>   </div> <div class="flex gap-2 flex-wrap mb-3"> <a href="/tags/llm" class="tag text-xs">
-#LLM  </a><a href="/tags/information retrieval" class="tag text-xs">
-#Information Retrieval  </a><a href="/tags/search" class="tag text-xs">
-#Search  </a><a href="/tags/recommendation systems" class="tag text-xs">
-#Recommendation Systems  </a><a href="/tags/python" class="tag text-xs">
-#Python  </a> </div> <p class="card-desc">LLM-based ranking and reasoning algorithms for search and recommendation: why asking an LLM to rank a shortlist outperforms embedding distance on compositional queries, a research-grounded tour of pointwise, pairwise, listwise, setwise, and tournament-style ranking, and a package that implements all of them over any provider.</p> </div>  </article><article class="card"> <div class="card-content"> <a href="/posts/dualturn-production" class="card-title">DualTurn in Production: From Research Checkpoint to Continual Learning on Live Calls</a> <div class="card-meta"> <span class="flex items-center gap-1"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-calendar-event"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M4 7a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2l0 -12" /><path d="M16 3l0 4" /><path d="M8 3l0 4" /><path d="M4 11l16 0" /><path d="M8 15h2v2h-2l0 -2" /></svg>
-</svg> <span>July 2026</span> </span> <span class="flex items-center gap-1"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-user">
+</a> </div> </div> </div> </aside> <div class="main-content"> <nav class="navbar"> <ul class="nav-links"> <li class> <a href="/" class="nav-link inactive"> About <span class="nav-link-line"></span> </a> </li><li class> <a href="/cv" class="nav-link inactive"> CV <span class="nav-link-line"></span> </a> </li><li class> <a href="/publications" class="nav-link inactive"> Publications <span class="nav-link-line"></span> </a> </li><li class> <a href="/posts" class="nav-link active"> Blog <span class="nav-link-line"></span> </a> </li><li class="nav-item-right"> <a href="/courses" class="nav-link inactive"> Courses <span class="nav-link-line"></span> </a> </li> </ul> </nav> <div class="main-body animate-in">   <div class="flex justify-between items-center mb-4"> <a href="/posts" class="back-link">
+Go back to posts </a>  </div> <article> <h1 class="page-title mb-4">DualTurn in Production: From Research Checkpoint to Continual Learning on Live Calls</h1> <div class="card-meta mb-4"> <span class="flex items-center gap-1"> <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-calendar-event"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M4 7a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2l0 -12" /><path d="M16 3l0 4" /><path d="M8 3l0 4" /><path d="M4 11l16 0" /><path d="M8 15h2v2h-2l0 -2" /></svg>
+</svg> <span>July 2026</span> </span><span class="flex items-center gap-1"> <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-user">
 	<path stroke="none" d="M0 0h24v24H0z" fill="none" />
 	<path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" />
 	<path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
-</svg></svg> <span>Shangeth Rajaa</span> </span>  </div> <div class="flex gap-2 flex-wrap mb-3"> <a href="/tags/voice ai" class="tag text-xs">
+</svg></svg> <span>Shangeth Rajaa</span> </span> </div> <div class="flex gap-2 flex-wrap mb-4"> <a href="/tags/voice ai" class="tag text-xs">
 #Voice AI  </a><a href="/tags/turn-taking" class="tag text-xs">
 #Turn-Taking  </a><a href="/tags/full-duplex" class="tag text-xs">
 #Full-Duplex  </a><a href="/tags/production ml" class="tag text-xs">
 #Production ML  </a><a href="/tags/continual learning" class="tag text-xs">
-#Continual Learning  </a> </div> <p class="card-desc">Taking DualTurn from an Interspeech 2026 paper into a live voice agent: a ~1.5M-parameter model trained with zero manual labels, fastest end-to-end in real-call testing against cloud and open-source turn detectors, the only one in the industry that tells a backchannel from a real interruption, and set up to keep improving for free from every call it handles.</p> </div>  </article><article class="card"> <div class="card-content"> <a href="/posts/dualturn" class="card-title">DualTurn: Learning Turn-Taking from Dual-Channel Generative Speech Pretraining</a> <div class="card-meta"> <span class="flex items-center gap-1"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-calendar-event"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M4 7a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2l0 -12" /><path d="M16 3l0 4" /><path d="M8 3l0 4" /><path d="M4 11l16 0" /><path d="M8 15h2v2h-2l0 -2" /></svg>
-</svg> <span>April 2026</span> </span> <span class="flex items-center gap-1"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-user">
+#Continual Learning  </a> </div> <div class="prose"> <p><a href="https://github.com/anyreachai/dualturn"><img src="https://img.shields.io/badge/-Github-black?logo=github" alt="GitHub"></a>
+<a href="https://huggingface.co/collections/anyreach-ai/dualturn"><img src="https://img.shields.io/badge/%F0%9F%A4%97-DualTurn-blue.svg" alt="HuggingFace"></a>
+<a href="https://arxiv.org/abs/2603.08216"><img src="https://img.shields.io/badge/arXiv-2603.08216-b31b1b.svg" alt="arXiv"></a></p>
+<div class="status-highlight">
+This is a follow-up to <a href="/posts/dualturn">DualTurn: Learning Turn-Taking from Dual-Channel Generative Speech Pretraining</a> (Interspeech 2026). That post is about the method and the paper's numbers. This one is about what happened after: taking DualTurn out of the paper and into a real voice agent, on real calls, and what changes when the thing you're optimizing for is a person on the phone instead of a benchmark split.
+</div>
+<h2 id="quick-recap">Quick recap</h2>
+<p>DualTurn is a turn-taking perception model. Instead of waiting for a voice activity detector to flag a pause and then classifying whether that pause is a real end of turn, it listens to both sides of a call continuously, full-duplex, and predicts turn-taking signals directly from raw dual-channel audio. It gets there by pretraining generatively on dual-channel conversational audio, the same ingredient that makes full-duplex speech-to-speech models like Moshi good at turn-taking, but stripped down to just the perception component, so a standard ASR-LLM-TTS pipeline can use it without giving up the LLM’s reasoning and tool-calling. The paper version is a 0.5B-parameter model with a Qwen2.5-0.5B backbone, twelve classification heads, and 453 hours of Switchboard and otoSpeech audio behind it, and it beats a 3.1B fusion baseline and the prior state of the art (VAP) on both word-level turn prediction and full agent-action prediction.</p>
+<p>None of that is deployment-ready as written, and the paper says so explicitly. This post is the deployment.</p>
+<h2 id="same-method-a-much-smaller-vessel">Same method, a much smaller vessel</h2>
+<p>The production model doesn’t change the method. It’s still stage-1 generative pretraining on dual-channel audio followed by stage-2 finetuning into turn-taking signals, still with no manually labeled data anywhere in the loop. What changes is the backbone, because a component that has to run continuously, on every call, in real time, on CPU, cannot afford a 0.5B-parameter LLM.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th></th><th>Research (paper)</th><th>Production</th></tr></thead><tbody><tr><td>Backbone</td><td>Qwen2.5-0.5B</td><td>2-layer LSTM, 256 hidden</td></tr><tr><td>Trainable params</td><td>~500M</td><td>~1.5M</td></tr><tr><td>Audio front-end</td><td>Frozen Mimi encoder</td><td>Frozen Mimi encoder</td></tr><tr><td>Heads</td><td>12 (EOT/HOLD/BOT/BC × 2 channels)</td><td>4 (end-of-turn, per-channel VAD, future-VAD)</td></tr><tr><td>Runs on</td><td>CPU</td><td>CPU, real time</td></tr></tbody></table>
+<p>That’s roughly a 330x reduction in trainable parameters. The reason this is worth trying at all, instead of just assuming a smaller model degrades, is the paper’s own central finding: capacity alone barely moves turn-taking performance. An 8M-parameter LSTM and the 0.5B backbone score statistically identically on backchannel detection <em>without</em> dual-channel generative pretraining; pretraining is what takes the exact same architecture from near-chance to state-of-the-art. If that finding is real, it predicts that the backbone can be swapped for something CPU-cheap without losing the thing that actually matters, as long as the pretrain-then-finetune recipe stays intact. Production is that prediction, tested.</p>
+<h2 id="training-on-calls-nobody-labeled">Training on calls nobody labeled</h2>
+<p>The other thing that has to hold for a much smaller model trained on much less curated data to work is the labeling pipeline, and here the constraint was even harder than the paper’s: zero manual annotation, on real AI-agent-to-human production phone calls, at a scale a labeling team was never going to touch.</p>
+<p>The pipeline that makes this possible has no human in it:</p>
+<ol>
+<li><strong>ASR</strong> transcribes both channels with word-level timestamps.</li>
+<li><strong>Voice activity detection</strong> gives per-channel speech intervals, i.e. the timing ground truth.</li>
+<li><strong>One LLM call per conversation</strong> reads the transcript and judges, per customer turn, whether it was complete or the customer was cut off, and whether an overlap was a stop-worthy interruption.</li>
+<li>Deterministic rules turn those judgments into frame-level training targets: an endpoint gets snapped to the actual VAD offset, then dropped if the customer resumes speaking shortly after with no agent speech in between, because that’s a mid-thought pause, not a turn end, and no one should have to hand-label that distinction call by call.</li>
+</ol>
+<p>Every step after ASR is either a VAD threshold or one cheap LLM call, and the LLM call is the one place any kind of judgment enters the pipeline. Applied across a corpus of production calls, this is a rounding error in cost next to what a comparable amount of human-labeled turn-taking data would run.</p>
+<h2 id="continuous-at-inference-still-no-vad-gate">Continuous at inference, still no VAD gate</h2>
+<p>The part of the architecture that’s easy to state and easy to underestimate: in the deployed model, voice activity detection is an <em>output</em> of the network, not an input to it. There is no VAD sitting in front of the model deciding when it’s allowed to run. Every 80ms tick, on both channels, unconditionally, the model runs. Its own VAD prediction is one of the things it emits alongside the end-of-turn signal, not a gate that has to fire first.</p>
+<p>That has a direct, practical consequence for deployment: the model’s internal state has already been accumulating evidence about where the turn is going for the entire utterance, not just since a pause started, so when the turn actually ends there’s no cold start. Streaming state (hidden state carried tick to tick, a bounded attention cache in the audio front-end) keeps this at flat, constant latency regardless of how long the call has been running, and it’s small enough to run on CPU in real time. This is what “full-duplex, continuously modeling both channels” from the paper actually looks like once it has to run in a live phone call instead of on a benchmark split.</p>
+<h2 id="two-evaluations-one-consistent-picture">Two evaluations, one consistent picture</h2>
+<p>We tested DualTurn two ways: once against the field on a neutral public benchmark, and once inside an actual voice agent talking to actual people.</p>
+<p><strong>On the neutral benchmark</strong>, DualTurn goes head-to-head with the field of turn detectors people actually ship: LiveKit’s own models, Deepgram Flux, the open SmartTurn and ultraVAD, scored on LiveKit’s public leaderboard protocol (classify each pause in a call as a real end-of-turn or a mid-turn hold, at fixed latency/false-cutoff budgets).</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Model</th><th>Params</th><th>Runs on</th><th align="right">FC@300ms</th><th align="right">FC@600ms</th><th align="right">Lat@5%</th><th align="right">Lat@10%</th></tr></thead><tbody><tr><td>LiveKit Turn Detector v1</td><td>undisclosed</td><td>Cloud</td><td align="right">9.9%</td><td align="right">4.5%</td><td align="right">543 ms</td><td align="right">295 ms</td></tr><tr><td>Deepgram Flux</td><td>undisclosed</td><td>Cloud</td><td align="right">12.9%</td><td align="right">9.9%</td><td align="right">1151 ms</td><td align="right">548 ms</td></tr><tr><td><strong>DualTurn (ours)</strong></td><td><strong>1.5M</strong></td><td><strong>CPU</strong></td><td align="right"><strong>20.6%</strong></td><td align="right"><strong>8.5%</strong></td><td align="right">1026 ms</td><td align="right"><strong>520 ms</strong></td></tr><tr><td>ultraVAD</td><td>~8B</td><td>GPU</td><td align="right">27.7%</td><td align="right">11.9%</td><td align="right">899 ms</td><td align="right">663 ms</td></tr><tr><td>LiveKit Turn Detector v1-mini</td><td>undisclosed</td><td>CPU</td><td align="right">27.8%</td><td align="right">12.1%</td><td align="right">1070 ms</td><td align="right">698 ms</td></tr><tr><td>SmartTurn v3.2</td><td>~8M</td><td>CPU</td><td align="right">35.2%</td><td align="right">14.8%</td><td align="right">1051 ms</td><td align="right">739 ms</td></tr></tbody></table>
+<p>DualTurn is the best self-hostable, on-device turn detector on the board, ahead of an 8B open model at roughly 5,000x fewer parameters, ahead of LiveKit’s own local model, ahead of the open state of the art. Only two undisclosed-size closed cloud systems place ahead of it at all.</p>
+<p><strong>Inside a live agent</strong>, we ran DualTurn against Deepgram Flux and LiveKit’s detectors (the cloud v1 model, its MultilingualModel, and the local v1-mini) inside the same production LiveKit voice-agent stack, same LLM, same TTS, only the turn detector changing between runs.</p>
+<img src="/images/posts/dualturn-production-latency.png" alt="Agent response latency: DualTurn vs. production turn detectors. DualTurn hands the turn back in 0.22s and gets the agent talking in 1.36s, ahead of Deepgram Flux, LiveKit v1, LiveKit MultilingualModel, and LiveKit v1-mini.">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Turn detector</th><th align="right">End-of-turn latency</th><th align="right">Total response latency</th><th>Backchannel / interrupt</th></tr></thead><tbody><tr><td><strong>DualTurn</strong></td><td align="right"><strong>0.22 s</strong></td><td align="right"><strong>1.36 s</strong></td><td>✅ natively supported</td></tr><tr><td>Deepgram Flux</td><td align="right">0.36 s</td><td align="right">1.50 s</td><td>❌</td></tr><tr><td>LiveKit Turn Detector v1 (cloud)</td><td align="right">0.58 s</td><td align="right">1.72 s</td><td>❌</td></tr><tr><td>LiveKit MultilingualModel</td><td align="right">0.69 s</td><td align="right">1.83 s</td><td>❌</td></tr><tr><td>LiveKit Turn Detector v1-mini</td><td align="right">1.10 s</td><td align="right">2.24 s</td><td>❌</td></tr></tbody></table>
+<p>Here DualTurn doesn’t place third behind the cloud systems, it’s first, full stop: 0.22s to hand back the turn and 1.36s to the agent’s first word, ahead of Deepgram Flux, LiveKit’s cloud v1, LiveKit’s MultilingualModel, and LiveKit v1-mini.</p>
+<p>These are two different measurements, not two contradictory ones. The public benchmark scores a classification task: is this specific, already-flagged pause a real end-of-turn or not. It’s a fair, neutral way to compare turn detectors, but by construction the clock only starts once a pause has already been identified. The live-agent test measures the thing a caller actually feels: real wall-clock time from the last word spoken to the agent’s first word back, with every component in the loop except the turn detector held fixed. That’s the harder and more honest test, because it’s not scoring a model against a fixed dataset, it’s timing an agent talking to a person. And it’s where being the one detector in the room that never waited for a pause to be flagged in the first place shows up as a real, measured latency win, against everything we tested it against, cloud included.</p>
+<h2 id="what-nothing-else-here-can-do">What nothing else here can do</h2>
+<p>There’s a capability gap underneath these numbers that’s worth stating plainly: no turn detector in the industry today, open-source or commercial, can tell a backchannel from a real interruption. DualTurn can.</p>
+<p>Every detector we tested here is single-channel and VAD-triggered on the user’s audio alone, and that’s the norm across the field, not a gap specific to this comparison: LiveKit, Deepgram, and every published open turn-taking model reason over the user’s channel and nothing else. When the agent is mid-sentence and the user says “mhm” or “right,” none of them can tell that apart from the user genuinely taking the floor, because none of them were ever given the agent’s own audio to reason over in the first place, and the best any of them can fall back on is a crude duration heuristic. DualTurn listens to both channels continuously, so it has direct access to the exact thing that decision depends on: what the agent is doing while the user is making that sound. That’s not a training gap the field hasn’t gotten around to closing, it’s a wiring constraint: you cannot get this capability out of a model that was only ever given one channel to listen to.</p>
+<p>That capability sits on top of a model that’s also the fastest and lightest thing in the comparison: ~1.5M parameters, the smallest footprint of anything tested, running on CPU with no per-call vendor cost and no network round-trip, and it’s the one that got the agent talking fastest, in every measurement above.</p>
+<h2 id="continual-learning-turn-taking-that-keeps-improving-for-free">Continual learning: turn-taking that keeps improving for free</h2>
+<p>Deploying DualTurn doesn’t end the training loop, it restarts it. Every call the agent handles is another dual-channel recording that runs through the exact same zero-manual-label pipeline described above: ASR, VAD, one LLM pass per call. There’s no incremental labeling cost as call volume grows, because there was never a human labeling step to scale in the first place. Continual learning here isn’t a separate system bolted on afterward, it’s the same training pipeline that produced v1, pointed at v1’s own call traffic.</p>
+<p>There’s a second effect on top of raw volume, and it’s the more interesting one. When the agent’s turn-taking is bad, people can tell, and they adapt for it: they over-enunciate, they slow down, they leave unnaturally long pauses before continuing, the way anyone talks to something they suspect is a machine. That’s a distribution of speech that isn’t representative of how people actually talk to each other, and training on more of it doesn’t buy much. As turn-taking gets better and the agent stops stepping on people and stops missing backchannels, that self-conscious, careful register goes away, and conversations start looking more like two people talking to each other than a person talking to a phone tree. That shift, more natural pacing, more overlap, more of the backchannel and interruption behavior the model exists to handle, is exactly the training signal that’s hardest to get any other way, and it only shows up once the model deployed is already good enough to stop provoking the unnatural version of it. Better turn-taking produces better training data for turn-taking, at zero additional labeling cost, for as long as the agent keeps taking calls.</p>
+<h2 id="where-this-leaves-it">Where this leaves it</h2>
+<p>The paper’s core claim was that generative pretraining, not architecture, is what makes a model good at turn-taking, and that the backbone is a vessel for that pretraining rather than the source of it. Production is that claim under real conditions: a 330x smaller backbone, trained on real, unlabeled production calls instead of a curated research corpus, still comes out ahead of everything self-hostable on a neutral public benchmark, and still wins outright once it’s put in front of an actual person on a live call. The method traveled. The vessel didn’t need to be big.</p>
+<p>Paper, code, and the open model weights are here if you want to look closer: <a href="https://arxiv.org/abs/2603.08216">arXiv</a>, <a href="https://github.com/anyreachai/dualturn">GitHub</a>, <a href="https://huggingface.co/collections/anyreach-ai/dualturn">Hugging Face</a>, and the <a href="/posts/dualturn">original DualTurn post</a> for the method and the paper’s own results in full.</p>
+<hr>
+<h2 id="citation">Citation</h2>
+<p>If you use this work, please cite:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bibtex"><code><span class="line"><span style="color:#F97583">@misc</span><span style="color:#E1E4E8">{</span><span style="color:#B392F0">rajaa2026dualturn</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">  author</span><span style="color:#E1E4E8">        = </span><span style="color:#9ECBFF">{</span><span style="color:#E1E4E8">Rajaa, Shangeth</span><span style="color:#9ECBFF">}</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">  title</span><span style="color:#E1E4E8">         = </span><span style="color:#9ECBFF">{</span><span style="color:#E1E4E8">{DualTurn: Learning Turn-Taking from Dual-Channel Generative Speech Pretraining}</span><span style="color:#9ECBFF">}</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">  year</span><span style="color:#E1E4E8">          = </span><span style="color:#9ECBFF">{</span><span style="color:#E1E4E8">2026</span><span style="color:#9ECBFF">}</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">  eprint</span><span style="color:#E1E4E8">        = </span><span style="color:#9ECBFF">{</span><span style="color:#E1E4E8">2603.08216</span><span style="color:#9ECBFF">}</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">  archivePrefix</span><span style="color:#E1E4E8"> = </span><span style="color:#9ECBFF">{</span><span style="color:#E1E4E8">arXiv</span><span style="color:#9ECBFF">}</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">  primaryClass</span><span style="color:#E1E4E8">  = </span><span style="color:#9ECBFF">{</span><span style="color:#E1E4E8">eess.AS</span><span style="color:#9ECBFF">}</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">  url</span><span style="color:#E1E4E8">           = </span><span style="color:#9ECBFF">{</span><span style="color:#E1E4E8">https://arxiv.org/abs/2603.08216</span><span style="color:#9ECBFF">}</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre> </div> <div class="container-narrow"> <div class="flex items-center gap-4 mt-8"> <span class="body-sm font-semibold" style="opacity: 0.75;">Share:</span> <div class="flex gap-2"> <a href="https://twitter.com/intent/tweet?text=DualTurn%20in%20Production%3A%20From%20Research%20Checkpoint%20to%20Continual%20Learning%20on%20Live%20Calls&#38;url=https%3A%2F%2Fshangeth.com%2Fposts%2Fdualturn-production" target="_blank" rel="noopener noreferrer" aria-label="Share on Twitter" class="icon-btn"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-x">
 	<path stroke="none" d="M0 0h24v24H0z" fill="none" />
-	<path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" />
-	<path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
-</svg></svg> <span>Shangeth Rajaa</span> </span>  </div> <div class="flex gap-2 flex-wrap mb-3"> <a href="/tags/voice ai" class="tag text-xs">
-#Voice AI  </a><a href="/tags/turn-taking" class="tag text-xs">
-#Turn-Taking  </a><a href="/tags/full-duplex" class="tag text-xs">
-#Full-Duplex  </a><a href="/tags/spoken dialogue" class="tag text-xs">
-#Spoken Dialogue  </a><a href="/tags/speech llm" class="tag text-xs">
-#Speech LLM  </a> </div> <p class="card-desc">Speech-to-speech models know when to speak but can&#39;t reason. Cascaded LLM pipelines can reason but only react to silence. DualTurn pretrains on dual-channel human conversation to bring S2S-level turn-taking into a standard ASR-LLM-TTS stack.</p> </div>  </article><article class="card"> <div class="card-content"> <a href="/posts/speechllm" class="card-title">SpeechLLM: Multi-Modal LLM for Speech Understanding</a> <div class="card-meta"> <span class="flex items-center gap-1"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-calendar-event"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M4 7a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2l0 -12" /><path d="M16 3l0 4" /><path d="M8 3l0 4" /><path d="M4 11l16 0" /><path d="M8 15h2v2h-2l0 -2" /></svg>
-</svg> <span>June 2024</span> </span>   </div> <div class="flex gap-2 flex-wrap mb-3"> <a href="/tags/speech llm" class="tag text-xs">
-#Speech LLM  </a><a href="/tags/voice ai" class="tag text-xs">
-#Voice AI  </a><a href="/tags/speech representation" class="tag text-xs">
-#Speech Representation  </a><a href="/tags/prosody" class="tag text-xs">
-#Prosody  </a> </div> <p class="card-desc">A small multimodal LLM that reads paralinguistic signal — emotion, prosody, speaker traits — directly from speech audio instead of through an ASR transcript, built alongside the release of SpeechLLM at Skit.ai.</p> </div>  </article><article class="card"> <div class="card-content"> <a href="/posts/speech-llms-conversations" class="card-title">Speech LLMs for Conversations</a> <div class="card-meta"> <span class="flex items-center gap-1"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-calendar-event"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M4 7a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2l0 -12" /><path d="M16 3l0 4" /><path d="M8 3l0 4" /><path d="M4 11l16 0" /><path d="M8 15h2v2h-2l0 -2" /></svg>
-</svg> <span>May 2024</span> </span>   </div> <div class="flex gap-2 flex-wrap mb-3"> <a href="/tags/voice ai" class="tag text-xs">
-#Voice AI  </a><a href="/tags/speech llm" class="tag text-xs">
-#Speech LLM  </a><a href="/tags/conversational ai" class="tag text-xs">
-#Conversational AI  </a> </div> <p class="card-desc">A multimodal speech LLM that processes audio directly to enhance conversational AI while reducing overhead compared to traditional ASR-LLM-TTS pipelines.</p> </div> <div class="flex-shrink-0"> <a href="https://tech.skit.ai/speech-conversational-llms/" target="_blank" rel="noopener noreferrer" class="card-link">
-View
-</a> </div> </article> </section> <nav class="pagination"> <span class="pagination-inactive">Newer</span> <span class="pagination-info">Page 1 of 3</span> <a href="/posts/2" class="pagination-link">Older</a> </nav>  </div> <footer class="footer"> <div class="flex items-center gap-4"> <span class="body-xs">&copy; 2026 Shangeth Rajaa.</span> </div> <div class="flex items-center gap-4"> <a href="/rss.xml" aria-label="RSS Feed" title="RSS Feed" target="_blank" rel="noreferrer" class="btn-icon"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-rss">
+	<path d="M4 4l11.733 16h4.267l-11.733 -16l-4.267 0" />
+	<path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772" />
+</svg></svg> </a> <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fshangeth.com%2Fposts%2Fdualturn-production" target="_blank" rel="noopener noreferrer" aria-label="Share on Facebook" class="icon-btn"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-facebook">
+	<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+	<path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3" />
+</svg></svg> </a> <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fshangeth.com%2Fposts%2Fdualturn-production" target="_blank" rel="noopener noreferrer" aria-label="Share on LinkedIn" class="icon-btn"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-linkedin">
+	<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+	<path d="M8 11v5" />
+	<path d="M8 8v.01" />
+	<path d="M12 16v-5" />
+	<path d="M16 16v-3a2 2 0 1 0 -4 0" />
+	<path d="M3 7a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v10a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4l0 -10" />
+</svg></svg> </a> <a href="mailto:?subject=DualTurn%20in%20Production%3A%20From%20Research%20Checkpoint%20to%20Continual%20Learning%20on%20Live%20Calls&#38;body=https%3A%2F%2Fshangeth.com%2Fposts%2Fdualturn-production" aria-label="Share via Email" class="icon-btn"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-mail">
+	<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+	<path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10" />
+	<path d="M3 7l9 6l9 -6" />
+</svg></svg> </a> </div> </div> </div> <nav class="post-navigation container-narrow flex justify-between mt-24 pt-12 gap-8"> <a href="/posts/llmranker" class="nav-prev flex flex-col group max-w-[45%] no-underline"> <span class="nav-label text-[0.8rem] uppercase tracking-wider opacity-75 font-bold mb-2">
+Previous Post
+</span> <span class="nav-title text-lg font-semibold text-foreground group-hover:text-accent transition-colors duration-200 leading-snug"> llmranker: LLM-based ranking and reasoning algorithms for search and recommendation </span> </a> <div class="nav-spacer flex-1"></div> <a href="/posts/dualturn" class="nav-next flex flex-col items-end text-right group max-w-[45%] no-underline"> <span class="nav-label text-[0.8rem] uppercase tracking-wider opacity-75 font-bold mb-2">
+Next Post
+</span> <span class="nav-title text-lg font-semibold text-foreground group-hover:text-accent transition-colors duration-200 leading-snug"> DualTurn: Learning Turn-Taking from Dual-Channel Generative Speech Pretraining </span> </a> </nav> </article>   </div> <footer class="footer"> <div class="flex items-center gap-4"> <span class="body-xs">&copy; 2026 Shangeth Rajaa.</span> </div> <div class="flex items-center gap-4"> <a href="/rss.xml" aria-label="RSS Feed" title="RSS Feed" target="_blank" rel="noreferrer" class="btn-icon"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-rss">
 	<path stroke="none" d="M0 0h24v24H0z" fill="none" />
 	<path d="M4 19a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
 	<path d="M4 4a16 16 0 0 1 16 16" />
@@ -185,4 +382,54 @@ View
 </svg></svg> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="block dark:hidden"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-moon">
 	<path stroke="none" d="M0 0h24v24H0z" fill="none" />
 	<path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454l0 .008" />
-</svg></svg> </button>  </div> </footer> </div> </div> </body></html>
+</svg></svg> </button>  </div> </footer> </div> </div> </body></html> <script>
+    function initCodeCopyButtons() {
+        document.querySelectorAll(".prose pre").forEach((pre) => {
+            if (pre.parentElement?.classList.contains("code-block")) return;
+
+            const wrapper = document.createElement("div");
+            wrapper.className = "code-block";
+            pre.parentNode.insertBefore(wrapper, pre);
+            wrapper.appendChild(pre);
+
+            const button = document.createElement("button");
+            button.type = "button";
+            button.className = "code-copy-btn";
+            button.setAttribute("aria-label", "Copy code");
+            const copyIcon = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M8 8m0 2a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v8a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2z" /><path d="M16 8v-2a2 2 0 0 0 -2 -2h-8a2 2 0 0 0 -2 2v8a2 2 0 0 0 2 2h2" /></svg>';
+            const checkIcon = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 12l5 5l10 -10" /></svg>';
+            button.innerHTML = copyIcon;
+
+            button.addEventListener("click", async () => {
+                const code = pre.querySelector("code");
+                const text = code ? code.innerText : pre.innerText;
+                if (pre.dataset.language === "bibtex") {
+                    window.umami?.track("citation-copy");
+                }
+                try {
+                    await navigator.clipboard.writeText(text);
+                } catch (e) {
+                    const textarea = document.createElement("textarea");
+                    textarea.value = text;
+                    textarea.style.position = "fixed";
+                    textarea.style.opacity = "0";
+                    document.body.appendChild(textarea);
+                    textarea.select();
+                    document.execCommand("copy");
+                    document.body.removeChild(textarea);
+                }
+                button.classList.add("copied");
+                button.innerHTML = checkIcon;
+                setTimeout(() => {
+                    button.classList.remove("copied");
+                    button.innerHTML = copyIcon;
+                }, 1500);
+            });
+
+            wrapper.appendChild(button);
+        });
+    }
+
+    document.addEventListener("astro:page-load", initCodeCopyButtons);
+    document.addEventListener("DOMContentLoaded", initCodeCopyButtons);
+</script>
