@@ -144,7 +144,8 @@ Go back to posts </a>  </div> <article> <h1 class="page-title mb-4">DualTurn in 
 #Production ML  </a><a href="/tags/continual learning" class="tag text-xs">
 #Continual Learning  </a> </div> <div class="prose"> <p><a href="https://github.com/anyreachai/dualturn"><img src="https://img.shields.io/badge/-Github-black?logo=github" alt="GitHub"></a>
 <a href="https://huggingface.co/collections/anyreach-ai/dualturn"><img src="https://img.shields.io/badge/%F0%9F%A4%97-DualTurn-blue.svg" alt="HuggingFace"></a>
-<a href="https://arxiv.org/abs/2603.08216"><img src="https://img.shields.io/badge/arXiv-2603.08216-b31b1b.svg" alt="arXiv"></a></p>
+<a href="https://arxiv.org/abs/2603.08216"><img src="https://img.shields.io/badge/arXiv-2603.08216-b31b1b.svg" alt="arXiv"></a>
+<a href="#citation"><img src="https://img.shields.io/badge/Cite-BibTeX-yellow.svg" alt="Cite this work"></a></p>
 <div class="status-highlight">
 This is a follow-up to <a href="/posts/dualturn">DualTurn: Learning Turn-Taking from Dual-Channel Generative Speech Pretraining</a> (Interspeech 2026). That post is about the method and the paper's numbers. This one is about what happened after: taking DualTurn out of the paper and into a real voice agent, on real calls, and what changes when the thing you're optimizing for is a person on the phone instead of a benchmark split.
 </div>
@@ -205,7 +206,7 @@ This is a follow-up to <a href="/posts/dualturn">DualTurn: Learning Turn-Taking 
 <p>That has a direct, practical consequence for deployment: the model’s internal state has already been accumulating evidence about where the turn is going for the entire utterance, not just since a pause started, so when the turn actually ends there’s no cold start. Streaming state (hidden state carried tick to tick, a bounded attention cache in the audio front-end) keeps this at flat, constant latency regardless of how long the call has been running, and it’s small enough to run on CPU in real time. This is what “full-duplex, continuously modeling both channels” from the paper actually looks like once it has to run in a live phone call instead of on a benchmark split.</p>
 <h2 id="two-evaluations-one-consistent-picture">Two evaluations, one consistent picture</h2>
 <p>We tested DualTurn two ways: once against the field on a neutral public benchmark, and once inside an actual voice agent talking to actual people.</p>
-<p><strong>On the neutral benchmark</strong>, DualTurn goes head-to-head with the field of turn detectors people actually ship: LiveKit’s own models, Deepgram Flux, the open SmartTurn and ultraVAD, scored on LiveKit’s public leaderboard protocol (classify each pause in a call as a real end-of-turn or a mid-turn hold, at fixed latency/false-cutoff budgets).</p>
+<p><strong>On the neutral benchmark</strong>, DualTurn goes head-to-head with the field of turn detectors people actually ship: <a href="https://livekit.com/blog/solving-end-of-turn-detection">LiveKit’s own models</a>, <a href="https://deepgram.com/learn/introducing-flux-conversational-speech-recognition">Deepgram Flux</a>, the open <a href="https://www.daily.co/blog/smart-turn-v3-2-handling-noisy-environments-and-short-responses/">SmartTurn</a> and <a href="https://huggingface.co/fixie-ai/ultraVAD">ultraVAD</a>, scored on LiveKit’s public leaderboard protocol (classify each pause in a call as a real end-of-turn or a mid-turn hold, at fixed latency/false-cutoff budgets).</p>
 
 
 

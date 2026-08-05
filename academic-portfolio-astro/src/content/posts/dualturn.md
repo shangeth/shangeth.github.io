@@ -19,6 +19,10 @@ tags:
 🎉 <strong>Accepted at Interspeech 2026!</strong> Excited to present DualTurn in person in Sydney, September 28 – October 1, 2026.
 </div>
 
+<div class="status-highlight">
+Update, July 2026: see how this went from paper to production in <a href="/posts/dualturn-production">DualTurn in Production</a>.
+</div>
+
 ## The turn-taking problem hasn't actually been solved
 
 Every voice agent has to answer the same question tens of times per call: has the other person finished talking? Get it wrong in one direction and the agent talks over the user; get it wrong in the other and the user sits through a dead-air pause wondering if the call dropped. Neither failure is rare in production voice AI today, and the reason is structural, not incidental.

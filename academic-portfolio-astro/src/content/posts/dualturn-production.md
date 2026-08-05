@@ -13,6 +13,7 @@ tags:
 [![GitHub](https://img.shields.io/badge/-Github-black?logo=github)](https://github.com/anyreachai/dualturn)
 [![HuggingFace](https://img.shields.io/badge/🤗-DualTurn-blue.svg)](https://huggingface.co/collections/anyreach-ai/dualturn)
 [![arXiv](https://img.shields.io/badge/arXiv-2603.08216-b31b1b.svg)](https://arxiv.org/abs/2603.08216)
+[![Cite this work](https://img.shields.io/badge/Cite-BibTeX-yellow.svg)](#citation)
 
 <div class="status-highlight">
 This is a follow-up to <a href="/posts/dualturn">DualTurn: Learning Turn-Taking from Dual-Channel Generative Speech Pretraining</a> (Interspeech 2026). That post is about the method and the paper's numbers. This one is about what happened after: taking DualTurn out of the paper and into a real voice agent, on real calls, and what changes when the thing you're optimizing for is a person on the phone instead of a benchmark split.
@@ -61,7 +62,7 @@ That has a direct, practical consequence for deployment: the model's internal st
 
 We tested DualTurn two ways: once against the field on a neutral public benchmark, and once inside an actual voice agent talking to actual people.
 
-**On the neutral benchmark**, DualTurn goes head-to-head with the field of turn detectors people actually ship: LiveKit's own models, Deepgram Flux, the open SmartTurn and ultraVAD, scored on LiveKit's public leaderboard protocol (classify each pause in a call as a real end-of-turn or a mid-turn hold, at fixed latency/false-cutoff budgets).
+**On the neutral benchmark**, DualTurn goes head-to-head with the field of turn detectors people actually ship: [LiveKit's own models](https://livekit.com/blog/solving-end-of-turn-detection), [Deepgram Flux](https://deepgram.com/learn/introducing-flux-conversational-speech-recognition), the open [SmartTurn](https://www.daily.co/blog/smart-turn-v3-2-handling-noisy-environments-and-short-responses/) and [ultraVAD](https://huggingface.co/fixie-ai/ultraVAD), scored on LiveKit's public leaderboard protocol (classify each pause in a call as a real end-of-turn or a mid-turn hold, at fixed latency/false-cutoff budgets).
 
 | Model | Params | Runs on | FC@300ms | FC@600ms | Lat@5% | Lat@10% |
 |---|---|---|---:|---:|---:|---:|
