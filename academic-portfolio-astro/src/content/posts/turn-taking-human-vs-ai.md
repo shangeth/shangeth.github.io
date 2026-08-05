@@ -1,7 +1,7 @@
 ---
-title: "Human-like is genre-specific: a turn-taking analysis of voice AI vs. people"
+title: "Comparing Voice Agents Against the Right Human: A Genre-Matched Turn-Taking Study"
 date: "2026-06-25"
-description: "Most of what gets called \"robotic\" in voice AI turns out to be genre-specific style, not a defect. The one real, directional problem, measured against human telephone chat, task dialogue, and casual conversation, is response speed (~4.5x slower), and fixing it is entangled with the one trait that already looks human."
+description: "The checklist for making a voice agent \"sound human\": less interrupting, more backchanneling, an even exchange, mostly targets things that aren't broken. Measured against the right human (task dialogue, not casual chat), almost everything holds up except response speed, and fixing that carelessly breaks the one thing the agent already gets right."
 tags:
   - "Voice AI"
   - "Turn-Taking"
@@ -12,220 +12,195 @@ image: "/images/posts/turn-taking-response-gap.png"
 
 [![Cite this work](https://img.shields.io/badge/Cite-BibTeX-yellow.svg)](#citation)
 
-Talk to a voice agent and you usually know within a sentence or two that it isn't a person. We reach for
-vague words like "robotic" or "stilted" and move on. But conversational rhythm isn't vague. It's
-measurable: how fast people answer, how often the floor changes hands, how long each turn runs, how much
-speakers overlap, how they hand off without colliding. These are the mechanics of **turn-taking**, and
-they are a large part of what makes a conversation feel alive.
+## You already talk two different ways
 
-I measured turn-taking across several kinds of conversation: human telephone chat, human task dialogue,
-casual human conversation, and a **task voice-agent**'s calls. The useful finding is more specific than
-"agents are slow." Exactly **one** thing is clearly, directionally worse: **response speed.** Almost
-everything else people call "robotic" turns out to be either a *style* difference with no universal
-"better," or a side-effect of that one timing problem. And the human "target" itself isn't a single
-number; it depends on the medium and the genre. So "make it sound human" is the wrong instruction.
-"Answer faster, and match the right human *style* for the job" is closer.
+Call your best friend and ask what they're doing this weekend. Then call a bank to schedule an
+appointment. You won't run either conversation the same way, and you already know that without thinking
+about it.
 
-A note on scope up front: this is a **descriptive cross-section**, not a benchmark of the industry. The
-agent figures come from one task domain (appointment-style calls); the human references are public and
-proprietary corpora measured the same way. Treat it as a case study of a pattern, not a leaderboard.
+With your friend, you trade long stories, jump in mid-sentence to react, say "yeah, totally" a dozen
+times just to keep things moving, and let whoever's talking hold the floor for a while. With the bank,
+you get straight to it: they ask, you answer, you ask, they answer, quick and alternating, nobody talking
+over anybody, and the call ends the moment the task is done. Neither one sounds robotic. They're just
+different jobs.
 
-## Turn-taking is a handful of measurable behaviors
+That's not just an impression, it shows up in measurement. Switchboard, a large corpus of recorded
+**casual** telephone conversation, and SpokenWOZ, a corpus of real human-to-human **task-oriented** calls
+(booking, scheduling, information requests), let you compare the two registers directly: same kind of
+measurement, both real people, only the genre of the conversation changes.
 
-A conversation's rhythm decomposes into a small set of quantities:
-
-| metric | what it captures | does "more/less" mean "better"? |
+| axis | casual conversation (Switchboard) | task dialogue (SpokenWOZ) |
 |---|---|---|
-| **response gap** | silence before the next person starts | **yes, faster is generally better** (to a point) |
-| **floor-changes / min** | how often the turn passes between speakers | no, genre-dependent |
-| **turn length** | how long turns run (monologuing) | no, genre/role-dependent |
-| **talk balance** | how evenly the two share the floor | no, role-dependent |
-| **overlap / talk-over** | how much both talk at once | no; *cooperative* overlap is positive, only floor-grabbing is disruptive |
-| **backchannels** | "uh-huh / yeah" listening cues | no, "more ≠ better"; context-appropriate |
+| response gap | 0.33 s | 0.40 s |
+| floor-changes / min | 7.0 | 13.7 |
+| turn length (p90) | 17.3 s | 8.3 s |
+| overlap | 6.0% | 1.7% |
+| interruptions / min | 0.96 | 0.38 |
+| talk balance | 0.73 | 0.84 |
 
-That third column matters, and it's where most "human-likeness" talk goes wrong. Only response speed has
-a clean direction (faster responses reliably increase felt connection in human conversation
-[Templeton et al., PNAS 2022](https://www.pnas.org/doi/10.1073/pnas.2116915119); modal human gap ≈ 200 ms,
-[Stivers et al., 2009](https://www.pnas.org/doi/10.1073/pnas.0903616106)). The rest are *style* dimensions
-whose "right" value depends on the kind of conversation. Overlap is the clearest case: sociolinguistics
-distinguishes **cooperative overlap**, a marker of engagement and rapport in Deborah Tannen's
-"high-involvement" style, from **competitive** floor-grabbing; overlap per se is not a defect.
+Response speed barely moves. People answer in about a third of a second in casual conversation and about
+four-tenths of a second on a task call, both the same kind of fast, well within the normal human range
+(response times around 200 milliseconds are typical across languages generally
+[Stivers et al., 2009](https://www.pnas.org/doi/10.1073/pnas.0903616106)). Speed isn't what tells these
+two conversations apart.
 
-The conversations: **Switchboard** (recorded telephone chit-chat) and **[SpokenWOZ](https://arxiv.org/abs/2305.13040)**
-(a spoken task-oriented corpus: booking and information calls) as public human references, a set of
-**casual online** human conversations, and a body of **task voice-agent** calls. I computed the metrics
-above on each; this post is about what they say, not how they're computed.
+What tells them apart is the shape of the turn-taking. Task calls change speakers about twice as often
+per minute, run much shorter turns, and involve far less overlap and far fewer interruptions. Even the
+most "obviously humanizing" behavior doesn't work the way you'd expect: task calls are actually the more
+evenly balanced ones, not the casual conversations, probably because a task call is naturally a
+back-and-forth exchange, while casual conversation gives more room for one person to hold the floor
+telling a story.
 
-## There is no single "human" baseline, and it's mostly about *medium*, not casual-vs-task
+None of this makes the bank call less human. It's a different, and equally legitimate, way of talking.
+Which is the whole point: "natural" was never one thing, even for people. It's a fit between the
+conversation's job and its shape. So before asking why a voice agent feels robotic, it's worth asking a
+more basic question first: robotic compared to which kind of human, the one on a casual call, or the one
+doing the task?
 
-The first finding is about people. Two things vary the human "rhythm," and they're different things.
+## The wrong bar for a voice agent
 
-**Speed varies with the medium, not with casual-vs-task.** Telephone chit-chat (Switchboard) answers in
-**~0.33 s** and task dialogue (SpokenWOZ) in **~0.40 s**, essentially the same, both near the ~0.2–0.4 s
-human norm. The slow human number is **casual *online* conversation (~1.5 s)**, and that's a **mediation
-effect**: network latency and missing cues stretch gaps. Face-to-face transitions average ~135 ms, but the
-same speakers over video run ~440 ms, and remote responses approach a second
-([Boland et al., "Zoom disrupts the rhythm of conversation"](https://www.researchgate.net/publication/356018506_Zoom_disrupts_the_rhythm_of_conversation)).
-So "casual" is **not** slow; *mediated* is slow. (As a check on the measurement itself: scored as pooled
-response latency, a stricter cut of the same gap, the Switchboard calls come out to ~0.22 s, close to the
-canonical Switchboard floor-transfer-offset of ~187 ms, per
-[Roberts, Torreira & Levinson, 2015](https://pmc.ncbi.nlm.nih.gov/articles/PMC4429583/). That's evidence
-the underlying measurement behaves.)
+So which register should a voice agent be measured against? If it's booking an appointment or walking
+through an account update, its job matches the task call, not the catch-up-with-a-friend call. That
+sounds obvious once you say it. But it's not how "make it sound human" usually gets applied. The instinct
+when an agent feels off is to import the traits of casual conversation: never interrupt, backchannel
+constantly, keep the exchange perfectly even, don't let either side run long. Those are good instincts
+for a friend. They're the wrong bar for an agent doing a bank's job, and grading against the wrong bar is
+a mistake made before anything has even been measured.
 
-<img src="/images/posts/turn-taking-genre-grid.png" alt="Turn-taking by conversation type: response gap, floor-changes per minute, talk balance, and turn length across Switchboard, SpokenWOZ, casual online conversation, and the AI voice agent" />
+The comparison that actually matters is a task voice agent against human task dialogue, SpokenWOZ, not
+Switchboard: real people doing the same kind of job the agent is doing. That's the bar the rest of this
+piece uses, measured the same way across four sets of calls, two public human corpora, a set of casual
+online human conversation, and a body of real task voice-agent calls (appointment-style: scheduling,
+information delivery), so every number below is comparable to every other. Worth being precise about
+scope, too: this argument is about task agents specifically. A casual, companion-style voice agent should
+probably be graded closer to Switchboard than SpokenWOZ. The lesson doesn't transfer directly to that
+case.
 
-**Style varies with genre.** What casual and task dialogue genuinely differ on is *how the floor is
-shared*, not speed. Task dialogue is brisk and alternating: the floor changes ~13.7 times per minute of
-speech, turns are short, participation is near-even (talk-balance 0.84), think "what date?", "the 15th,"
-"morning or afternoon?" Casual conversation has longer turns, more overlap, and far more backchannels. On
-backchannels specifically the literature gives a cited contrast, roughly **7/min in casual vs ~5.5/min in
-task** dialogue (Danish corpus), and notes that *more isn't automatically better*; what matters is
-context-appropriateness ("[the more does not necessarily mean the better](https://www.researchgate.net/publication/43968975)").
-(I don't quote my own backchannel numbers: they aren't comparably measurable. Hand-transcribed corpora
-capture "uh-huh"s; ASR-based ones drop most.)
+## The one real gap: speed
 
-The takeaway: there is no one "human" rhythm to imitate. Speed has a clear target (fast, ~0.3–0.5 s,
-regardless of genre); *style* depends on whether the conversation is casual or transactional.
+Here's where the genre-matched comparison earns its keep. Human task dialogue answers in about 0.40
+seconds. The task voice agent answers in about 1.80 seconds. That's roughly 4.5 times slower, and it's
+the one place in this whole comparison where the direction is unambiguous: faster is better, no genre
+caveat required.
 
-## The agent vs. human task dialogue
+<img src="/images/posts/turn-taking-response-gap.png" alt="Median response gap before the other party answers: 0.33s for casual conversation (Switchboard), 0.40s for task dialogue (SpokenWOZ), 1.50s for casual online conversation, and 1.80s for the AI voice agent, about 4.5x slower than human task dialogue" />
 
-For a task agent, the right human comparison is human *task* dialogue (SpokenWOZ), not casual chat.
+It's tempting to wonder whether this is a byproduct of task calls being quick, brisk exchanges rather
+than an actual defect. It isn't: the agent is slower than casual conversation too (0.33 seconds), which
+rules out "the bar itself is just fast" as an excuse. However the human side is measured, the agent is
+answering several times slower than a person would. (There's a separate human dataset of casual
+conversation happening online, over video or a similar remote medium, that clocks in slower still, around
+1.5 seconds, but that's a mediation effect, network lag and missing visual cues stretch out response
+gaps, not evidence that casual talk is naturally slow
+[Boland et al., "Zoom disrupts the rhythm of conversation"](https://pubmed.ncbi.nlm.nih.gov/34748361/).
+Take the call away from a screen and the numbers above are what you get.)
 
-<img src="/images/posts/turn-taking-response-gap.png" alt="Median response gap before the other party answers: 0.33s for Switchboard telephone chat, 0.40s for SpokenWOZ task dialogue, 1.50s for casual online conversation, and 1.80s for the AI voice agent, about 4.5x slower than human task dialogue" />
+This is genuine dead air, the gap while a speech-recognition-to-language-model-to-speech-synthesis
+pipeline processes and generates a reply before the agent can start talking.
 
-**On speed, the gap is real and large: ~0.4 s for human task dialogue vs ~1.8 s for the agent, about 4.5×
-slower.** And this is *not* a genre artifact: the agent is slower than human *casual telephone* (~0.33 s)
-too. This is the one finding that survives every caveat below. It's genuine dead air while a cascaded
-ASR→LLM→TTS stack thinks.
+Response speed isn't just a technical latency number, either. In human conversation it acts as a social
+signal: people answer each other in around 200 milliseconds, too fast to be consciously planned, and
+controlled experiments show that shortening or lengthening that gap directly changes how connected two
+people feel, even with nothing else about the conversation different
+[Templeton et al., PNAS 2022](https://www.pnas.org/doi/10.1073/pnas.2116915119). So a 4.5x gap isn't a
+rounding error. It's also not catastrophic, though: the tolerance research puts a genuinely broken
+conversation somewhere past two to three seconds of delay
+[Maslych et al., 2025](https://arxiv.org/abs/2507.22352), and in a controlled
+[human-robot study](https://ir.library.oregonstate.edu/downloads/h415pk244), satisfaction held up until
+about three seconds. At 1.8 seconds, the agent sits just under that line. The honest way to size it is
+"noticeably less crisp and connected," not "unusable."
 
-The other differences need more care, because (a) most of these metrics have no universal "better," and
-(b) the comparison isn't as clean as "same genre." SpokenWOZ is *collaborative booking* (two people
-trading questions, naturally symmetric); the agent's calls are *information delivery* (the agent conveys
-details, the human confirms, naturally asymmetric). So part of any reciprocity / balance / turn-length gap
-is **task type**, not human-vs-AI. With that caveat:
+## Checked against the right bar, the rest holds up
 
-| metric (task setting) | human task (SpokenWOZ) | task voice agent | how to read it |
-|---|---|---|---|
-| response gap | 0.40 s | **1.80 s** | **~4.5× slower, a real, directional gap** |
-| floor-changes / speech-min | 13.7 | 5.97 | less back-and-forth (but partly task-type) |
-| talk balance | 0.84 | 0.31 | more one-sided (partly task-type, info delivery) |
-| turn length (p90) | 8.3 s | 14.0 s | longer than *task* humans, though casual humans run longer still (telephone p90 ≈ 17 s) |
-| talk-over (competitive overlap) | low | low | the agent does **not** talk over people |
+With the bar set correctly, what about everything else on the usual checklist: turn length, how evenly
+the floor is shared, how often it changes hands, whether the agent talks over people?
 
-Two things worth stating plainly. First, **"the agent monologues" is genre-relative.** Its turns are
-longer than human *task* turns (14 s vs 8 s), but *shorter* than casual telephone turns (~17 s). People
-monologue too, in the right setting. So this is "less like brisk task dialogue," not "uniquely verbose."
+<img src="/images/posts/turn-taking-genre-grid.png" alt="Turn-taking by conversation type: response gap, floor-changes per minute, talk balance, and turn length across casual conversation, task dialogue, casual online conversation, and the AI voice agent" />
 
-Second, the agent's low talk-over is **not necessarily a virtue to bank.** An agent that waits ~1.8 s
-before speaking structurally *can't* overlap, so "it doesn't interrupt" may be a **by-product of being
-slow**, not independent politeness. That matters for what comes next: making it faster could *erode* the
-low-overlap behavior, so the two have to be tuned together.
-
-## What's actually off, in three tiers
-
-Decomposing turn-taking turns "it feels off" into something honest about direction:
-
-| tier | axes | reading |
+| metric (task setting) | human task dialogue | task voice agent |
 |---|---|---|
-| **Clearly worse (directional)** | response speed | ~4.5× slower than humans; the one unambiguous problem. (Crispness of hand-offs is the same timing dimension, not a separate one.) |
-| **Differs from human task dialogue, but genre/role-dependent, not "worse"** | reciprocity, turn length, talk balance | the agent is less brisk and more one-sided than human *task* dialogue, but these have no universal "better," and part of the gap is the agent's task being info-delivery |
-| **At human level** | talk-over, false-starts | the agent doesn't grab the floor or cut into pauses, though some of this may follow from its slowness (above) |
+| floor-changes / min | 13.7 | 5.97 |
+| talk balance | 0.84 | 0.31 |
+| turn length (p90) | 8.3 s | 14.0 s |
+| talk-over (competitive overlap) | low | low |
 
-So the genuinely solid, directional conclusion is **narrow and strong: the agent is much too slow.** The
-"monologue/one-sided" differences are real but soft (genre- and task-confounded), and the good behaviors
-are partly entangled with the slowness. This is a more useful map than "the agent is bad at conversation":
-**fix speed first; treat the floor-sharing differences as genre-specific tuning, not universal defects.**
+On paper this looks like a list of problems: the agent changes speakers less than half as often, is far
+more one-sided, and runs longer turns. Look closer, though, and most of it is explained by the job, not
+by the agent being bad at conversation. The human task calls in SpokenWOZ are collaborative booking, two
+people trading questions back and forth, naturally symmetric. The agent's calls are information delivery,
+the agent conveys details and the caller mostly confirms, naturally asymmetric. Some of that one-sidedness
+would show up in a human doing the exact same job. The turn-length gap tells a similar story from another
+angle: the agent's turns are longer than task-dialogue turns (14 seconds vs. 8), but still shorter than
+the turns people run in casual conversation (past 17 seconds). It isn't "the agent monologues," it's "the
+agent is less brisk than a booking call," a real claim, but a much smaller and less alarming one.
 
-That's worth pausing on, because it cuts against the usual complaint about spoken dialogue systems, which
-is the *opposite*: most are accused of interrupting too aggressively and rarely backchanneling
-([Apple, ICLR 2025](https://arxiv.org/abs/2503.01174)). This one fails the other way, too slow rather than
-too aggressive, which matters for what you'd actually fix first. Politeness turns out to be the easy,
-well-tooled problem in this literature; speed is the hard part.
+And on the axis that sounds most like textbook politeness, not talking over people, the agent is already
+at the human level. That's worth pausing on, because it cuts against the usual complaint about spoken
+dialogue systems. The published research on voice AI turn-taking generally reports systems that interrupt
+too aggressively and rarely backchannel
+([Apple, ICLR 2025](https://arxiv.org/abs/2503.01174)). This one is too passive, not too aggressive.
+Whatever's actually wrong here, it isn't the thing most turn-taking research is built to catch.
 
-## Why speed is the one to fix first, but keep it in proportion
+## Why the fix isn't free
 
-Response speed is more than a latency number; in human conversation it's a **social signal**. People
-answer each other in ~200 ms, faster than deliberate thought, and faster responses make conversations feel
-more connected; because replies under ~250 ms are too fast to consciously stage, timing acts as an
-*honest* signal of engagement ([Templeton et al., PNAS 2022](https://www.pnas.org/doi/10.1073/pnas.2116915119)).
-That's why a 4.5× gap matters even when nothing is "wrong" with the words.
+That last point comes with a catch, and it's the reason this isn't just a "reduce latency" problem you
+can hand off and forget about.
 
-But keep the magnitude honest:
+An agent that takes 1.8 seconds to respond cannot, by definition, talk over the person it's listening to;
+it hasn't started generating a reply yet. So the fact that this agent doesn't interrupt people may not be
+independent good behavior. It may simply be a side effect of being slow. That matters for what happens
+next: shrink the latency without addressing anything else, and the by-product goes away with it. The
+safety margin that "not being ready to speak yet" was quietly providing disappears, and there's a real
+risk of trading a well-understood, well-diagnosed problem, the agent is too slow, for a less obvious one,
+the agent now talks over people, which is arguably worse, because it's the harder failure to catch and
+the exact failure most of the existing turn-taking literature is already warning about.
 
-<img src="/images/posts/turn-taking-perception-thresholds.png" alt="Response latency against human-perception thresholds: human task dialogue at 0.4s in the natural band, the AI voice agent at 1.8s in the noticeably-slower-but-still-tolerable band, well before the 2s unnatural line, the 3s satisfaction-drop line, and the 4s breakdown line" />
+Speed and restraint, in other words, aren't two separate dials here. They're coupled, at least in a
+system that currently gets its politeness for free by being slow. Fixing one without a plan for the other
+doesn't fix the conversation. It just moves the defect somewhere less obvious.
 
-Classic interface thresholds put ~0.1 s as "instant," ~1 s as the limit for staying in flow
-([Miller, 1968](https://dl.acm.org/doi/pdf/10.1145/1476589.1476628); Nielsen, 1994). Conversationally,
-controlled studies find delays become clearly unnatural only past ~2 s, and user satisfaction in a
-[human–robot study](https://ir.library.oregonstate.edu/downloads/h415pk244) held up until about **3 s**
-(and depended on task complexity: simple questions soured sooner). The agent's ~1.8 s is therefore **~4.5×
-the human rate but still short of the ~2–3 s tolerance cliffs**: the cost is a conversation that feels
-*noticeably less crisp and less connected*, not one that's unusable. That's the right framing, meaningful
-rather than catastrophic, and it's why responsiveness is the highest-leverage fix rather than an
-emergency.
+## What actually closes the gap
 
-## The mechanism: anticipation, not waiting
+Why are cascaded agents stuck around 1.5 to 2 seconds in the first place? Partly compute, but mostly how
+they decide the caller is finished talking. Most systems wait for a fixed length of silence, typically
+half a second to a full second, and only then start generating a reply. Humans don't do this. They
+anticipate, reading prosody, syntax, and meaning to project where a turn is headed, often planning a
+reply before the other person has finished speaking
+([Gravano & Hirschberg, 2011](https://www.sciencedirect.com/science/article/abs/pii/S0885230810000690)).
+Silence is also a coarse signal to wait on: most real speaker transitions are separated by very short
+gaps, the majority under half a second
+([Heldner & Edlund, 2010](https://staff.fnwi.uva.nl/r.fernandezrovira/teaching/cosp/cosp2016/docs/HeldnerEdlund2010.pdf)),
+so a detector waiting on 500 to 1000 milliseconds of silence is, by construction, slower than the rhythm
+it's trying to match, and blind to the exact moments humans use to hand off. The lever here isn't a
+faster language model. It's predicting the end of a turn instead of waiting for silence to prove it
+happened: full-duplex models like [Moshi](https://arxiv.org/abs/2410.00037), built around exactly that,
+get down to around 200 milliseconds.
 
-Why are cascaded agents stuck around 1.5–2 s? Partly compute, but mostly **how they decide the caller is
-done.** Most systems wait for a fixed silence, typically 0.5–1 s, then begin. Humans don't wait; they
-**anticipate**, reading prosody, syntax, and meaning to project where a turn will end, often planning
-their reply before the speaker finishes ([Gravano & Hirschberg, turn-taking cues in task-oriented dialogue](https://www.sciencedirect.com/science/article/abs/pii/S0885230810000690)).
+Put together, the targets for a task voice agent look genre-specific rather than universal:
 
-And silence is a coarse signal. In real conversation most speaker transitions are separated by very short
-intervals, the majority under half a second
-([Heldner & Edlund, 2010](https://staff.fnwi.uva.nl/r.fernandezrovira/teaching/cosp/cosp2016/docs/HeldnerEdlund2010.pdf)).
-A detector that waits ~500–1000 ms of silence to declare "your turn" is, by construction, slower than the
-human rhythm and blind to the moments humans actually use to hand off. The lever for the speed gap isn't a
-faster LLM; it's **predicting turn-ends instead of waiting for silence to prove them**. Full-duplex models
-like [Moshi](https://arxiv.org/abs/2410.00037) (≈200 ms) show how far the other end of that design space
-reaches.
-
-## So how do you make a task voice agent more human?
-
-Match the human profile *for the job*, and be honest about which targets are firm and which are
-genre-specific:
-
-| axis | human task reference | target for a task agent | firmness |
+| axis | human task reference | target | why |
 |---|---|---|---|
-| response gap | ~0.4 s | **~0.8 s** (cascaded can't hit human ~0.4 s, but well-tuned cascaded systems land in the 0.7–1.0 s band, per [Patamia et al., 2025](https://www.mdpi.com/2227-7080/13/12/591)) | **firm, directional** |
-| turn length | ~8 s | shorter, broken-up reads | genre-specific (toward task style) |
-| reciprocity | ~13.7/min | more hand-backs | genre-specific (toward task style) |
-| talk balance | ~0.84 | more even | genre/role-specific; adjust for your task's asymmetry |
-| talk-over / false-starts | low | keep low, but watch it as you speed up | guardrail (entangled with speed) |
+| response gap | ~0.4 s | ~0.8 s | the firm target; ~0.4 s isn't realistic yet for a cascaded pipeline, but well-tuned cascaded systems land in the 0.7-1.0 s band [Patamia et al., 2025](https://www.mdpi.com/2227-7080/13/12/591) |
+| turn length, reciprocity, balance | matches SpokenWOZ | move toward task style, adjusted for the task's asymmetry | genre-specific, not a universal maximum |
+| talk-over | low | keep low while speed improves | the guardrail from the section above |
 
-Three notes. **(1) The firm target is speed**: anticipatory endpointing so the agent can begin near the
-half-second humans expect; everything else is secondary. **(2) The floor-sharing targets are
-genre-specific**, not universal maxima: aim toward the *task* style (shorter turns, more hand-backs),
-adjusted for how asymmetric your task genuinely is. A status-delivery call is *meant* to be more one-sided
-than a collaborative booking. **(3) Speed and restraint are coupled**: the agent's good low-overlap
-behavior may partly come from waiting, so as you cut latency, watch that it doesn't start talking over
-people. A casual *companion* agent would target the opposite on overlap and backchannels, which is the
-whole point: **"human-like" is not one setting.**
+Only the first row is a hard target with a real direction. The rest are "move toward the human task
+profile, adjusted for how asymmetric the job actually is," not a checklist to max out.
 
-## Caveats
+## Back to the two phone calls
 
-This is a **descriptive cross-section**, not a causal or industry-wide claim: the agent data is one task
-domain (one system), the casual-online set is a single corpus (its ~1.5 s is at the high end of even the
-online-conversation literature), and I lean on published perception research, not my own A/B outcomes, to
-argue that speed matters. The "genre-matched" comparison still mixes two task *types* (collaborative
-booking vs information delivery), so the floor-sharing gaps are partly task structure. And most metrics
-have **no universal "better" direction**; they're genre/role-specific, which is the post's whole point. I
-only claim a direction for response speed. Backchannel rates aren't comparably measurable across these
-corpora (transcription captures them unevenly), so I cite published rates rather than my own.
+A few honest limits first: this is a descriptive comparison, not a controlled experiment; the agent data
+comes from one task domain; and most of the perception research above is published literature, not a
+test run for this piece specifically.
 
-## Takeaway
-
-Most of what gets called "robotic" turns out not to be a defect at all. **Monologuing, one-sidedness, low
-back-and-forth: these are genre and role differences with no universal "better,"** and part of the gap
-here is simply that information delivery is naturally more one-sided than the collaborative booking calls
-it's being measured against. The one real, directional problem is response speed: **about 4.5× slower
-than people, in both casual and task conversation**, and that gap alone explains most of the "robotic"
-feeling. It doesn't come free to fix, though. The agent's one clearly human-like trait, not talking over
-people, may just be a side effect of waiting so long to respond, so closing the latency gap without
-watching that trade-off risks curing one problem by creating another. Human-likeness isn't a single
-naturalness dial to turn up. It's answering in roughly the half-second humans expect, matching the
-conversational *style* the job actually calls for, and keeping the restraint that speed was quietly buying
-it.
+Now go back to the two calls this piece opened with. Nobody expects the bank call to sound like the one
+with your friend, and grading it that way would be a mistake before the data even comes out. The same
+mistake is easy to make with a voice agent: reach for the traits of casual conversation, more
+backchanneling, less monologuing, a perfectly even exchange, as the definition of "sounds human," when
+the right comparison is how a person would run the exact same task-oriented call. Measured against that
+bar, almost everything on the usual checklist is fine. The one real gap is response speed, and closing it
+only helps if the fix also watches the thing it's currently buying for free: an agent that doesn't talk
+over people. Fix the actual problem, and don't lose the one thing already working while doing it.
 
 ## Citation
 
@@ -234,7 +209,7 @@ If you use this work, please cite:
 ```bibtex
 @misc{rajaa2026turntaking,
   author       = {Rajaa, Shangeth},
-  title        = {{Human-like is genre-specific: a turn-taking analysis of voice AI vs. people}},
+  title        = {{Comparing Voice Agents Against the Right Human: A Genre-Matched Turn-Taking Study}},
   year         = {2026},
   howpublished = {\url{https://shangeth.com/posts/turn-taking-human-vs-ai/}},
   note         = {Blog post}
@@ -250,16 +225,10 @@ If you use this work, please cite:
 <li>Godfrey, J. J., Holliman, E. C., &amp; McDaniel, J. (1992). <em>Switchboard: Telephone Speech Corpus for Research and Development.</em> ICASSP 1992, 517-520.</li>
 <li>Gravano, A., &amp; Hirschberg, J. (2011). <em>Turn-taking cues in task-oriented dialogue.</em> Computer Speech &amp; Language, 25(3), 601-634. <a href="https://www.sciencedirect.com/science/article/abs/pii/S0885230810000690" target="_blank" rel="noopener noreferrer">sciencedirect.com</a>.</li>
 <li>Heldner, M., &amp; Edlund, J. (2010). <em>Pauses, gaps and overlaps in conversations.</em> Journal of Phonetics, 38(4), 555-568. <a href="https://staff.fnwi.uva.nl/r.fernandezrovira/teaching/cosp/cosp2016/docs/HeldnerEdlund2010.pdf" target="_blank" rel="noopener noreferrer">PDF</a>.</li>
-<li>Li, H. Z., Cui, Y., &amp; Wang, Z. (2010). <em>Backchannel Responses and Enjoyment of the Conversation: The More Does Not Necessarily Mean the Better.</em> International Journal of Psychological Studies, 2(1), 25-34. <a href="https://www.researchgate.net/publication/43968975" target="_blank" rel="noopener noreferrer">researchgate.net</a>.</li>
 <li>Maslych, M., Katebi, M., Lee, C., Hmaiti, Y., Ghasemaghaei, A., Pumarada, C., Palmer, J., Segarra Martinez, E., Emporio, M., Snipes, W., McMahan, R. P., &amp; LaViola Jr., J. J. (2025). <em>Mitigating Response Delays in Free-Form Conversations with LLM-powered Intelligent Virtual Agents.</em> CUI '25. <a href="https://arxiv.org/abs/2507.22352" target="_blank" rel="noopener noreferrer">arXiv:2507.22352</a>.</li>
 <li>Miller, M. R. (2025). <em>Timing Matters: Effects of Response Delay on Perceived Naturalness in Robot Conversations</em> (Master's project, Oregon State University). <a href="https://ir.library.oregonstate.edu/downloads/h415pk244" target="_blank" rel="noopener noreferrer">ir.library.oregonstate.edu</a>.</li>
-<li>Miller, R. B. (1968). <em>Response time in man-computer conversational transactions.</em> AFIPS '68 (Fall, part I), 267-277. <a href="https://dl.acm.org/doi/pdf/10.1145/1476589.1476628" target="_blank" rel="noopener noreferrer">dl.acm.org</a>.</li>
-<li>Nielsen, J. (1994). <em>Usability Engineering.</em> Morgan Kaufmann Publishers.</li>
 <li>Patamia, R. A., Dinh, H. P. T., Liu, M., &amp; Cosgun, A. (2025). <em>Turn-Taking Modelling in Conversational Systems: A Review of Recent Advances.</em> Technologies, 13(12), 591. <a href="https://www.mdpi.com/2227-7080/13/12/591" target="_blank" rel="noopener noreferrer">mdpi.com</a>.</li>
-<li>Roberts, S. G., Torreira, F., &amp; Levinson, S. C. (2015). <em>The effects of processing and sequence organization on the timing of turn-taking: a corpus study.</em> Frontiers in Psychology, 6, 509. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4429583/" target="_blank" rel="noopener noreferrer">pmc.ncbi.nlm.nih.gov</a>.</li>
 <li>Si, S., Ma, W., Gao, H., Wu, Y., Lin, T.-E., Dai, Y., Li, H., Yan, R., Huang, F., &amp; Li, Y. (2023). <em>SpokenWOZ: A Large-Scale Speech-Text Benchmark for Spoken Task-Oriented Dialogue Agents.</em> NeurIPS 2023. <a href="https://arxiv.org/abs/2305.13040" target="_blank" rel="noopener noreferrer">arXiv:2305.13040</a>.</li>
 <li>Stivers, T., et al. (2009). <em>Universals and cultural variation in turn-taking in conversation.</em> PNAS, 106(26), 10587-10592. <a href="https://www.pnas.org/doi/10.1073/pnas.0903616106" target="_blank" rel="noopener noreferrer">pnas.org</a>.</li>
-<li>Tan, F. F.-Y., Messerschmidt, M. A., Yin, W., &amp; Nov, O. (2026). <em>The Impact of Response Latency and Task Type on Human-LLM Interaction and Perception.</em> <a href="https://arxiv.org/abs/2604.06183" target="_blank" rel="noopener noreferrer">arXiv:2604.06183</a>.</li>
-<li>Tannen, D. (1984). <em>Conversational Style: Analyzing Talk Among Friends.</em> Ablex Publishing.</li>
 <li>Templeton, E. M., et al. (2022). <em>Fast response times signal social connection in conversation.</em> PNAS, 119(4), e2116915119. <a href="https://www.pnas.org/doi/10.1073/pnas.2116915119" target="_blank" rel="noopener noreferrer">pnas.org</a>.</li>
 </ol>
