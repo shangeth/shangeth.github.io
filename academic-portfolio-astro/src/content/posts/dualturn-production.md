@@ -2,7 +2,6 @@
 title: "DualTurn in Production: From Research Checkpoint to Continual Learning on Live Calls"
 date: "2026-07-24"
 description: "Taking DualTurn from an Interspeech 2026 paper into a live voice agent: a ~1.5M-parameter model trained with zero manual labels, fastest end-to-end in real-call testing against cloud and open-source turn detectors, the only one in the industry that tells a backchannel from a real interruption, and set up to keep improving for free from every call it handles."
-author: "Shangeth Rajaa"
 tags:
   - "Voice AI"
   - "Turn-Taking"

@@ -2,7 +2,6 @@
 title: "DualTurn: Learning Turn-Taking from Dual-Channel Generative Speech Pretraining"
 date: "2026-04-03"
 description: "Speech-to-speech models know when to speak but can't reason. Cascaded LLM pipelines can reason but only react to silence. DualTurn pretrains on dual-channel human conversation to bring S2S-level turn-taking into a standard ASR-LLM-TTS stack."
-author: "Shangeth Rajaa"
 tags:
   - "Voice AI"
   - "Turn-Taking"
