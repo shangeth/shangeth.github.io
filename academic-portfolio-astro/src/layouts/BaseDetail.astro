@@ -32,9 +32,47 @@ if (detail.extraInput) {
 
 const description = entry.data.description || detail.description || SITE.desc;
 const ogImage = entry.data.image || SITE.ogImage;
+
+const toPerson = (name: string) => ({
+    "@type": "Person",
+    name: name.trim(),
+    ...(name.trim() === SITE.author ? { url: SITE.website } : {}),
+});
+
+const detailJsonLd = collection === "posts" ? {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: entry.data.title,
+    description,
+    datePublished: entry.data.date,
+    author: toPerson(entry.data.author || SITE.author),
+    image: new URL(ogImage, Astro.site).toString(),
+    keywords: entry.data.tags?.join(", "),
+    mainEntityOfPage: Astro.url.toString(),
+} : collection === "publications" ? {
+    "@context": "https://schema.org",
+    "@type": "ScholarlyArticle",
+    headline: entry.data.title,
+    description,
+    datePublished: entry.data.date,
+    author: (entry.data.author || SITE.author).split(",").map(toPerson),
+    ...(entry.data.journal ? { publisher: { "@type": "Organization", name: entry.data.journal } } : {}),
+    ...(entry.data.external_url ? { sameAs: entry.data.external_url } : {}),
+    image: new URL(ogImage, Astro.site).toString(),
+    keywords: entry.data.tags?.join(", "),
+    mainEntityOfPage: Astro.url.toString(),
+} : undefined;
 ---
 
-<BaseLayout title={detail.title} description={description} ogImage={ogImage} ogType="article">
+<BaseLayout
+    title={detail.title}
+    description={description}
+    ogImage={ogImage}
+    ogType="article"
+    jsonLd={detailJsonLd}
+    publishedDate={entry.data.date}
+    tags={entry.data.tags}
+>
     <div class="flex justify-between items-center mb-4">
         <BackLink href={detail.backHref} label={collection} />
         {detail.externalUrl && (

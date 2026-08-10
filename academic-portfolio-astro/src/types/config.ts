@@ -4,6 +4,7 @@ export interface SiteConfig {
     desc: string;
     title: string;
     ogImage: string;
+    twitterHandle: string;
     postPerPage: number;
     favicon: string;
     lang: string;

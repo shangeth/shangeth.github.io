@@ -3,9 +3,10 @@ import type { SiteConfig, ThemeConfig, SettingsConfig, UmamiAnalyticsConfig, Ana
 export const SITE: SiteConfig = {
     website: "https://shangeth.com/",
     author: "Shangeth Rajaa",
-    desc: "Shangeth Rajaa, Senior ML Scientist at Anyreach AI (ex-Skit.ai). Voice AI research on full-duplex spoken dialogue, turn-taking, and speech LLMs.",
+    desc: "Voice AI researcher and Senior Research Scientist working on full-duplex spoken dialogue, turn-taking, and speech LLMs.",
     title: "Shangeth Rajaa",
     ogImage: "avatar.jpeg",
+    twitterHandle: "@shangethr",
     postPerPage: 5,
     favicon: "/favicon.svg",
     lang: "en",

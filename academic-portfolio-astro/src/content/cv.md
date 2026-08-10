@@ -1,6 +1,6 @@
 ---
 name: "Shangeth Rajaa"
-title: "Senior ML Scientist, Voice AI Researcher"
+title: "Senior Research Scientist, Voice AI Researcher"
 experience:
   - role: "Senior Machine Learning Research Scientist"
     institution: "Anyreach AI"

@@ -1,11 +1,11 @@
 ---
 name: "Shangeth Rajaa"
 avatar: "avatar.jpeg"
-shortBio: "Senior ML Scientist working on Voice AI, Turn-Taking, Full-Duplex Spoken Dialogue Systems, and Multi-Modal Speech LLMs."
+shortBio: "Senior Research Scientist working on Voice AI, Turn-Taking, Full-Duplex Spoken Dialogue Systems, and Multi-Modal Speech LLMs."
 institution: "Open to full-time & consulting roles in Voice AI"
 ---
 
-I'm a Senior ML Scientist, most recently at **Anyreach AI**, working on turn-taking in full-duplex spoken dialogue systems, multimodal speech LLMs, and speech-to-speech translation.
+I'm a Senior Research Scientist working on turn-taking in full-duplex spoken dialogue systems, multimodal speech LLMs, and speech-to-speech translation.
 
 <div class="status-highlight">
 🎉 <strong>DualTurn accepted at Interspeech 2026!</strong> Excited to present this work in person in Sydney, September 28 – October 1, 2026. Read the <a href="/posts/dualturn" data-umami-event="cta-click" data-umami-event-location="highlight-dualturn">write-up</a> or the <a href="https://arxiv.org/abs/2603.08216" target="_blank" rel="noopener noreferrer" data-umami-event="cta-click" data-umami-event-location="highlight-dualturn-arxiv">paper</a>.
@@ -16,7 +16,7 @@ I'm currently exploring what's next, open to full-time and consulting research r
 </div>
 
 
-Before this, I spent 6+ years building Voice AI across industry and academia (**Skit.ai** (previously Vernacular.ai), **ScoreTravel AI**, **NTU Singapore**, **IBM Research**, and **Inria Paris**), leading ML teams from zero to production and publishing at Top speech conferences like Interspeech and ICASSP.
+I've spent 6+ years building Voice AI across industry and academia (**Anyreach AI**, **Skit.ai** (previously Vernacular.ai), **ScoreTravel AI**, **NTU Singapore**, **IBM Research**, and **Inria Paris**), leading ML teams from zero to production and publishing at Top speech conferences like Interspeech and ICASSP.
 
 
 ## Research

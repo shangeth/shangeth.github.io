@@ -16,9 +16,9 @@ tags:
 # [Supervised Learning](https://en.wikipedia.org/wiki/Supervised_learning)
 The task in supervised learning is to learn a function to map a data X to a label y. All the [classification](https://towardsdatascience.com/supervised-machine-learning-classification-5e685fe18a6d), regression, object detection/recognition/segmentation generally comes under supervised learning.
 
-![](https://corochann.com/wp-content/uploads/2017/02/mnist_plot-800x600.png)
+![Example of labeled MNIST digit images used in supervised learning](https://corochann.com/wp-content/uploads/2017/02/mnist_plot-800x600.png)
 
-![](https://appliedmachinelearning.files.wordpress.com/2018/03/cifar2.jpg)
+![Example of labeled CIFAR images used in supervised learning](https://appliedmachinelearning.files.wordpress.com/2018/03/cifar2.jpg)
 
 In supervised learning we have a dataset which contains data X and label y and we need to learn how to find y given X.
 
@@ -29,17 +29,17 @@ Some examples of Unsupervised Learning are:
 
 - ## Clustering
   Clustering is dividing the data into groups through some distance metric, like kmeans clustering.
-  ![](https://www.imperva.com/blog/wp-content/uploads/sites/9/2017/07/k-means-clustering-on-spherical-data-1v2.png)
+  ![Diagram of k-means clustering on spherical data](https://www.imperva.com/blog/wp-content/uploads/sites/9/2017/07/k-means-clustering-on-spherical-data-1v2.png)
 
 - ## Feature Learning
   As the name suggest, learning the features of each of the given data, without its label. This is generally done with a help of a model called [Autoencoders](https://www.youtube.com/watch?v=H1AllrJ-_30).
   Autoencoders take the data X as the label y, it try to recreate the data X given data X and learns some underlying features in that process. We generally take the one of the middle layers of the autoencoder as the encoded feature.
-  ![](https://cdn-images-1.medium.com/max/1200/1*j_y0bNZLP1yzqtyF48Z3Ug.png)
+  ![Diagram of an autoencoder architecture used for feature learning](https://cdn-images-1.medium.com/max/1200/1*j_y0bNZLP1yzqtyF48Z3Ug.png)
 
 - ## Dimensionality Reduction
   As we know data can be multi dimensional which can extent even to millions. Computation and visualization of such multi dimensioanl data is difficult and thus we want to reduce the dimension of the data (to pick the dimensions which can represent the data more).
   Dimensionality reduction is done by choosing the axis in the data space along which variance of the data is high.
-  ![](https://static1.squarespace.com/static/5a316dfecf81e0076f50dae2/t/5ac35d702b6a284b3fde6131/1522753187751/PCA.png)
+  ![Diagram illustrating dimensionality reduction with PCA](https://static1.squarespace.com/static/5a316dfecf81e0076f50dae2/t/5ac35d702b6a284b3fde6131/1522753187751/PCA.png)
 
 - and many other examples like data compression(using auto encoders), Generative models, density estimation, etc.
 

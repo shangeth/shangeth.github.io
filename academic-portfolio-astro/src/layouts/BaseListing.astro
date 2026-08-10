@@ -22,9 +22,15 @@ const sortedEntries = entries.sort((a: any, b: any) => {
     const dateB = b.data.date ? new Date(b.data.date).getTime() : 0;
     return dateB - dateA;
 });
+
+const isPaginated = page && page.currentPage > 1;
+const pageTitle = isPaginated ? `${title} (Page ${page.currentPage})` : title;
+const pageDescription = isPaginated
+    ? `${subtitle || title} — page ${page.currentPage} of ${page.lastPage}.`
+    : undefined;
 ---
 
-<BaseLayout title={title}>
+<BaseLayout title={pageTitle} description={pageDescription}>
     {(title || subtitle) && (
         <header class="page-header">
             {title && <h1 class="page-title">{title}</h1>}

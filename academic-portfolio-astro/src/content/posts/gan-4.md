@@ -12,27 +12,27 @@ tags:
 DCGAN is exactly the same as Linear GANs, except they use Convolutional neural networks. As we all know CNNs are the best feature extractor for many kind of data like image, videos, audio, etc.
 
 We will use Street View House (SVHN) Dataset and generate new home numbers using DCGAN.
-![](https://agi.io/wp-content/uploads/2018/01/svhn-large.png)
+![Sample images from the Street View House Numbers (SVHN) dataset](https://agi.io/wp-content/uploads/2018/01/svhn-large.png)
 
 The model architecture will be the same, except the CNNs will be used in the Discriminator to classify images as real or fake. Generator will use a transpose convolutional layers to upsample/generate new image samples from a given latent vector z.
 
 # Discriminator
 In the [original paper](https://arxiv.org/pdf/1511.06434.pdf), no max-pooling layers are used with the CNN layers, rather a stride of 2 is used.
 
-![](https://image.slidesharecdn.com/cnnmodels-170714134232/95/convolutional-neural-network-models-deep-learning-11-638.jpg?cb=1500039867)
+![Diagram of a CNN architecture used in the DCGAN discriminator](https://image.slidesharecdn.com/cnnmodels-170714134232/95/convolutional-neural-network-models-deep-learning-11-638.jpg?cb=1500039867)
 
 [Batch Normalization](https://arxiv.org/abs/1502.03167) and Leaky ReLU are also used.
 
-![](https://cdn-images-1.medium.com/max/800/1*Hiq-rLFGDpESpr8QNsJ1jg.png)
+![Diagram illustrating batch normalization in a neural network layer](https://cdn-images-1.medium.com/max/800/1*Hiq-rLFGDpESpr8QNsJ1jg.png)
 
-![](https://i.ytimg.com/vi/9h1ILdk0Cik/maxresdefault.jpg)
+![Illustration of the Leaky ReLU activation function](https://i.ytimg.com/vi/9h1ILdk0Cik/maxresdefault.jpg)
 
 Linear layers are connected at the end of flattened cnn layers and sigmoid activation is used to make the output in the range 0 to 1.
 
 # Generator
 In generator as we need to upsample a latent vector to an image of size [3, 32, 32], we use [transposed convolutional layer](https://arxiv.org/pdf/1603.07285.pdf) with ReLU activation and Batch Normalization. Tanh activation in the output layer.
 
-![](https://cdn-images-1.medium.com/max/1600/1*Tv7wjpBTB0Pg6rWfLm4YSA.png)
+![Diagram of transposed convolution used to upsample the generator's output](https://cdn-images-1.medium.com/max/1600/1*Tv7wjpBTB0Pg6rWfLm4YSA.png)
 
 # Let's code the DCGAN
 

@@ -22,4 +22,10 @@ export default defineConfig({
   site: 'https://shangeth.com',
   base: '/',
   integrations: [sitemap()],
+  redirects: {
+    '/publication/[id]': '/publications/[id]',
+    '/project/[id]': '/projects/[id]',
+    '/post/[id]': '/posts/[id]',
+    '/google-ml-academy/[course]/[lesson]': '/courses/[course]/[lesson]',
+  },
 });
