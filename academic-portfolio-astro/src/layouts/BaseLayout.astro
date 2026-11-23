@@ -50,7 +50,20 @@ const jsonLd = jsonLdProp ?? {
     url: SITE.website,
     jobTitle: "Senior Research Scientist",
     description: SITE.desc,
+    worksFor: {
+        "@type": "Organization",
+        name: "Sabi",
+        url: "https://sabi.com",
+    },
+    alumniOf: {
+        "@type": "CollegeOrUniversity",
+        name: "Birla Institute of Technology and Science (BITS Pilani)",
+    },
+    award: "3rd Place, Track 2, EEG/EMG Foundation Challenge 2026",
     knowsAbout: [
+        "Brain-Computer Interfaces",
+        "EEG Signal Processing",
+        "EEG Codec Representation Learning",
         "Voice AI",
         "Full-Duplex Spoken Dialogue",
         "Turn-Taking Prediction",

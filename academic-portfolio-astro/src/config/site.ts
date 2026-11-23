@@ -3,7 +3,7 @@ import type { SiteConfig, ThemeConfig, SettingsConfig, UmamiAnalyticsConfig, Ana
 export const SITE: SiteConfig = {
     website: "https://shangeth.com/",
     author: "Shangeth Rajaa",
-    desc: "Voice AI researcher and Senior Research Scientist working on full-duplex spoken dialogue, turn-taking, and speech LLMs.",
+    desc: "Senior Research Scientist working on Voice AI, BCI (Brain Signals), Turn-Taking, Full-Duplex Spoken Dialogue Systems, and Multi-Modal LLMs.",
     title: "Shangeth Rajaa",
     ogImage: "avatar.jpeg",
     twitterHandle: "@shangethr",
