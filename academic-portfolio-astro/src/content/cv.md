@@ -1,7 +1,11 @@
 ---
 name: "Shangeth Rajaa"
-title: "Senior Research Scientist, Voice AI Researcher"
+title: "Senior Research Scientist, Voice AI & BCI Researcher"
 experience:
+  - role: "Senior Research Scientist"
+    institution: "Sabi (Sabi.com)"
+    period: "Sep 2026 - Present"
+    description: "Working on BCI (brain signals) and voice AI. On the BCI side: EEG signal understanding and generation, EEG codec representation learning, and multimodal LLMs for EEG signals. On the voice AI side: full-duplex voice AI agents, speech synthesis, and multimodal LLMs."
   - role: "Senior Machine Learning Research Scientist"
     institution: "Anyreach AI"
     period: "Feb 2025 - Jul 2026"
@@ -34,13 +38,15 @@ education:
 
 ## Research Interests
 
-Full-Duplex Spoken Dialogue · Turn-Taking · Speech & Multimodal LLMs · Speech Representations · Speech Understanding and Synthesis
+Full-Duplex Spoken Dialogue · Turn-Taking · Speech & Multimodal LLMs · Speech Representations · Speech Understanding and Synthesis · BCI & EEG Representation Learning
 
 ## Skills
 
 **Voice AI & Speech:** ASR, TTS, SLU, prosody modeling, speaker representation, voice cloning, language ID, end-to-end spoken dialogue systems.
 
 **Speech & Multimodal LLMs:** Pretraining, instruction-tuning, RLHF/DPO alignment, dual-channel generative pretraining, speech tokenization.
+
+**BCI & Neural Signals:** EEG signal processing, EEG codec and representation learning, multimodal LLMs for EEG.
 
 **Modeling & Systems:** PyTorch, JAX, distributed training, model distillation, latency-sensitive serving for real-time voice.
 

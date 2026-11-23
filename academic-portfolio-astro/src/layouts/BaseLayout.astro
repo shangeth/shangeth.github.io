@@ -119,8 +119,8 @@ const jsonLd = jsonLdProp ?? {
         <link rel="canonical" href={canonicalURL} />
 
         <!-- General Meta Tags -->
-        <title>{title} | {SITE.title}</title>
-        <meta name="title" content={`${title} | ${SITE.title}`} />
+        <title>{SITE.title} - {title}</title>
+        <meta name="title" content={`${SITE.title} - ${title}`} />
         <meta name="description" content={description} />
         <meta name="author" content={SITE.author} />
         {tags && tags.length > 0 && <meta name="keywords" content={tags.join(", ")} />}

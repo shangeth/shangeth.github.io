@@ -2,7 +2,7 @@
 title: "DualTurn: Learning Turn-Taking from Dual-Channel Generative Speech Pretraining"
 author: "Shangeth Rajaa"
 date: "2026-03-09"
-journal: "Interspeech 2026 (Accepted)"
+journal: "Interspeech 2026"
 external_url: "https://arxiv.org/abs/2603.08216"
 description: "Dual-channel generative pretraining for learning natural turn-taking in spoken dialogue without labeled data. A 0.5B model that outperforms models 6x its size on turn prediction."
 tags:

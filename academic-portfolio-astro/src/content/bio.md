@@ -1,22 +1,22 @@
 ---
 name: "Shangeth Rajaa"
 avatar: "avatar.jpeg"
-shortBio: "Senior Research Scientist working on Voice AI, Turn-Taking, Full-Duplex Spoken Dialogue Systems, and Multi-Modal Speech LLMs."
-institution: "Open to full-time & consulting roles in Voice AI"
+shortBio: "Senior Research Scientist working on Voice AI, BCI (Brain Signals), Turn-Taking, Full-Duplex Spoken Dialogue Systems, and Multi-Modal LLMs."
+institution: "Open to consulting roles in Voice AI"
 ---
 
 I'm a Senior Research Scientist working on turn-taking in full-duplex spoken dialogue systems, multimodal speech LLMs, and speech-to-speech translation.
 
 <div class="status-highlight">
-🎉 <strong>DualTurn accepted at Interspeech 2026!</strong> Excited to present this work in person in Sydney, September 28 – October 1, 2026. Read the <a href="/posts/dualturn" data-umami-event="cta-click" data-umami-event-location="highlight-dualturn">write-up</a> or the <a href="https://arxiv.org/abs/2603.08216" target="_blank" rel="noopener noreferrer" data-umami-event="cta-click" data-umami-event-location="highlight-dualturn-arxiv">paper</a>.
+🎉 Won 3rd place in <a href="https://neural-interfaces26.github.io/tracks.html" target="_blank" rel="noopener noreferrer" data-umami-event="cta-click" data-umami-event-location="highlight-eegchallenge">Track 2 of the EEG/EMG Foundation Challenge 2026</a>! Excited to present this work at the Brain & Body Workshop, NeurIPS 2026, in Sydney, December 6–12, 2026.
 </div>
 
 <div class="status-highlight">
-I'm currently exploring what's next, open to full-time and consulting research roles in multi-modal speech LLMs, full-duplex conversation, and speech-to-speech models. <a href="https://calendly.com/shangeth/30min" data-umami-event="cta-click" data-umami-event-location="highlight">Get in touch</a> if you're building in this space.
+I'm open to consulting research roles in multi-modal speech LLMs, full-duplex conversation, and speech-to-speech models. <a href="https://calendly.com/shangeth/30min" data-umami-event="cta-click" data-umami-event-location="highlight">Get in touch</a> if you're building in this space.
 </div>
 
 
-I've spent 6+ years building Voice AI across industry and academia (**Anyreach AI**, **Skit.ai** (previously Vernacular.ai), **ScoreTravel AI**, **NTU Singapore**, **IBM Research**, and **Inria Paris**), leading ML teams from zero to production and publishing at Top speech conferences like Interspeech and ICASSP.
+I've spent 6+ years building Voice AI across industry and academia (**Sabi**, **Anyreach AI**, **Skit.ai** (previously Vernacular.ai), **ScoreTravel AI**, **NTU Singapore**, **IBM Research**, and **Inria Paris**), leading ML teams from zero to production and publishing at Top speech conferences like Interspeech and ICASSP.
 
 
 ## Research
@@ -30,6 +30,8 @@ I'm working toward a different shape: a single system that understands, reasons 
 Concretely, that changes the agent's behavior. If a banking agent is expecting a young male in his twenties but hears a voice that sounds like a woman in her late fifties, the right move isn't to plow ahead with the script. It's to slow down, verify, or route to a human. If the caller's audio is full of traffic noise, the right move might be to ask "is this a good time, or should I call you when you're home?" instead of starting a long form. If the user switches mid-sentence from English to Hindi, the agent should follow. If frustration is rising in someone's voice, the agent should hear that and respond to it, not just to the text it produced.
 
 My current research sits in full-duplex spoken dialogue, turn-taking, and dual-channel speech LLMs, because these are the pieces that have to land first: a model can't reason about a conversation if it can't even decide when to speak. But the broader question I keep coming back to is what it takes for a system to participate in a conversation rather than just complete a turn.
+
+Most recently, I've also started working on BCI: how to represent and generate EEG signals, and how multimodal LLMs can reason over brain activity the way they already reason over speech.
 
 ---
 
